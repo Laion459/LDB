@@ -1,0 +1,40 @@
+h1{
+    size: 15em;
+    background-color: green;
+    color: blue;
+}
+
+#center {
+    width: 900px;
+    margin: auto;
+    }
+
+    #header, #sidebar-left, #sidebar-right, #content, #footer {
+    border: 2px solid black;
+    padding: 5px;
+    }
+
+    #sidebar-left, #sidebar-right {
+    margin-top: 10px;
+    width: 20%;
+    }
+
+    #sidebar-right {
+    float: right;
+    margin-left: 10px;
+    }
+
+    #sidebar-left {
+    float: left;
+    margin-right: 10px;
+    }
+
+    #content {
+    margin: 10px 5px;
+    width: 52%;
+    float: left;
+    }
+    
+    #header, #footer {
+    clear: both;
+}
