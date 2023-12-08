@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-image: url('F:\LEONARDO\PORTIFOLIO\img\fondo.JPG'); 
+    background-image: url('fondo.JPG'); 
     background-size: cover;
     color: white;
     text-align: center;
@@ -48,7 +48,7 @@ section {
 .carousel-item {
     width: 100%;
     box-sizing: border-box;
-=======
+
 body {
     margin: 0;
     padding: 0;
