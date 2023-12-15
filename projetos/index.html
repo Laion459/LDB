@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="caminho/para/sua/font-awesome/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Projetos</h1>
+
+        <!-- Seção de Projetos -->
+        <div class="projects">
+
+            <!-- Projeto 1 -->
+            <div class="project" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
+                <img src="caminho/para/projeto1.jpg" alt="Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>Descrição do Projeto 1.</p>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="project" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
+                <img src="caminho/para/projeto2.jpg" alt="Projeto 2">
+                <h3>Projeto 2</h3>
+                <p>Descrição do Projeto 2.</p>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="project" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
+                <img src="caminho/para/projeto3.jpg" alt="Projeto 3">
+                <h3>Projeto 3</h3>
+                <p>Descrição do Projeto 3.</p>
+            </div>
+
+            <!-- Adicione os outros projetos seguindo a mesma estrutura -->
+
+        </div>
+
+        <!-- Botão Voltar ao Menu Principal -->
+        <a href="../index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar ao Menu Principal</a>
+
+        <!-- Botão Voltar ao Topo -->
+        <button onclick="scrollToTop()" class="back-to-top"><i class="fas fa-arrow-up"></i> Voltar ao Topo</button>
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

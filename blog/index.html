@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="caminho/para/sua/font-awesome/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Meu Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projetos/index.html">Projetos</a></li>
+                    <li><a href="../diplomas/index.html">Diplomas</a></li>
+                    <li><a href="../contato/index.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2>Postagem 1</h2>
+            <p>Data da postagem: 15 de janeiro de 2023</p>
+            <img src="caminho/para/imagem1.jpg" alt="Imagem da Postagem 1">
+            <p>Conteúdo da postagem...</p>
+            
+            <!-- Seção de Comentários -->
+            <section class="comments-section">
+                <h3>Comentários</h3>
+                <ul class="comments-list">
+                    <!-- Comentários serão adicionados dinamicamente aqui -->
+                </ul>
+                <textarea id="commentInput" placeholder="Adicione um comentário"></textarea>
+                <button onclick="addComment()">Adicionar Comentário</button>
+            </section>
+        </article>
+
+        <!-- Adicione mais postagens conforme necessário -->
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LDB Leonardo Dario Borges. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

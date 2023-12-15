@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-pzjw8Ys+1QfH7bJh2oAkzdk5BuObO6VCA6ZcM2z/fEQ5jod4dR0eJ2x1rMPr58N1RYyDrz9nm1qte1pmCPeLvw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar à Página Principal</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Entre em Contato</h1>
+        
+        <p>Se precisar entrar em contato, você pode ligar para o número abaixo:</p>
+        <div class="telefone"><i class="fas fa-phone"></i> (51) 99909-2387</div>
+
+        <p>Pode enviar um e-mail para:</p>
+        <div class="email"><i class="far fa-envelope"></i> Laion459@gmail.com</div>
+
+        <p>Ou me encontre online:</p>
+        <ul>
+            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank">LinkedIn</a></li>
+            <li><i class="fab fa-github"></i> <a href="https://github.com/Laion459" target="_blank">GitHub</a></li>
+        </ul>
+
+        <p>Ou envie uma mensagem diretamente:</p>
+        <form id="contactForm">
+            <label for="email"><i class="far fa-envelope"></i> Seu E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message"><i class="fas fa-comment"></i> Sua Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
+
