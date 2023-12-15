@@ -10,3 +10,8 @@ function showNextMessage() {
 }
 
 setInterval(showNextMessage, 10000);
+
+function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show-menu');
+}
