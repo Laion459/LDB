@@ -90,7 +90,7 @@ function cadastrarUsuario() {
 
     // Enviar os dados ao backend (usando uma API, AJAX, ou outra forma de comunicação)
     // Neste exemplo, utilizaremos o método fetch para simular a comunicação com um backend
-    fetch('/cadastrar-usuario', {
+    fetch('http://localhost:3000/cadastrar-usuario', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
