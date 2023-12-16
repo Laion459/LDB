@@ -1,3 +1,20 @@
+// Adicionar um ouvinte de eventos para verificar a tecla "Enter" no campo de senha
+document.addEventListener('DOMContentLoaded', function() {
+    const passwordInput = document.getElementById('password');
+  
+    if (passwordInput) {
+        passwordInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                login();
+            }
+        });
+    }
+});
+
+// script.js
+// Restante do seu código...
+
+
 // Função para realizar o login
 async function login() {
     const usernameInput = document.getElementById('username');
