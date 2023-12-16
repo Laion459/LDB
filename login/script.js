@@ -90,23 +90,15 @@ function cadastrarUsuario() {
 
     // Enviar os dados ao backend (usando uma API, AJAX, ou outra forma de comunicação)
     // Neste exemplo, utilizaremos o método fetch para simular a comunicação com um backend
-    fetch('http://localhost:3000/cadastrar-usuario', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(novoUsuario)
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-        if (data.success) {
-            // Redirecionar para a página personalizada após o cadastro bem-sucedido
-            window.location.href = 'meusite.html';
-        }
-    })
-    .catch(error => {
-        console.error('Erro ao cadastrar usuário:', error);
-    });
+    fetch('/testar-conexao')
+   .then(response => response.json())
+   .then(data => {
+       alert(data.message);
+   })
+   .catch(error => {
+       console.error('Erro ao testar conexão:', error);
+       alert('Erro ao testar conexão. Verifique o console para mais informações.');
+   });
+
 }
 
