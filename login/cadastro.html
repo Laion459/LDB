@@ -1,3 +1,4 @@
+<!-- cadastro.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -32,15 +34,11 @@
 
             <label for="novaSenha">Senha:</label>
             <input type="password" id="novaSenha" name="novaSenha" required>
-
             <button type="button" onclick="cadastrarUsuario()">Cadastrar</button>
-
-            <!-- Adicionar botão para voltar à página principal -->
-            <a href="index.html">Voltar à Página Principal</a>
+            <!-- Remover o link para a página principal aqui, pois o redirecionamento será feito no JavaScript -->
         </form>
     </div>
 
-    <script src="script.js" defer></script>
-
 </body>
 </html>
+

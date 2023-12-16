@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-// Função para cadastrar um novo usuário
+// script.js
 function cadastrarUsuario() {
+    // Obter os valores dos campos do formulário
     const nomeInput = document.getElementById('nome');
     const emailInput = document.getElementById('email');
     const enderecoInput = document.getElementById('endereco');
@@ -74,32 +74,34 @@ function cadastrarUsuario() {
     const sexo = sexoInput.value;
     const novaSenha = novaSenhaInput.value.trim();
 
-    // Recuperar usuários do localStorage
-    const storedUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+    // Criar um objeto com os dados do usuário
+    const novoUsuario = {
+        nome,
+        email,
+        endereco,
+        idade,
+        sexo,
+        senha: novaSenha // Alterar para 'senha' para corresponder à coluna no banco de dados
+    };
 
-    // Verificar se o usuário já existe
-    if (storedUsers.some(u => u.username === nome)) {
-        alert('Usuário já registrado. Escolha um nome de usuário diferente.');
-    } else {
-        // Adicionar novo usuário à lista
-        storedUsers.push({ username: nome, password: novaSenha });
-
-        // Salvar usuários de volta no localStorage
-        localStorage.setItem('registeredUsers', JSON.stringify(storedUsers));
-
-        alert('Usuário cadastrado com sucesso! Redirecionando para o Meu Site.');
-        
-        // Redirecionar para a página personalizada após o cadastro
-        window.location.href = 'meusite.html';
-    }
-
-    // Limpar campos após o cadastro (pode ser opcional)
-    nomeInput.value = '';
-    emailInput.value = '';
-    enderecoInput.value = '';
-    idadeInput.value = '';
-    sexoInput.value = 'masculino';
-    novaSenhaInput.value = '';
-
-
+    // Enviar os dados ao backend (usando uma API, AJAX, ou outra forma de comunicação)
+    // Neste exemplo, utilizaremos o método fetch para simular a comunicação com um backend
+    fetch('/cadastrar-usuario', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoUsuario)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        if (data.success) {
+            // Redirecionar para a página personalizada após o cadastro bem-sucedido
+            window.location.href = 'meusite.html';
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao cadastrar usuário:', error);
+    });
 }
