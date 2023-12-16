@@ -36,7 +36,7 @@
     <script>
         function testarConexao() {
             // Envie uma requisição simples para testar a conexão
-            fetch('http://localhost:3000/testar-conexao')
+            fetch('/testar-conexao')
                 .then(response => response.json())
                 .then(data => {
                     alert(data.message);
