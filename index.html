@@ -6,6 +6,20 @@
     <title>Leonardo Borges - Site Pessoal</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script>
+        // Adicionar um ouvinte de eventos para verificar a tecla "Enter" no campo de senha
+d       ocument.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.getElementById('password');
+  
+        if (passwordInput) {
+            passwordInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                login();
+            }
+        });
+    }
+});
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-pzjw8Ys+1QfH7bJh2oAkzdk5BuObO6VCA6ZcM2z/fEQ5jod4dR0eJ2x1rMPr58N1RYyDrz9nm1qte1pmCPeLvw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
