@@ -1,32 +1,40 @@
 // Função para realizar o login
-function login() {
+async function login() {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
-    
+   
     const username = usernameInput.value.trim();
     const password = passwordInput.value.trim();
-
-    // Recuperar usuários do localStorage
-    const storedUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
-
-    // Verificar se o usuário e a senha são válidos
-    const user = storedUsers.find(u => u.username === username && u.password === password);
-
-    if (user) {
+  
+    try {
+      const response = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
         alert('Login bem-sucedido!');
-
-        // Salvar usuário no localStorage para lembrar
         localStorage.setItem('loggedInUser', JSON.stringify({ username, password }));
-
         window.location.href = 'meusite.html'; // Redirecionar para a página personalizada
-    } else {
+      } else {
         alert('Usuário ou senha incorretos. Tente novamente.');
+      }
+  
+    } catch (error) {
+      console.error('Erro ao realizar login:', error);
+      alert('Erro ao realizar login. Tente novamente.');
     }
-
+  
     // Limpar campos após o login (pode ser opcional)
     usernameInput.value = '';
     passwordInput.value = '';
-}
+  }
+  
 
 // Adicionar um ouvinte de eventos para verificar a tecla "Enter" no campo de senha
 document.getElementById('password').addEventListener('keyup', function(event) {
