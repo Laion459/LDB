@@ -109,14 +109,4 @@ function cadastrarUsuario() {
         console.error('Erro ao cadastrar usuário:', error);
     });
 }
-// Adicione esta rota ao seu código Express
-app.get('/testar-conexao', (req, res) => {
-    connection.query('SELECT 1', (err, results) => {
-        if (err) {
-            console.error(err);
-            res.status(500).json({ success: false, message: 'Erro ao testar conexão com o banco de dados' });
-        } else {
-            res.status(200).json({ success: true, message: 'Conexão com o banco de dados bem-sucedida!' });
-        }
-    });
-});
+
