@@ -1,3 +1,5 @@
+// script.js
+
 // Adicionar um ouvinte de eventos para verificar a tecla "Enter" no campo de senha
 document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('password');
@@ -10,10 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-// script.js
-// Restante do seu código...
-
 
 // Função para realizar o login
 async function login() {
@@ -50,15 +48,7 @@ async function login() {
     // Limpar campos após o login (pode ser opcional)
     usernameInput.value = '';
     passwordInput.value = '';
-  }
-  
-
-// Adicionar um ouvinte de eventos para verificar a tecla "Enter" no campo de senha
-document.getElementById('password').addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-        login();
-    }
-});
+}
 
 // Verificar se há um usuário lembrado e preencher os campos de login
 document.addEventListener('DOMContentLoaded', function() {
@@ -71,10 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-
-
-// script.js
+// Função para cadastrar usuário
 function cadastrarUsuario() {
     // Obter os valores dos campos do formulário
     const nomeInput = document.getElementById('nome');
