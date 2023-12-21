@@ -19,9 +19,6 @@
 
             <button type="button" onclick="login()">Entrar</button>
 
-            <!-- Adicione o botão de teste de conexão -->
-            <button type="button" onclick="testarConexao()">Testar Conexão</button>
-
             <!-- Adicionar botão para redirecionar para a página principal -->
             <a href="../index.html">Voltar à Página Principal</a>
 
@@ -31,22 +28,6 @@
     </div>
 
     <script src="script.js" defer></script>
-
-    <!-- Adicione a função de teste de conexão -->
-    <script>
-        function testarConexao() {
-            // Envie uma requisição simples para testar a conexão
-            fetch('http://localhost:3000')
-                .then(response => response.json())
-                .then(data => {
-                    alert(data.message);
-                })
-                .catch(error => {
-                    console.error('Erro ao testar conexão:', error);
-                    alert('Erro ao testar conexão. Verifique o console para mais informações.');
-                });
-        }
-    </script>
 
 </body>
 </html>

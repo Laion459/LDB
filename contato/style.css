@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
 }
 
@@ -41,11 +41,25 @@ ul li {
 
 a {
     text-decoration: none;
-    color: #007bff;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
 }
 
-a:hover {
-    text-decoration: underline;
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fcce00; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+a:hover::before {
+    width: 100%;
 }
 
 form {
@@ -58,13 +72,14 @@ label {
 }
 
 input, textarea {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 8px;
 }
 
 button {
-    background-color: #007bff;
+    background-color: #fcce00;
     color: #000000;
     padding: 10px 20px;
     border: none;
@@ -73,7 +88,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #5eff01;
 }
 
 body {
@@ -84,28 +99,27 @@ body {
     background-size: cover; /* Garante que a imagem cubra toda a área do body */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
+    border-radius: 8px;
 }
 
 .container {
     text-align: center;
     margin: 50px auto;
-    background-color: rgba(124, 117, 117, 0.8); /* Adiciona um fundo branco semi-transparente ao conteúdo */
+    background-color: rgba(124, 117, 117, 0.5); /* Adiciona um fundo branco semi-transparente ao conteúdo */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 
-/* Adicione o estilo para o botão de voltar */
 .back-button {
     display: block;
     margin-top: 20px;
     text-decoration: none;
-    color: #007bff;
+    color: #dbdcdd;
+    margin-right: 5px;
+    color: #fcce00;
 }
 
-.back-button i {
-    margin-right: 5px;
-}
 
 

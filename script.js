@@ -1,17 +1,18 @@
-const carouselInner = document.getElementById('carousel-inner');
-const carouselItems = document.querySelectorAll('.carousel-item');
+document.addEventListener('DOMContentLoaded', function () {
+    var backButton = document.querySelector('.back-to-top');
 
-let currentIndex = 0;
+    // Adicione um ouvinte de rolagem para verificar a posição da página
+    window.addEventListener('scroll', function () {
+        // Se o usuário rolar mais de 200 pixels, mostra o botão, caso contrário, esconde
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backButton.style.display = 'block';
+        } else {
+            backButton.style.display = 'none';
+        }
+    });
+});
 
-function showNextMessage() {
-    carouselItems[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % carouselItems.length;
-    carouselItems[currentIndex].classList.add('active');
-}
-
-setInterval(showNextMessage, 10000);
-
-function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('show-menu');
+// Função para rolar suavemente ao topo
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
