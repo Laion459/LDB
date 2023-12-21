@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #2c2a2a;
 }
 
 .container {
@@ -10,12 +10,17 @@ body {
     margin: 50px auto;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(31, 30, 30, 0.1);
     border-radius: 5px;
 }
 
-h1 {
-    color: #333;
+h1, h2{
+    color: #fcce00;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 25px;
+    padding-left: 8%;
+
 }
 
 .projects {
@@ -31,6 +36,7 @@ h1 {
     overflow: hidden;
     transition: transform 0.3s, background-color 0.3s;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .project img {
@@ -50,7 +56,8 @@ h1 {
 
 .project:hover {
     transform: translateY(-5px);
-    background-color: #007bff;
+    background-color: #83df1a;
+    border-radius: 20px;
 }
 
 .project:hover img {
@@ -65,8 +72,87 @@ h1 {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding-left: 90%;
 }
 
 .back-button i, .back-to-top i {
     margin-right: 5px;
+}
+
+.back-button {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #dbdcdd;
+    margin-right: 5px;
+    color: #fcce00;
+}
+
+
+nav a {
+    color: #fcce00;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 50px 0;
+    }
+
+    h1 {
+        font-size: 6em;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #333; 
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fcce00; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+
+.back-button {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fcce00;
+}
+
+
+.project img {
+    width: 100%; /* Ajusta a largura da imagem para ocupar 100% do contêiner pai */
+    height: auto; /* Garante que a altura é ajustada proporcionalmente */
 }
