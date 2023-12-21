@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type" : "module" ,
+  "scripts": {
+    "start": "nonnodemon index.js"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
