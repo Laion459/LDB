@@ -9,7 +9,7 @@ const Table = styled.table`
     width: 100%;
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0px 0px 5px #ccc;
+    box-shadow: 10px 10px 5px #ccc;
     border-radius: 50px;
     max-width: 800px;
     margin: 20px auto;
