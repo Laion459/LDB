@@ -15,6 +15,7 @@ body {
     background-image: url('fundo\ louza.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
+    flex-direction: column;
 }
 
 #calculadora {
@@ -235,4 +236,13 @@ a::before {
 
 a:hover::before {
     width: 100%;
+}
+
+.back-button{
+    padding: 25px;
+}
+
+
+header{
+    padding: 5%  
 }

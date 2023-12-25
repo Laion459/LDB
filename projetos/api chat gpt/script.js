@@ -5,7 +5,7 @@ inputQuestion.addEventListener("keypress", (e) => {
     if (inputQuestion.value && e.key === "Enter") SendQuestion();
 });
 
-const OPEN_API_KEY = "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";
+const OPEN_API_KEY = "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";
 
 function SendQuestion() {
     let sQuestion = inputQuestion.value;
@@ -19,7 +19,7 @@ function SendQuestion() {
         },
         body: JSON.stringify({
             model: "text-davinci-003",
-            prompt: sQuestion,  // Corrigido de "process" para "prompt"
+            prompt: sQuestion,  
             max_tokens: 2048,
             temperature: 0.5,
         }),
