@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fcce00;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+
+.back-button {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #dbdcdd;
+  margin-right: 5px;
+  color: #fcce00;
+}
+
+
