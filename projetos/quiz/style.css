@@ -1,32 +1,31 @@
-
 /* GERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica;
-  }
-  
-  body {
+}
+
+body {
     background-color: #242940;
     color: #FFF;
-  }
-  
-  .hide {
+}
+
+.hide {
     display: none !important;
-  }
-  
-  #main-title {
+}
+
+#main-title {
     padding: 40px 0;
     text-align: center;
     background-color: #2D425A;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-  }
-  
-  /* Score Container */
-  
-  #score-container {
+}
+
+/* Score Container */
+
+#score-container {
     background-color: #CDDDE8;
     color: #000;
     text-align: center;
@@ -34,29 +33,29 @@
     margin: 50px auto;
     padding: 25px;
     border-radius: 20px;
-  }
-  
-  #score-container p {
+}
+
+#score-container p {
     font-size: 14px;
     margin: 20px 0;
-  }
-  
-  #score-container #display-score {
+}
+
+#score-container #display-score {
     font-size: 32px;
     font-weight: bold;
-  }
-  
-  #correct-answers {
+}
+
+#correct-answers {
     font-weight: bold;
     color: #40B576;
-  }
-  
-  #questions-qty {
+}
+
+#questions-qty {
     font-weight: bold;
     color: #075EA4;
-  }
-  
-  #restart {
+}
+
+#restart {
     background-color: #E78230;
     color: #FFF;
     font-weight: bold;
@@ -68,35 +67,35 @@
     margin-top: 20px;
     cursor: pointer;
     transition: .5s;
-  }
-  
-  #restart:hover {
+}
+
+#restart:hover {
     background-color: transparent;
     border-color: #E78230;
     color: #E78230;
-  }
-  
-  /* Quizz container */
-  
-  #quizz-container {
+}
+
+/* Quizz container */
+
+#quizz-container {
     width: 500px;
     margin: 50px auto;
     border: 1px solid #CDDDE8;
     padding: 25px;
     border-radius: 25px;
-  }
-  
-  #question {
+}
+
+#question {
     text-align: center;
     margin-bottom: 25px;
     font-size: 20px;
-  }
-  
-  #question-number {
+}
+
+#question-number {
     font-weight: bold;
-  }
-  
-  #answers-box button {
+}
+
+#answers-box button {
     display: flex;
     align-items: center;
     margin: 15px 0;
@@ -111,14 +110,14 @@
     color: #000;
     cursor: pointer;
     transition: .5s;
-  }
-  
-  #answers-box button:hover {
+}
+
+#answers-box button:hover {
     background-color: #E78230;
     color: #FFF;
-  }
-  
-  #answers-box .btn-letter {
+}
+
+#answers-box .btn-letter {
     font-size: 30px;
     font-weight: bold;
     background-color: #E78230;
@@ -129,42 +128,42 @@
     text-transform: uppercase;
     flex: 1 1 0;
     max-width: 40px;
-  }
-  
-  .question-answer {
+}
+
+.question-answer {
     flex: 1 1 0;
     margin-left: 10px;
     font-size: 16px;
-  }
-  
-  #quizz-container .wrong-answer,
-  #quizz-container .wrong-answer .btn-letter {
+}
+
+#quizz-container .wrong-answer,
+#quizz-container .wrong-answer .btn-letter {
     background-color: #e62210;
     color: #FFF;
-  }
-  
-  #quizz-container .correct-answer,
-  #quizz-container .correct-answer .btn-letter {
+}
+
+#quizz-container .correct-answer,
+#quizz-container .correct-answer .btn-letter {
     background-color: #40B576;
     color: #FFF;
-  }
-  
-  /* RESPONSIVO */
-  
-  @media(max-width:450px) {
+}
+
+/* RESPONSIVO */
+
+@media(max-width:450px) {
     #quizz-container {
-      border: none;
-      width: 100%;
+        border: none;
+        width: 100%;
     }
-  
+
     #answers-box button {
-      width: 100%;
+        width: 100%;
     }
-  
+
     #score-container {
-      width: 90%;
+        width: 90%;
     }
-  }
+}
 
 nav a {
     color: #fcce00;
@@ -182,6 +181,7 @@ nav a {
     nav {
         flex-direction: column;
         align-items: flex-start;
+        padding: 1;
     }
 
     nav a {
@@ -199,10 +199,11 @@ nav a {
 
 a {
     text-decoration: none;
-    color: #333; 
+    color: #333;
     position: relative;
     overflow: hidden;
     padding: 20px;
+    text-align: center;
 }
 
 a::before {
@@ -210,10 +211,10 @@ a::before {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #fcce00; 
+    background-color: #fcce00;
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease;
 }
 
 a:hover::before {
@@ -230,11 +231,11 @@ a:hover::before {
 
 
 .project img {
-    width: 80%; 
-    height: auto; 
+    width: 80%;
+    height: auto;
 }
 
-header{
-    padding: 2%;
+header {
+    padding: 8%;
     height: 1px;
 }
