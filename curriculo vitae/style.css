@@ -4,14 +4,19 @@
     margin: 0;
 }
 
+body{
+    padding: 18px;
+}
+
 h1{
-    padding: 12px;
+    padding: 18px;
 }
 
 nav a {
     color: #fcce00;
     text-decoration: none;
     padding: 10px 20px;
+    padding: 18px;
     margin: 0 10px;
     border-radius: 5px;
 }
