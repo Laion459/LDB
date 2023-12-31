@@ -153,4 +153,150 @@ footer {
     width: 50px; /* Ajuste a largura conforme necessário */
     height: 50px; /* A altura será ajustada automaticamente mantendo a proporção original da imagem */
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+nav ul li a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff0000; /* Cor vermelha para a barra */
+    transition: width 0.3s;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+/* Adicione esses estilos para a cor vermelha do texto do menu */
+nav ul li:hover > a {
+    color: #ff0000; /* Cor vermelha */
+}
+
+/* Adicione esses estilos para o menu responsivo */
+.menu-toggle {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    /* ... Estilos responsivos existentes ... */
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle:checked + label + nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav ul li ul {
+        top: 0;
+        left: 100%;
+        display: none;
+    }
+
+    .menu-toggle:checked + label + nav ul li:hover ul {
+        display: none;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+label[for="menu-toggle"] {
+    cursor: pointer;
+    color: #ff0000; /* Cor vermelha para o botão do menu */
+    font-size: 20px; /* Tamanho do ícone do menu */
+    padding: 10px;
+    display: none;
+}
+
+/* Adicione esses estilos para tornar o botão do menu visível em telas menores */
+@media screen and (max-width: 768px) {
+    label[for="menu-toggle"] {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav ul li ul {
+        top: 0;
+        left: 100%;
+        display: none;
+    }
+
+    .menu-toggle:checked + label + nav {
+        display: flex;
+    }
+}
+
