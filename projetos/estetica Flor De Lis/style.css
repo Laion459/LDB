@@ -106,7 +106,7 @@ nav ul li:hover ul {
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: #ff0000;
     padding: 20px;
 }
 
@@ -300,3 +300,7 @@ label[for="menu-toggle"] {
     }
 }
 
+
+svg{
+    color: #ff0000;
+}
