@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>FLOR DE LIS</title>
+
 </head>
 
 <body>
@@ -37,7 +38,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"> 
+                        <a href="#">
                             <div>
                                 <p>SERVICOS</p>
                             </div>
@@ -75,6 +76,50 @@
         </div>
     </header>
     <br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="carousel-container">
+        <div class="carousel-slides">
+            <div class="carousel-slide" id="slide1">
+                <img src="img/engin-akyurt-nAeap3cef8k-unsplash.jpg" alt="Imagem 1">
+            </div>
+            <div class="carousel-slide" id="slide2">
+                <img src="img/maria-lupan-ZiZ4q21W9vc-unsplash.jpg" alt="Imagem 2">
+            </div>
+            <div class="carousel-slide" id="slide3">
+                <img src="img/oliver-johnson-yH0dth2yEQE-unsplash.jpg" alt="Imagem 3">
+            </div>
+            <div class="carousel-slide" id="slide4">
+                <img src="img/rafaella-mendes-diniz-AoL-mVxprmk-unsplash.jpg" alt="Imagem 4">
+            </div>
+            <div class="carousel-slide" id="slide5">
+                <img src="img/toa-heftiba-a9pFSC8dTlo-unsplash.jpg" alt="Imagem 5">
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button class="prev" onclick="prevSlide()">❮</button>
+            <div class="dots" onclick="currentSlide(1)"></div>
+            <div class="dots" onclick="currentSlide(2)"></div>
+            <div class="dots" onclick="currentSlide(3)"></div>
+            <div class="dots" onclick="currentSlide(4)"></div>
+            <div class="dots" onclick="currentSlide(5)"></div>
+            <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+    <div id="map-container">
+        <!-- Informações à esquerda do mapa -->
+        <div id="info-container">
+            <p>Estética Flor de Lis</p>
+            <p>Estrada Vereador Onildo Lemos, 256, Sala 1</p>
+            <p>Terça a Sábado, 9:00 - 19:00</p>
+        </div>
+
+        <!-- Mapa -->
+        <div id="map" style="width: 100%; height: 400px;"></div>
+
+
+
+    </div>
     <a href="agenda/agenda.html">
         <img src="img/White and Black Minimalist Salon Logo.jpg" alt="Logo da Flor de Lis">
     </a>
@@ -86,11 +131,12 @@
                 <p>© Estetica FLOR DE LIS. Desde 1996. Todos os direitos reservados 2024.</p>
                 <p>
                     <span style="font-weight:bold;">e-mail: </span>
-                    <a href="mailto:pbbruninha@hotmail.com?subject=Duvida sobre o salao&body=Ola, tenhu uma duvida sobre `digite sua duvida aqui`">pbbruninha@hotmail.com</a>
+                    <a
+                        href="mailto:pbbruninha@hotmail.com?subject=Duvida sobre o salao&body=Ola, tenhu uma duvida sobre `digite sua duvida aqui`">pbbruninha@hotmail.com</a>
                     <br>
                     CNPJ: 36.663.699/0001-17
                 </p>
-                
+
             </div>
             <div class="footer-right">
                 <p>Siga-nos nas redes sociais!</p>
@@ -124,7 +170,10 @@
         </p>
     </footer>
 
+    <script src="https://openlayers.org/en/latest/build/ol.js"></script>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
