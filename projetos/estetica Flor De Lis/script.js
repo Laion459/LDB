@@ -53,35 +53,55 @@ document.addEventListener('DOMContentLoaded', function () {
         nav.style.display = menuToggle.checked ? 'flex' : 'none';
     });
 
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".carousel-slide");
-    const dots = document.querySelectorAll(".dots");
 
+    // Initialize variables
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.carousel-indicators button');
+    const totalSlides = slides.length;
+    const intervalTime = 3000; // Intervalo de 3 segundos
+
+    // Function to show a specific slide
     function showSlide(index) {
-        slides.forEach((slide) => slide.classList.remove("show"));
-        slides[index].classList.add("show");
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slides[index].classList.add("active");
 
         dots.forEach((dot) => dot.classList.remove("active"));
         dots[index].classList.add("active");
     }
 
+    // Function to show the next slide
     function nextSlide() {
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }
 
+    // Function to show the previous slide
     function prevSlide() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         showSlide(currentSlide);
     }
 
+    // Function to set the current slide
     function setCurrentSlide(index) {
         currentSlide = index - 1;
         showSlide(currentSlide);
     }
 
-    setInterval(nextSlide, 8000);
+    // Set interval for auto-sliding
+    setInterval(nextSlide, intervalTime);
     showSlide(currentSlide);
+
+    // Event listeners for next and previous buttons
+    document.querySelector('.carousel-control-prev').addEventListener('click', prevSlide);
+    document.querySelector('.carousel-control-next').addEventListener('click', nextSlide);
+
+    // Event listeners for indicator buttons
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            setCurrentSlide(index);
+        });
+    });
 
     // Mapa OpenLayers
     var endereco = [-27.445827309755046, -48.37738612381911];

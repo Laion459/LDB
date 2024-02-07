@@ -77,35 +77,40 @@
     </header>
     <br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div class="carousel-container">
-        <div class="carousel-slides">
-            <div class="carousel-slide" id="slide1">
-                <img src="img/engin-akyurt-nAeap3cef8k-unsplash.jpg" alt="Imagem 1">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/oliver-johnson-yH0dth2yEQE-unsplash.jpg" class="d-block w-100"
+                    alt="img/oliver-johnson-yH0dth2yEQE-unsplash.jpg">
             </div>
-            <div class="carousel-slide" id="slide2">
-                <img src="img/maria-lupan-ZiZ4q21W9vc-unsplash.jpg" alt="Imagem 2">
+            <div class="carousel-item">
+                <img src="img/engin-akyurt-nAeap3cef8k-unsplash.jpg" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-slide" id="slide3">
-                <img src="img/oliver-johnson-yH0dth2yEQE-unsplash.jpg" alt="Imagem 3">
-            </div>
-            <div class="carousel-slide" id="slide4">
-                <img src="img/rafaella-mendes-diniz-AoL-mVxprmk-unsplash.jpg" alt="Imagem 4">
-            </div>
-            <div class="carousel-slide" id="slide5">
-                <img src="img/toa-heftiba-a9pFSC8dTlo-unsplash.jpg" alt="Imagem 5">
+            <div class="carousel-item">
+                <img src="img/maria-lupan-ZiZ4q21W9vc-unsplash.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
-
-        <div class="carousel-controls">
-            <button class="prev" onclick="prevSlide()">❮</button>
-            <div class="dots" onclick="currentSlide(1)"></div>
-            <div class="dots" onclick="currentSlide(2)"></div>
-            <div class="dots" onclick="currentSlide(3)"></div>
-            <div class="dots" onclick="currentSlide(4)"></div>
-            <div class="dots" onclick="currentSlide(5)"></div>
-            <button class="next" onclick="nextSlide()">❯</button>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+
+
     <div id="map-container">
         <!-- Informações à esquerda do mapa -->
         <div id="info-container">
@@ -116,6 +121,7 @@
 
         <!-- Mapa -->
         <div id="map" style="width: 100%; height: 400px;"></div>
+
 
 
 
@@ -169,6 +175,10 @@
             de atendimento. Escolha a sua data e agende seu horário.
         </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 
     <script src="https://openlayers.org/en/latest/build/ol.js"></script>
 
