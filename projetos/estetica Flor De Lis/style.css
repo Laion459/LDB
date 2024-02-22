@@ -348,3 +348,8 @@ footer {
     display: flex;
     
 }
+
+
+iframe{
+    border-radius: 20px;
+}
