@@ -73,8 +73,13 @@ body, html {
 
 }
 
-.logo-principal{
-    text-align: center;
-    padding-left: 25%;
-}
 
+
+.logo-principal img {
+    width: 150px; /* Ajuste a largura conforme necessário */
+    height: 150px; /* A altura será ajustada automaticamente mantendo a proporção original da imagem */
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 37%;
+}
