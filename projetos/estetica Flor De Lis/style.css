@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Estilos para o cabeçalho */
 header {
     background-color: #333;
     color: #fff;
@@ -71,7 +72,7 @@ nav ul li:hover ul {
     display: block;
 }
 
-/* Estilos para tornar responsivo */
+/* Estilos para tornar o menu responsivo */
 @media screen and (max-width: 768px) {
     .menu {
         flex-direction: column;
@@ -127,54 +128,11 @@ label[for="menu-toggle"] {
     display: none;
 }
 
-/* Adicione esses estilos para tornar o botão do menu visível em telas menores */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
-
-    label[for="menu-toggle"] {
-        display: block;
-    }
-    
-    nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    nav ul li:last-child {
-        margin-bottom: 0;
-    }
-
-    nav ul li ul {
-        top: 0;
-        left: 100%;
-        display: none;
-    }
-
-    .menu-toggle:checked + label + nav {
-        display: flex;
-    }
-}
-
+/* Estilos para o rodapé */
 footer {
     background-color: #333;
     color: #ff0000;
+    
     padding: 20px;
 }
 
@@ -227,7 +185,7 @@ footer {
     align-items: center;
 }
 
-
+/* Estilos para o carrossel de imagens */
 #carouselExampleIndicators {
     position: relative;
 }
@@ -256,7 +214,7 @@ footer {
 #carouselExampleIndicators .carousel-control-next {
     width: 15%;
     opacity: 0.5;
-    background-color: rgba(255, 255, 255, 0.5);
+    color: #ff0000;
     border: none;
     transition: opacity 0.15s ease;
 }
@@ -293,9 +251,7 @@ footer {
     opacity: 1;
 }
 
-
-
-/* Mapa */
+/* Estilos para o mapa */
 #map-container {
     display: flex;
     flex-wrap: wrap;
@@ -325,12 +281,7 @@ footer {
     overflow: hidden;
 }
 
-
-
-
-
-
-
+/* Outros estilos específicos */
 .carousel-item {
     font-size: 2em;
 }
@@ -338,7 +289,6 @@ footer {
 .carousel-caption h5,
 .carousel-caption p {
     color: #dfc21bf5;
-    
 }
 
 .carousel-item img {
@@ -346,10 +296,43 @@ footer {
     width: 500px;
     background-repeat: no-repeat;
     display: flex;
-    
 }
 
-
-iframe{
+iframe {
     border-radius: 20px;
+}
+
+.logoPrincipal {
+    align-items: center;
+    padding-left: 30%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* largura ajustável */
+    height: 20px; /* altura ajustável */
+    border: none;
+    border-radius: 20%;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.carousel-control-prev {
+    left: 1px; /* ajuste a distância do lado esquerdo */
+}
+
+.carousel-control-next {
+    right: 1px; /* ajuste a distância do lado direito */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
