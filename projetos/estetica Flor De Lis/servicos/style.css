@@ -16,6 +16,11 @@ img{
     font-size: 3em;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: red;
+    text-shadow: 
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 .paragrafo{
@@ -27,15 +32,11 @@ img{
 .texto{
     padding: 10%;
     padding-top: 1%;
-    background-color: rgba(79, 233, 19, 0.514);
+    background-color: rgba(255, 255, 255, 0.87);
     border-radius: 20px;
     max-width: 700px;
     text-align: center;
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+    
     
 }
 
