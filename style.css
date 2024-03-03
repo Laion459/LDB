@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #020202;
+}
+
+header {
+    background-size: cover;
+    color: rgb(2, 2, 2);
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-image: url('deck verde.jpg'); 
+    background-repeat: no-repeat;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+
+nav a {
+    color: #fcce00;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 10px 50px;
+    }
+
+    h1 {
+        font-size: 6em;
+    }
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #333; 
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fcce00; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+
+.skills {
+    width: 300px;
+    padding: 10%;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.language {
+    font-weight: bold;
+}
+
+.bar {
+    background-color: #524f4f;
+    height: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.percentage {
+    height: 100%;
+    background-color: #fcce00; 
+    border-radius: 10px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills {
+    flex: 1;
+    margin-right: 20px; 
+}
+
+span {
+    font-size: 1.3em;
+    color: gray;
+}
+
+
+.skills-container {
+    text-align: center;
+    margin: 1% auto;
+    background-color: rgba(124, 117, 117, 0.5);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+h1, h3{
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #fcce00;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 20px;     
+}
+
+h1{
+    font-size: 5em;
+    text-decoration: underline;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #fcce00;
+    color: #0a0a0a; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-to-top i {
+    margin-left: 5px; 
+}

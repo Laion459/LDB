@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+body {
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    background-image: url('fundo\ louza.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+#calculadora {
+    width: 400px;
+    padding: 0.5em;
+    background-color: #4b4a49;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 4px solid;
+}
+
+#calculadora h3 {
+    font-size: 1em;
+    font-weight: 300;
+    color: #3d3b41;
+    text-align: center;
+}
+
+#operations {
+    text-align: right;
+}
+
+#current-operation,
+#previus-operation {
+    min-height: 1.6em;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+}
+
+#previous-operation {
+    color: #000000;
+    font-size: 1.5em;
+}    
+
+#current-operation {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+#buttons-container button {
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+#buttons-container .number {
+    background-color: #fefefe;
+}
+
+#buttons-container button:hover {
+    background-color: #bababa;
+    border-color: #999;
+}
+
+#buttons-container #equal-btn {
+    grid-column: span 2;
+    background-color: #75a5cb;
+}
+
+#buttons-container #equal-btn:hover {
+    background-color: #3a91d8;
+}
+
+
+.glow-on-hover {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #fcce00;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: 100%; 
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite alternate;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: black;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; opacity: 0; }
+    50% { background-position: 400% 0; opacity: 1; }
+    100% { background-position: 0 0; opacity: 0; }
+}
+
+
+
+#operations {
+    text-align: right;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    overflow: hidden;
+    animation: gradientAnimation 10s linear infinite;
+}
+
+#operations:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite alternate;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#operations:hover:before {
+    opacity: 1;
+}
+
+
+
+
+nav a {
+    color: #fcce00;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 50px 0;
+    }
+
+    h1 {
+        font-size: 6em;
+    }
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #333; 
+    position: relative;
+    overflow: hidden;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fcce00; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+.back-button{
+    padding: 25px;
+}
+
+
+header{
+    padding: 5%  
+}
