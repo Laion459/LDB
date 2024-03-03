@@ -14,18 +14,20 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     background-color: #333;
     padding: 15px 0;
+    
 }
 
-nav a {
+nav a,h3 {
     color: white;
     text-decoration: none;
-    padding: 10px 50px;
-    margin: 0 50px;
+    padding: 10px 5px;
+    margin: 0 20px;
     border-radius: 5px;
 }
+
 
 section {
     padding: 50px 0;
@@ -40,7 +42,7 @@ h1{
     font-family: fantasy;
 }
 
-h1, p{
+h1{
 
     color: #000000;
     text-shadow: 
@@ -58,12 +60,6 @@ p{
 
 }
 
-p {
-    animation-duration: 10s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
 
 @keyframes slidein {
     from {
