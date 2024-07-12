@@ -1,33 +1,252 @@
+/* Geral */
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
-    font-family: 'Playfair Display', serif;
-    background-color: #020202;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+.container p {
+    color: #fcce00;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Cabeçalho */
 header {
-    background-size: cover;
-    color: rgb(2, 2, 2);
+    background: #383838;
+    color: #fcce00;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    min-height: 300px;
     text-align: center;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background-image: url('deck verde.jpg'); 
-    background-repeat: no-repeat;
 }
 
+header a {
+    color: #fff;
+}
 
-nav {
+header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px 15px;
+    justify-content: center;
+}
+
+.header-content {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+header .profile-picture {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    margin-right: 30px;
+    border: 3px solid #fff;
+}
+
+header .profile-picture img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+}
+
+header .header-text h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+    color: #fcce00;
+}
+
+header .header-text h2 {
+    font-size: 1.8em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #555;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #ffbb33;
+}
+
+/* Menu de navegação */
+nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    background: #383838;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #fcce00; /* Cor de destaque ao passar o mouse */
+}
+
+/* Ícone do menu (mobile) */
+.menu-icon {
+    display: none; /* Esconde o ícone em telas maiores */
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Seção de Habilidades */
+.skills-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.skill-group h3 {
+    color: #35424a;
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    margin-bottom: 15px;
+}
+
+.skill-bar h4 {
+    margin: 0 0 5px 0;
+}
+
+.progress {
+    height: 20px;
+    background: #ddd;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #fcce00; /* Cor da barra de progresso */
+    width: 0%; /* Valor inicial da largura */
+    transition: width 0.5s ease-in-out;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Botão "Voltar ao Topo" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #3d3d3d;
+    color: #fcce00;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header .profile-picture {
+        margin: 0 0 20px 0;
+    }
+
+    .menu {
+        display: none; /* Esconde a lista em telas menores */
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone em telas menores */
+    }
+
+    /* Mostra o menu ao clicar no ícone em telas menores */
+    .menu.show {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #35424a;
+        padding: 10px 0;
+    }
+
+    .menu.show li {
+        display: block;
+        margin: 10px 20px;
+    }
 }
 
 
@@ -35,6 +254,7 @@ nav a {
     color: #fcce00;
     text-decoration: none;
     padding: 10px 20px;
+    padding: 18px;
     margin: 0 10px;
     border-radius: 5px;
 }
@@ -54,7 +274,7 @@ nav a {
     }
 
     header {
-        padding: 10px 50px;
+        padding: 50px 0;
     }
 
     h1 {
@@ -69,7 +289,6 @@ a {
     color: #333; 
     position: relative;
     overflow: hidden;
-    padding: 15px;
 }
 
 a::before {
@@ -87,83 +306,7 @@ a:hover::before {
     width: 100%;
 }
 
-
-.skills {
-    width: 300px;
-    padding: 10%;
-}
-
-.skill {
-    margin-bottom: 15px;
-}
-
-.language {
-    font-weight: bold;
-}
-
-.bar {
-    background-color: #524f4f;
-    height: 10px;
-    position: relative;
-    border-radius: 10px;
-}
-
-.percentage {
-    height: 100%;
-    background-color: #fcce00; 
-    border-radius: 10px;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.skills {
-    flex: 1;
-    margin-right: 20px; 
-}
-
-span {
-    font-size: 1.3em;
-    color: gray;
-}
-
-
-.skills-container {
+.footer {
     text-align: center;
-    margin: 1% auto;
-    background-color: rgba(124, 117, 117, 0.5);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-}
-
-h1, h3{
-    padding-left: 10%;
-    padding-right: 10%;
     color: #fcce00;
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 20px;     
-}
-
-h1{
-    font-size: 5em;
-    text-decoration: underline;
-}
-
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px;
-    background-color: #fcce00;
-    color: #0a0a0a; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.back-to-top i {
-    margin-left: 5px; 
 }
