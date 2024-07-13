@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">PET SHOP</a>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bem-vindo à PET SHOP</h1>
+                <p>Cuidando do seu melhor amigo com carinho e dedicação.</p>
+                <a href="#contato" class="btn">Agende uma visita</a>
+            </div>
+            <img src="img/logo.png" alt="Imagem de um Pet Shop">
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>No Mundo Pet, somos apaixonados por animais e dedicados a proporcionar o melhor para nossos amigos de
+                quatro patas. Nossa missão é oferecer uma experiência de compra única e personalizada, com uma vasta
+                seleção de produtos de alta qualidade, desde alimentos nutritivos até brinquedos divertidos, acessórios
+                elegantes e produtos de higiene essenciais. Nossa equipe é composta por especialistas comprometidos em
+                fornecer conselhos e recomendações para garantir o bem-estar e a felicidade do seu pet. Acreditamos que
+                cada animal é especial e merece o melhor cuidado. Venha nos visitar e descubra como podemos ajudar a
+                tornar a vida do seu pet ainda mais incrível!</p>
+        </div>
+    </section>
+
+    <section id="servicos" class="section">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="services">
+                <div class="service">
+                    <img src="img/banho e tosa.jpg" alt="Banho e Tosa">
+                    <h3>Banho e Tosa</h3>
+                    <p>Nosso serviço de banho e tosa garante que seu pet fique limpo, cheiroso e bem cuidado. Contamos
+                        com profissionais experientes que tratam cada animal com carinho e atenção.</p>
+                </div>
+                <div class="service">
+                    <img src="img/vacina.jpg" alt="Vacinação">
+                    <h3>Vacinação</h3>
+                    <p>Proteja seu pet com nosso serviço de vacinação. Oferecemos todas as vacinas essenciais para
+                        garantir a saúde e a segurança do seu amigo de quatro patas.</p>
+                </div>
+                <div class="service">
+                    <img src="img/hotel.jpg" alt="Hotel para Pets">
+                    <h3>Hotel para Pets</h3>
+                    <p>Nosso hotel para pets oferece um ambiente seguro e confortável, onde seu pet pode ficar enquanto
+                        você viaja. Com atendimento personalizado, seu pet se sentirá em casa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="section">
+        <h2>Nossos Produtos</h2>
+        <div class="container">
+            <div class="products">
+                <div class="product">
+                    <a href="#">
+                        <img src="img/racao.jpg" alt="Ração Premium">
+                        <h3>Ração Premium</h3>
+                        <p>Alimento balanceado para todas as idades.</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="img/coleira.jpg" alt="Coleira de Luxo">
+                        <h3>Coleira de Luxo</h3>
+                        <p>Elegância e conforto para o seu pet.</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="img/cama_gato.jpg" alt="Cama para Gatos">
+                        <h3>Cama para Gatos</h3>
+                        <p>Conforto e estilo para os felinos.</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="img/cama_cachorro.jpg" alt="Cama para Cachorros">
+                        <h3>Cama para Cachorros</h3>
+                        <p>Maciez e aconchego para seu cão.</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="img/aquario.jpg" alt="Aquário Moderno">
+                        <h3>Aquário Moderno</h3>
+                        <p>Design inovador para seu peixe.</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="img/brinquedo.jpg" alt="Brinquedo Interativo">
+                        <h3>Brinquedo Interativo</h3>
+                        <p>Diversão garantida para seu pet.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contato</h2>
+            <form action="#">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="anoAtual"></span> - PET SHOP - Todos os direitos reservados.</p>
+    </footer>
+
+    <button id="voltarTopo" title="Voltar ao Topo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+        </svg>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
