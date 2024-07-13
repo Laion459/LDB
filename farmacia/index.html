@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Farmácia</a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sua saúde é nossa prioridade</h1>
+                <p>Encontre aqui os melhores produtos e cuide de você e de quem você ama.</p>
+                <a href="#produtos" class="btn">Ver Produtos</a>
+            </div>
+            <img src="img/logo.png" alt="Imagem de uma farmácia">
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo à Farmácia Bem-Estar, sua parceira dedicada ao cuidado da saúde e bem-estar. Desde nossa
+                fundação, temos nos comprometido em oferecer produtos farmacêuticos de qualidade e serviços que superam
+                as expectativas dos nossos clientes. Nosso time de farmacêuticos experientes está aqui para fornecer
+                orientação personalizada e aconselhamento especializado, garantindo que você receba o melhor atendimento
+                em todas as suas necessidades de saúde. Na Farmácia Bem-Estar, valorizamos a confiança e o compromisso
+                com a comunidade, buscando sempre promover uma vida mais saudável e feliz para todos os nossos clientes.
+                Venha nos visitar e descubra como podemos cuidar de você e de sua família com carinho e dedicação.</p>
+        </div>
+    </section>
+
+    <section id="produtos" class="section produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="products-grid">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contato</h2>
+            <form action="#">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="anoAtual"></span> - Farmácia - Todos os direitos reservados.</p>
+    </footer>
+
+    <button id="voltarTopo" title="Voltar ao Topo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+        </svg>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
