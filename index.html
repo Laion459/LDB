@@ -7,9 +7,12 @@
     <title>Leonardo D. Borges - Developer Full stack</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
+
     <header>
         <div class="container">
             <nav>
@@ -26,19 +29,21 @@
                 </ul>
             </nav>
             <div class="header-content">
-                <div class="profile-picture">
+                <div class="profile-picture" data-aos="fade-right">
                     <img src="imagens/img/Leonardo perfil.jpeg" alt="Leonardo Borges">
                 </div>
                 <div class="header-text">
-                    <h1>Leonardo D. Borges</h1>
-                    <h2>Developer Full Stack</h2>
-                    <p>"Os que são loucos o suficiente para pensar que podem mudar o mundo são os que o fazem." - Steve
+                    <h1 data-aos="fade-down-right">Leonardo D. Borges</h1>
+
+                    <h2 >Developer Full Stack</h2>
+                    <p class="animate__animated animate__flash">"Os que são loucos o suficiente para pensar que podem mudar o mundo são os
+                        que o fazem." - Steve
                         Jobs
                         <br>
                         Bem-vindo ao meu portfólio. Eu sou Leonardo Borges e aqui você encontrará as ideias e inovações
                         que trago para o mundo através da programação.
                     </p>
-                    
+
                 </div>
             </div>
         </div>
@@ -124,6 +129,10 @@
         <i class="fas fa-arrow-up"></i>
     </button>
     <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
+<script>
+    AOS.init();
+</script>
 
 </html>

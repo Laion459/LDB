@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
+    background-color: #333;
 }
 
 .container {
@@ -109,6 +109,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
+    font-size: 2em;
 }
 
 
@@ -269,12 +270,22 @@ h1{
     border-radius: 15px;
     background-color: #333;
     color: #fcce00;
-    border: 2px dashed #fcce00;
+    padding: 20px;
 }
 
 .numero{
     text-align: center;
-    
     border-radius: 10px;
-    padding-top: 20%;
+    padding-top: 5%;
+    font-size: 2em;
+}
+
+input,
+textarea {
+    color: #ffffff;
+    background-color: #333;
+}
+
+svg {
+    color: #fcce00;
 }
