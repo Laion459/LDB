@@ -39,7 +39,7 @@ nav {
 
 
 .container {
-    max-width: 1200px;  
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #333;
@@ -51,14 +51,14 @@ nav {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .diploma-list li {
     background-color: #444;
     border-radius: 8px;
-    overflow: hidden;  
+    overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -71,25 +71,25 @@ nav {
     display: block;
     color: #fcce00;
     text-decoration: none;
-    padding: 15px; 
+    padding: 15px;
 }
 
 .diploma-list li img {
     width: 100%;
-    height: 200px; 
-    object-fit: cover; 
-    margin-bottom: 10px; 
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
     border-radius: 12px;
 }
 
 .diploma-list li span {
-    display: block; 
-    text-align: center; 
+    display: block;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
-    color: #333; 
+    color: #333;
     position: relative;
     overflow: hidden;
 
@@ -100,14 +100,34 @@ a::before {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #fcce00; 
+    background-color: #fcce00;
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease;
 }
 
 a:hover::before {
     width: 100%;
+}
+
+/* Botão "Voltar ao Topo" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #3d3d3d;
+    color: #fcce00;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+    opacity: 1;
 }
 
 footer {
@@ -122,10 +142,10 @@ p {
 /* This only changes this particular animation duration */
 .animate__animated.animate__bounce {
     --animate-duration: 10s;
-  }
-  
-  /* This changes all the animations globally */
-  :root {
+}
+
+/* This changes all the animations globally */
+:root {
     --animate-duration: 800ms;
     --animate-delay: 0.9s;
-  }
+}
