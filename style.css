@@ -247,6 +247,24 @@ footer {
         display: block;
         margin: 10px 20px;
     }
+
+    .menu {
+        display: none; /* Esconde a lista em telas menores */
+        /* Adicione estas propriedades para posicionar o menu fora da tela */
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        left: -100%; /* Posiciona o menu fora da tela à esquerda */
+        width: 100%;
+        background: #35424a;
+        padding: 10px 0;
+        transition: left 0.3s ease; /* Adicione uma transição suave */
+    }
+
+    /* Mostra o menu ao clicar no ícone em telas menores */
+    .menu.show {
+        display: block;
+        left: 0; /* Traz o menu de volta à tela */
+    }
 }
 
 

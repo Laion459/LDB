@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
             backButton.style.display = 'none';
         }
     });
+
+    
 });
 
 // Função para rolar suavemente ao topo
@@ -27,3 +29,9 @@ function updateCopyrightYear() {
 
 // Chama a função para atualizar o ano ao carregar a página
 window.onload = updateCopyrightYear;
+
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+}
