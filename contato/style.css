@@ -3,48 +3,58 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #333;
+    color: #fcce00; /* Cor do texto padrão */
 }
 
+/* Container Principal */
 .container {
     text-align: center;
     margin: 50px auto;
-    background-color: #ffffff;
+    background-color: rgba(124, 117, 117, 0.5);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 8px; 
+    max-width: 800px; /* Largura máxima do container */
 }
 
-h1 {
-    color: #333;
+/* Título da Página */
+.page-title { 
+    border-radius: 15px;
+    background-color: #333; 
+    color: #fcce00; 
+    padding: 20px;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
-.telefone {
-    font-size: 24px;
+.telefone, 
+.email {
+    font-size: 1.8em; 
     color: #007bff;
-    margin-top: 10px;
+    margin: 10px 0; /* Espaçamento acima e abaixo */
 }
 
-.email{
-    font-size: 24px;
-    color: #007bff;
-    margin-top: 10px;
-}
+/* Lista */
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 20px 0; /* Espaçamento acima e abaixo da lista */
 }
 
 ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin: 0 10px; /* Espaçamento entre os itens */
 }
 
+/* Links */
 a {
     text-decoration: none;
-    color: #333;
+    color: #fcce00;
     position: relative;
     overflow: hidden;
-    padding: 20px;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    display: inline-block; /* Para que o padding funcione */
+    margin-bottom: 10px; /* Espaçamento entre os links */
 }
 
 a::before {
@@ -52,7 +62,7 @@ a::before {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #fcce00; 
+    background-color: #fcce00;
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
@@ -62,8 +72,10 @@ a:hover::before {
     width: 100%;
 }
 
+/* Formulário */
 form {
     margin-top: 20px;
+    text-align: left; /* Alinha o formulário à esquerda */
 }
 
 label {
@@ -71,13 +83,18 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
-    width: 50%;
+input, 
+textarea {
+    width: calc(100% - 22px); /* Largura total menos o padding e borda */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 8px;
+    color: #ffffff;
+    background-color: #333;
+    border: 1px solid #555; /* Cor da borda */
 }
 
+/* Botão do Formulário */
 button {
     background-color: #fcce00;
     color: #000000;
@@ -85,207 +102,46 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
 
 button:hover {
     background-color: #5eff01;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-image: url('../imagens/img/telefone.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    border-radius: 8px;
-}
-
-.container {
-    text-align: center;
-    margin: 50px auto;
-    background-color: rgba(124, 117, 117, 0.5); 
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
+/* Estilos para o número de telefone */
+.numero {
     font-size: 2em;
+    margin-bottom: 20px; 
 }
 
-
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    border-radius: 5px;
-}
-
-
-nav a {
-    color: #fcce00;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    header {
-        padding: 10px 50px;
-    }
-
-    h1 {
-        font-size: 6em;
-    }
-}
-
-
-
-a {
-    text-decoration: none;
-    color: #fcce00; 
-    position: relative;
-    overflow: hidden;
-    padding: 15px;
-}
-
-a::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #fcce00; 
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease; 
-}
-
-a:hover::before {
-    width: 100%;
-}
-
-
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px;
-    background-color: #fcce00;
-    color: #0a0a0a; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.back-to-top i {
-    margin-left: 5px; 
-}
-
-
-
-nav a {
-    color: #fcce00;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    header {
-        padding: 50px 0;
-    }
-
-    h1 {
-        font-size: 6em;
-    }
-}
-
-a {
-    text-decoration: none;
-    color: #333; 
-    position: relative;
-    overflow: hidden;
-    padding: 20px;
-}
-
-a::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #fcce00; 
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease; 
-}
-
-a:hover::before {
-    width: 100%;
-}
-
-
-.back-button {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #fcce00;
-}
-
-h1{
-    border-radius: 15px;
-    background-color: #333;
-    color: #fcce00;
-    padding: 20px;
-}
-
-.numero{
-    text-align: center;
-    border-radius: 10px;
-    padding-top: 5%;
-    font-size: 2em;
-}
-
-input,
-textarea {
-    color: #ffffff;
-    background-color: #333;
-}
-
+/* Ícones */
 svg {
     color: #fcce00;
+}
+
+/* Media Query para Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduz o padding em telas menores */
+    }
+
+    .page-title {
+        font-size: 2em; /* Ajusta o tamanho do título */
+    }
+
+    .telefone, 
+    .email {
+        font-size: 1.5em; 
+    }
+
+    ul li {
+        display: block; /* Coloca os itens da lista em linhas separadas */
+        margin: 10px 0; /* Espaçamento entre os itens */
+    }
+
+    input, 
+    textarea {
+        width: 100%; /* Ajusta a largura dos campos do formulário */
+    }
 }
