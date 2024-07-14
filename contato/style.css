@@ -142,6 +142,6 @@ svg {
 
     input, 
     textarea {
-        width: 100%; /* Ajusta a largura dos campos do formulário */
+        width: 90%; /* Ajusta a largura dos campos do formulário */
     }
 }
