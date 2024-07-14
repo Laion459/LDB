@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .instituicao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .instituicao img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+section.dados-aluno {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr.aprovado {
+    background-color: #87f5a1;
+}
+
+tr.apto-a-cursar {
+    background-color: #499cf5;
+}
