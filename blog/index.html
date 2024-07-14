@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Meu Blog</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Tecnologia</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
     <header>
         <nav>
             <a href="../index.html" class="back-button"><i class="fas fa-arrow-left"></i>
@@ -19,35 +18,48 @@
                         d="M10.205 12.456A.5.5 0 0 0 10.5 12V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4a.5.5 0 0 0 .537.082" />
                 </svg>
             </a>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../contato/index.html">Contact</a></li>
-            </ul>
         </nav>
+        <h1>Blog de Tecnologia</h1>
     </header>
-
-    <h1>Bemvindo ao meu Blog</h1>
-
-
-    <section>
-        <article>
-            <h2>Blog Post Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl
-                nunc tincidunt urna, id lacinia nunc nunc id lectus. Sed euismod, nunc id aliquam tincidunt, nisl nunc
-                tincidunt urna, id lacinia nunc nunc id lectus.</p>
-        </article>
-
-        <article>
-            <h2>Another Blog Post Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl
-                nunc tincidunt urna, id lacinia nunc nunc id lectus. Sed euismod, nunc id aliquam tincidunt, nisl nunc
-                tincidunt urna, id lacinia nunc nunc id lectus.</p>
-        </article>
-    </section>
-
+    <main>
+        <div class="grid-container">
+            <article class="post">
+                <h2>Programação</h2>
+                <p>Introdução aos conceitos básicos de programação.</p>
+                <a href="../blog/programacao.html" class="read-more">Saber mais</a>
+            </article>
+            <article class="post">
+                <h2>Banco de Dados</h2>
+                <p>Os fundamentos do gerenciamento de banco de dados.</p>
+                <a href="../blog/bd.html" class="read-more">Saber mais</a>
+            </article>
+            <article class="post">
+                <h2>Segurança da Informação</h2>
+                <p>Como proteger dados e informações críticas.</p>
+                <a href="../blog/seguranca.html" class="read-more">Saber mais</a>
+            </article>
+            <article class="post">
+                <h2>Front-End</h2>
+                <p>Desenvolvimento de interfaces de usuário modernas.</p>
+                <a href="../blog/frontend.html" class="read-more">Saber mais</a>
+            </article>
+            <article class="post">
+                <h2>Back-End</h2>
+                <p>Construindo a lógica por trás das aplicações web.</p>
+                <a href="../blog/backend.html" class="read-more">Saber mais</a>
+            </article>
+            <article class="post">
+                <h2>Redes</h2>
+                <p>Entendendo a comunicação entre dispositivos.</p>
+                <a href="../blog/redes.html" class="read-more">Saber mais</a>
+            </article>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2022 My Blog. All rights reserved.</p>
+        <div class="container">
+            <p>© 2023 Leonardo Borges. Todos os direitos reservados.</p>
+        </div>
     </footer>
+    <script src="script.js" defer></script>
 </body>
-
 </html>

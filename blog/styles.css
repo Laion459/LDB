@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fcce00;
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 1em;
+}
+
+.post {
+    background-color: #999999;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1em;
+}
+
+.post h2 {
+    color: #fcce00;
+}
+
+.read-more {
+    background-color: #fcce00;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #81f165;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #fcce00; 
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fcce00; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #fcce00;
+    color: #0a0a0a; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-to-top i {
+    margin-left: 5px; 
+}
+
+
+nav {
+    text-align: left;
+    background-color: #333;
+}
+
+p {
+    color: #fcce00;
+}
+
+footer {
+    text-align: center;
+    padding-top: 5%
+}
+
+
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    main.post {
+        padding: 15px;
+    }
+}

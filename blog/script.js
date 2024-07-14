@@ -1,15 +1,10 @@
-// Função para adicionar um comentário
-function addComment() {
-    const commentInput = document.getElementById('commentInput');
-    const commentText = commentInput.value.trim();
 
-    if (commentText !== '') {
-        const commentsList = document.querySelector('.comments-list');
-        const newComment = document.createElement('li');
-        newComment.textContent = commentText;
-        commentsList.appendChild(newComment);
-
-        // Limpar a caixa de comentários após adicionar um comentário
-        commentInput.value = '';
-    }
+// Função para atualizar o ano automaticamente no rodapé
+function updateCopyrightYear() {
+    const copyrightYearElement = document.querySelector('footer .container p');
+    const currentYear = new Date().getFullYear();
+    copyrightYearElement.textContent = `© ${currentYear} Leonardo Borges. Todos os direitos reservados.`;
 }
+
+// Chama a função para atualizar o ano ao carregar a página
+window.onload = updateCopyrightYear;

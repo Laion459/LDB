@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #333;
+    color: #fcce00;
 }
 
 header {
     background-color: #333;
-    color: white;
+    color: #fcce00;
     padding: 10px 0;
     text-align: center;
 }
@@ -19,19 +20,21 @@ header .instituicao {
 }
 
 header .instituicao img {
-    height: 50px;
+    height: 80px;
     margin-right: 10px;
+    border: #1d1d1c solid 1px;
+    border-radius: 50%;
 }
 
 section.dados-aluno {
-    background-color: white;
+    background-color: 333;
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
 }
 
 main {
-    background-color: white;
+    background-color: #333;
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
@@ -43,7 +46,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 2px solid #b9b9b9;
 }
 
 th, td {
@@ -52,13 +55,84 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #333;
 }
 
-tr.aprovado {
-    background-color: #87f5a1;
+a {
+    text-decoration: none;
+    color: #333; 
+    position: relative;
+    overflow: hidden;
+
 }
 
-tr.apto-a-cursar {
-    background-color: #499cf5;
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fcce00; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
 }
+
+a:hover::before {
+    width: 100%;
+}
+
+nav {
+    color: #fcce00;
+    text-align: left;
+
+}
+
+nav svg {
+    color: #fcce00;
+    padding: 15px;
+}
+
+
+.progress {
+    height: 10px;
+    background: #b8b7b7;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #fcce00; /* Cor da barra de progresso */
+    width: 0%; /* Valor inicial da largura */
+    transition: width 0.5s ease-in-out;
+    border-radius: 15px;
+}
+
+
+.skill-bar {
+    margin-bottom: 15px;
+}
+
+.skill-bar h4 {
+    margin: 0 0 5px 0;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Estilo para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    header {
+      padding: 5px 0; /* Reduz o padding no cabeçalho */
+    }
+  
+    header .instituicao img {
+      height: 50px; /* Diminui o tamanho da imagem */
+    }
+  
+    table {
+      font-size: 14px; /* Diminui o tamanho da fonte da tabela */
+    }
+  }
