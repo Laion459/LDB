@@ -113,6 +113,7 @@ button:hover {
 .numero {
     font-size: 2em;
     margin-bottom: 20px; 
+    text-align: center;
 }
 
 /* Ícones */
@@ -143,5 +144,14 @@ svg {
     input, 
     textarea {
         width: 90%; /* Ajusta a largura dos campos do formulário */
+    }
+
+    .numero {
+        font-size: 1em;
+        margin-bottom: 20px; 
+    }
+
+    svg {
+        max-width: 20px;
     }
 }
