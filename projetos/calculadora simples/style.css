@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 3em;
-    background-image: url('fundo\ louza.jpg'); 
+    background-image: url('fundo\ louza.webp'); 
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;

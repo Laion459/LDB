@@ -18,10 +18,28 @@ main();
 
 function main() {
     let currency = {
+        "ARS": "Peso Argentino",
         "BRL": "Real",
         "EUR": "Euro",
-        "USD": "Dolar"
-    }
+        "USD": "Dólar",
+        "JPY": "Iene",
+        "GBP": "Libra Esterlina",
+        "AUD": "Dólar Australiano",
+        "CAD": "Dólar Canadense",
+        "CHF": "Franco Suíço",
+        "CNY": "Yuan Chinês",
+        "HKD": "Dólar de Hong Kong",
+        "NZD": "Dólar Neozelandês",
+        "SEK": "Coroa Sueca",
+        "KRW": "Won Sul-Coreano",
+        "SGD": "Dólar de Cingapura",
+        "NOK": "Coroa Norueguesa",
+        "MXN": "Peso Mexicano",
+        "INR": "Rupia Indiana",
+        "RUB": "Rublo Russo",
+        "ZAR": "Rand Sul-Africano",
+        "TRY": "Lira Turca"
+    };
 
     options = [];
     for(let [key, value] of Object.entries(currency)){

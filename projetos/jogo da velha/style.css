@@ -1,96 +1,135 @@
-*{
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
-body{
-    height: 100vh;
+header {
+    background-color: #333;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.back-button {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-image: url('nuvens.jpg');
-    background-size: cover;
-    background-position: center;
-    flex-direction: column;
+    text-decoration: none;
+    color: #fcce00;
+    font-weight: bold;
 }
 
-main{
+.back-button i {
+    margin-right: 5px;
+}
+
+.back-button svg {
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+}
+
+
+main {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
 }
 
-h1, h2{
-    text-align: center;
+h1 {
     color: #fcce00;
+    text-align: center;
 }
 
-hr{
-    font-weight: bold;
-    height: 3px;
-    background: #fcce00;
-    margin-bottom: 10px;
+hr {
+    width: 100%;
+    border: none;
+    border-top: 3px solid #fcce00;
+    margin: 20px 0;
 }
 
-
-.game{
+.game {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
 }
 
-.game button{
+.game button {
     width: 100px;
     height: 100px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 50px;
-    background: #fcce00;
-    border-radius: 10px;
-}
-
-
-
-
-nav a {
-    color: #fcce00;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+    font-size: 3rem;
+    border: 3px solid #fcce00;
     border-radius: 5px;
+    background-color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
+.game button:hover {
+    background-color: #fcce00;
+}
+
+.currentPlayer {
+    font-size: 1.5rem;
+    color: #fcce00;
+    margin-top: 20px;
+}
+
+/* Estilos para telas pequenas (até 768px de largura) */
+@media (max-width: 768px) {
+    .game {
+        grid-template-columns: repeat(3, 80px);
+        /* Diminui o tamanho dos quadrados */
+        grid-template-rows: repeat(3, 80px);
+        gap: 5px;
+        /* Diminui o espaçamento entre os quadrados */
     }
 
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    header {
-        padding: 50px 0;
-    }
-
-    h1 {
-        font-size: 6em;
+    .game button {
+        font-size: 2rem;
+        /* Diminui o tamanho da fonte */
     }
 }
 
+/* Estilos para telas muito pequenas (até 480px de largura) */
+@media (max-width: 480px) {
+    .game {
+        grid-template-columns: repeat(3, 60px);
+        /* Diminui ainda mais o tamanho dos quadrados */
+        grid-template-rows: repeat(3, 60px);
+    }
+
+    .game button {
+        font-size: 1.5rem;
+        /* Diminui ainda mais o tamanho da fonte */
+    }
+}
 
 
 a {
     text-decoration: none;
-    color: #333; 
+    color: #fcce00; /* Altere a cor conforme necessário */
     position: relative;
     overflow: hidden;
+    padding: 20px;
 }
 
 a::before {
@@ -98,21 +137,13 @@ a::before {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #fcce00; 
+    background-color: #fcce00; /* Cor do sublinhado amarelo */
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease; /* Adiciona uma transição suave à largura */
 }
 
 a:hover::before {
     width: 100%;
 }
 
-.back-button{
-    padding: 25px;
-}
-
-
-header{
-    padding: 5%  
-}

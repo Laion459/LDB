@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url('moedas.jpg');
+    background-image: url('moedas.webp');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -193,4 +193,104 @@ a::before {
 
 a:hover::before {
     width: 100%;
+}
+
+
+
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #333333;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+header nav a svg {
+    margin-right: 10px;
+}
+
+.borda {
+    background-color: #8b8989;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 500px;
+    text-align: center;
+}
+
+#texto {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+div {
+    margin: 10px 0;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select:focus, input[type="number"]:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.wrap {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+#tax_info {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+@media (max-width: 400px) {
+    .borda {
+        width: 90%;
+    }
 }
