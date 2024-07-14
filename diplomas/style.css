@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     background-color: #333;
-    color: #fcce00;
+    color: #fcce00; 
 }
 
 body {
@@ -32,15 +32,18 @@ nav {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.back-button:hover {
+    transform: scale(1.25);  /* Aumenta um pouco o botão ao passar o mouse */
+}
+
 .back-button svg {
     margin-left: 5px;
     fill: #fcce00;
 }
 
-
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; 
     padding: 20px;
     background-color: #333;
     border-radius: 10px;
@@ -51,24 +54,32 @@ nav {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta a quantidade de colunas automaticamente */
     gap: 20px;
+    max-width: 1000px; /* Largura máxima da lista */
+    margin: 20px auto; /* Centraliza a lista horizontalmente */
+}
+
+@media (max-width: 768px) { 
+    .diploma-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta para telas menores */
+    }
 }
 
 .diploma-list li {
     background-color: #444;
     border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a borda arredondada */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Adiciona uma transição suave */
 }
 
 .diploma-list li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px); /* Move ligeiramente para cima ao passar o mouse */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao passar o mouse */
 }
 
 .diploma-list li a {
-    display: block;
+    display: block; 
     color: #fcce00;
     text-decoration: none;
     padding: 15px;
@@ -76,8 +87,8 @@ nav {
 
 .diploma-list li img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 200px; /* Defina uma altura fixa */
+    object-fit: cover; /* Mantém a proporção e "corta" o excesso */
     margin-bottom: 10px;
     border-radius: 12px;
 }
@@ -89,10 +100,9 @@ nav {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #fcce00; 
     position: relative;
-    overflow: hidden;
-
+    overflow: hidden; 
 }
 
 a::before {
@@ -100,14 +110,14 @@ a::before {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #fcce00;
+    background-color: #fcce00; 
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease; 
 }
 
 a:hover::before {
-    width: 100%;
+    width: 100%; 
 }
 
 /* Botão "Voltar ao Topo" */
@@ -115,19 +125,19 @@ a:hover::before {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none;
+    display: none; 
     background: #3d3d3d;
     color: #fcce00;
     border: none;
-    border-radius: 50%;
+    border-radius: 50%; 
     padding: 10px 15px;
     cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    opacity: 0.8; 
+    transition: opacity 0.3s ease; 
 }
 
 .back-to-top:hover {
-    opacity: 1;
+    opacity: 1; 
 }
 
 footer {
@@ -139,12 +149,11 @@ p {
     text-align: center;
 }
 
-/* This only changes this particular animation duration */
+/* Animações */
 .animate__animated.animate__bounce {
     --animate-duration: 10s;
 }
 
-/* This changes all the animations globally */
 :root {
     --animate-duration: 800ms;
     --animate-delay: 0.9s;

@@ -218,6 +218,11 @@ footer {
     opacity: 1;
 }
 
+.back-button:hover {
+    transform: scale(1.25);  /* Aumenta um pouco o botão ao passar o mouse */
+}
+
+
 header .profile-picture img {
     width: 100%;
     height: 100%; 

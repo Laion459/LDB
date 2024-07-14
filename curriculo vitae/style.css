@@ -75,3 +75,7 @@ a:hover::before {
     text-align: center;
     color: #fcce00;
 }
+
+.back-button:hover {
+    transform: scale(1.25);  /* Aumenta um pouco o botão ao passar o mouse */
+}

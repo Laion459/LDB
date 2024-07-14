@@ -164,6 +164,11 @@ a:hover::before {
     width: 100%;
 }
 
+.back-button:hover {
+    transform: scale(1.25);  /* Aumenta um pouco o botão ao passar o mouse */
+}
+
+
 
 /* Responsividade */
 @media screen and (max-width: 768px) {

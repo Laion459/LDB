@@ -119,6 +119,9 @@ footer {
     padding-top: 5%
 }
 
+.back-button:hover {
+    transform: scale(1.25);  /* Aumenta um pouco o botão ao passar o mouse */
+}
 
 
 
