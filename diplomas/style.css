@@ -37,13 +37,9 @@ nav {
     fill: #fcce00;
 }
 
-.back-button:hover {
-    background-color: rgba(252, 206, 0, 0.2);
-    transform: translateX(-3px);
-}
 
 .container {
-    max-width: 1200px; /* Ajuste conforme necessário */
+    max-width: 1200px;  
     margin: 0 auto;
     padding: 20px;
     background-color: #222;
@@ -55,14 +51,14 @@ nav {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 por linha em telas maiores */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
     gap: 20px;
 }
 
 .diploma-list li {
     background-color: #444;
     border-radius: 8px;
-    overflow: hidden; /* Para conter a imagem dentro do card */
+    overflow: hidden;  
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -72,10 +68,10 @@ nav {
 }
 
 .diploma-list li a {
-    display: block; /* Para que o link ocupe todo o card */
+    display: block;
     color: #fcce00;
     text-decoration: none;
-    padding: 15px; /* Espaçamento interno do card */
+    padding: 15px; 
 }
 
 .diploma-list li img {
@@ -87,6 +83,29 @@ nav {
 }
 
 .diploma-list li span {
-    display: block; /* Para quebrar a linha após a imagem */
-    text-align: center; /* Centralizar o texto */
+    display: block; 
+    text-align: center; 
+}
+
+a {
+    text-decoration: none;
+    color: #333; 
+    position: relative;
+    overflow: hidden;
+
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fcce00; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
+}
+
+a:hover::before {
+    width: 100%;
 }

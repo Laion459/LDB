@@ -95,17 +95,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-image: url('deck verde.jpg'); /* Substitua pelo caminho da sua imagem */
-    background-size: cover; /* Garante que a imagem cubra toda a área do body */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-image: url('../imagens/img/telefone.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     border-radius: 8px;
 }
 
 .container {
     text-align: center;
     margin: 50px auto;
-    background-color: rgba(124, 117, 117, 0.5); /* Adiciona um fundo branco semi-transparente ao conteúdo */
+    background-color: rgba(124, 117, 117, 0.5); 
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
