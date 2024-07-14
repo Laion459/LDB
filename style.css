@@ -11,7 +11,7 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    
+
 }
 
 .container p {
@@ -121,12 +121,14 @@ nav {
 }
 
 .menu a:hover {
-    color: #fcce00; /* Cor de destaque ao passar o mouse */
+    color: #fcce00;
+    /* Cor de destaque ao passar o mouse */
 }
 
 /* Ícone do menu (mobile) */
 .menu-icon {
-    display: none; /* Esconde o ícone em telas maiores */
+    display: none;
+    /* Esconde o ícone em telas maiores */
     color: #fcce00;
     font-size: 20px;
     cursor: pointer;
@@ -169,8 +171,10 @@ nav {
 
 .progress-bar {
     height: 100%;
-    background: #fcce00; /* Cor da barra de progresso */
-    width: 0%; /* Valor inicial da largura */
+    background: #fcce00;
+    /* Cor da barra de progresso */
+    width: 0%;
+    /* Valor inicial da largura */
     transition: width 0.5s ease-in-out;
 }
 
@@ -214,6 +218,12 @@ footer {
     opacity: 1;
 }
 
+header .profile-picture img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+} 
+
 /* Responsividade */
 @media (max-width: 768px) {
     header .container {
@@ -225,11 +235,13 @@ footer {
     }
 
     .menu {
-        display: none; /* Esconde a lista em telas menores */
+        display: none;
+        /* Esconde a lista em telas menores */
     }
 
     .menu-icon {
-        display: block; /* Mostra o ícone em telas menores */
+        display: block;
+        /* Mostra o ícone em telas menores */
     }
 
     /* Mostra o menu ao clicar no ícone em telas menores */
@@ -250,23 +262,56 @@ footer {
     }
 
     .menu {
-        display: none; /* Esconde a lista em telas menores */
+        display: none;
+        /* Esconde a lista em telas menores */
         /* Adicione estas propriedades para posicionar o menu fora da tela */
         position: absolute;
-        top: 60px; /* Ajuste conforme necessário */
-        left: -100%; /* Posiciona o menu fora da tela à esquerda */
+        top: 60px;
+        /* Ajuste conforme necessário */
+        left: -100%;
+        /* Posiciona o menu fora da tela à esquerda */
         width: 100%;
         background: #333;
         padding: 10px 0;
-        transition: left 0.3s ease; /* Adicione uma transição suave */
+        transition: left 0.3s ease;
+        /* Adicione uma transição suave */
     }
 
     /* Mostra o menu ao clicar no ícone em telas menores */
     .menu.show {
         display: block;
-        left: 0; /* Traz o menu de volta à tela */
+        left: 0;
+        /* Traz o menu de volta à tela */
+    }
+
+    header .container {
+        flex-direction: column;
+        /* Imagem e texto em coluna */
+    }
+
+    header .header-content {
+        flex-direction: column; /* Imagem e texto em coluna */
+      }
+    
+      header .profile-picture {
+        margin: 0 auto 20px auto; /* Centraliza a imagem */
+        width: 100%; /* Ocupa a largura disponível */
+        max-width: 300px; /* Largura máxima da imagem */
+      } 
+
+    header .profile-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
+
+
+
+
+
+
+
 
 
 nav a {
@@ -305,7 +350,7 @@ nav a {
 
 a {
     text-decoration: none;
-    color: #333; 
+    color: #333;
     position: relative;
     overflow: hidden;
 }
@@ -315,10 +360,10 @@ a::before {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #fcce00; 
+    background-color: #fcce00;
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease;
 }
 
 a:hover::before {
