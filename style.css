@@ -239,13 +239,14 @@ footer {
         top: 60px;
         left: 0;
         width: 100%;
-        background: #35424a;
+        background: #333;
         padding: 10px 0;
     }
 
     .menu.show li {
         display: block;
         margin: 10px 20px;
+        padding: 2%;
     }
 
     .menu {
@@ -255,7 +256,7 @@ footer {
         top: 60px; /* Ajuste conforme necessário */
         left: -100%; /* Posiciona o menu fora da tela à esquerda */
         width: 100%;
-        background: #35424a;
+        background: #333;
         padding: 10px 0;
         transition: left 0.3s ease; /* Adicione uma transição suave */
     }
