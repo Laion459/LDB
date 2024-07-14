@@ -74,6 +74,7 @@ a:hover::before {
 .footer {
     text-align: center;
     color: #fcce00;
+    padding-top: 25px;
 }
 
 .back-button:hover {
