@@ -123,6 +123,11 @@ footer {
     transform: scale(1.25);  /* Aumenta um pouco o botão ao passar o mouse */
 }
 
+.post:hover {
+    transform: scale(1.05); 
+    transition: 0.8s;
+}
+
 
 
 /* Estilos para dispositivos móveis */
