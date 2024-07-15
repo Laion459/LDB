@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
 }
@@ -34,7 +34,7 @@ nav {
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 24px; 
+    font-size: 24px;
     color: #D3648F;
     text-decoration: none;
     display: flex;
@@ -45,6 +45,7 @@ nav {
     width: 60px;
     height: 60px;
     margin-right: 10px;
+    border-radius: 50%;
 }
 
 nav ul {
@@ -81,19 +82,19 @@ nav a:hover {
     background-color: #F8E9EE;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropdown-menu li {
     margin: 0;
-    padding: 5px 0; 
+    padding: 5px 0;
     display: block;
 }
 
 .dropdown-menu a {
     display: block;
-    padding: 5px 10px; 
+    padding: 5px 10px;
 }
 
 /* Menu Hamburguer */
@@ -105,18 +106,19 @@ label[for="menu-toggle"] {
     cursor: pointer;
     font-size: 24px;
     color: #D3648F;
-    display: none; 
+    display: none;
 }
 
 /* Hero (Carrossel) */
 .hero {
-    position: relative; 
-    margin-bottom: 30px; 
+    position: relative;
+    margin-bottom: 30px;
 }
 
 .carousel {
     width: 100%;
-    height: 500px; /* Altura fixa para o carrossel */
+    height: 500px;
+    /* Altura fixa para o carrossel */
     overflow: hidden;
     position: relative;
 }
@@ -136,11 +138,12 @@ label[for="menu-toggle"] {
 }
 
 /* Botões do Carrossel */
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8);
     color: #D3648F;
     padding: 10px 15px;
     border: none;
@@ -158,33 +161,35 @@ label[for="menu-toggle"] {
     right: 20px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(211, 100, 159, 0.8);
 }
 
 /* Seção Sobre */
 .sobre {
     padding: 40px 0;
-    text-align: center; 
+    text-align: center;
 }
 
 .sobre h2 {
-    font-family: 'Playfair Display', serif; 
+    font-family: 'Playfair Display', serif;
     font-size: 36px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     color: #D3648F;
 }
 
 /* Seção Mapa */
 .mapa {
-    background-color: #f8f8f8; 
-    padding: 40px 0; 
+    background-color: #F8E9EE;
+    padding: 40px 0;
 }
 
 .mapa-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 15px;
 }
 
 .contato {
@@ -213,8 +218,9 @@ footer {
 }
 
 .copyright {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 10px;
+    color: #c04079;
 }
 
 .social {
@@ -238,6 +244,28 @@ footer {
     color: #c04079;
 }
 
+a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #c04079;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
 /* Media Queries - Responsividade */
 
 @media (max-width: 768px) {
@@ -246,18 +274,18 @@ footer {
     }
 
     nav {
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .logo {
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
 
     nav ul {
         display: none;
         width: 100%;
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     nav li {
@@ -266,15 +294,15 @@ footer {
     }
 
     nav a {
-        display: block; 
-        padding: 10px 0; 
+        display: block;
+        padding: 10px 0;
     }
 
-    #menu-toggle:checked + label {
+    #menu-toggle:checked+label {
         text-align: right;
     }
 
-    #menu-toggle:checked ~ ul {
+    #menu-toggle:checked~ul {
         display: block;
     }
 
@@ -294,7 +322,7 @@ footer {
 
     /* Ajustes na seção Mapa */
     .mapa-content {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .contato {
@@ -304,6 +332,6 @@ footer {
     }
 
     iframe {
-        width: 100%; 
+        width: 100%;
     }
 }

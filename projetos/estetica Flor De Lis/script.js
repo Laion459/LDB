@@ -1,6 +1,9 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
+// Função para avançar o slide automaticamente a cada 5 segundos
+let slideInterval = setInterval(nextSlide, 5000); 
+
 function nextSlide() {
   showSlides(slideIndex += 1);
 }
@@ -19,3 +22,24 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+// Reinicia o intervalo quando o usuário interage com o carrossel
+// (opcional - para evitar comportamento inesperado)
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseenter', () => {
+  clearInterval(slideInterval);
+});
+
+carousel.addEventListener('mouseleave', () => {
+  slideInterval = setInterval(nextSlide, 5000); 
+});
+
+// Função para atualizar o ano dos direitos autorais
+function updateCopyrightYear() {
+    const copyright = document.getElementById('copyright');
+    const currentYear = new Date().getFullYear(); 
+    copyright.textContent = `© Estetica FLOR DE LIS. Desde 1996. Todos os direitos reservados ${currentYear}.`;
+  }
+  
+  // Chama a função para atualizar o ano ao carregar a página
+  updateCopyrightYear();
