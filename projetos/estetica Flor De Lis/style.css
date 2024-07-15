@@ -183,6 +183,7 @@ label[for="menu-toggle"] {
 .mapa {
     background-color: #F8E9EE;
     padding: 40px 0;
+    border: #D3648F solid 2px;
 }
 
 .mapa-content {
@@ -264,6 +265,11 @@ a::before {
 
 a:hover::before {
     width: 100%;
+}
+
+.redes a{
+    color: #c04079;
+    padding: 2%;
 }
 
 /* Media Queries - Responsividade */
