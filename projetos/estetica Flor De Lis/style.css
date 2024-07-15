@@ -382,6 +382,8 @@ a:hover::before {
         height: 200px;
         object-fit: cover;
     }
+
+
 }
 
 .fundo-historia {
@@ -399,7 +401,7 @@ a:hover::before {
     width: 100%;
     height: 100%;
     opacity: 0.2;
-    z-index: -1; 
+    z-index: -1;
 }
 
 
@@ -425,8 +427,8 @@ a:hover::before {
     width: 100%;
     height: 100%;
     opacity: 0.2;
-    z-index: -1; 
-    
+    z-index: -1;
+
 }
 
 
@@ -443,16 +445,40 @@ a:hover::before {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo para diferentes telas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsivo para diferentes telas */
     grid-gap: 20px;
-  }
+}
 
-  .grid-item {
-    text-align: center; /* Centraliza o texto dentro do grid */
-  }
+.grid-item {
+    text-align: center;
+    /* Centraliza o texto dentro do grid */
+}
 
-  .grid-item img {
-    width: 100%; /* Faz a imagem ocupar a largura total do container */
-    height: auto; /* Ajusta a altura automaticamente */
+.grid-item img {
+    width: 100%;
+    /* Faz a imagem ocupar a largura total do container */
+    height: auto;
+    /* Ajusta a altura automaticamente */
     box-sizing: border-box;
-  }
+}
+
+/* Botão "Voltar ao Topo" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #D3648F;
+    color: #f70170;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
