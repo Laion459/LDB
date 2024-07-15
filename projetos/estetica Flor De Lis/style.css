@@ -344,11 +344,9 @@ a:hover::before {
         right: 20px;
     }
 
-    /* Mostrar o menu quando o checkbox for selecionado */
     #menu-toggle:checked~ul {
         display: block;
     }
-
 
     /* Ajustes no carrossel */
     .hero {
@@ -377,6 +375,12 @@ a:hover::before {
 
     iframe {
         width: 100%;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
     }
 }
 
