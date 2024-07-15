@@ -118,7 +118,6 @@ label[for="menu-toggle"] {
 .carousel {
     width: 100%;
     height: 500px;
-    /* Altura fixa para o carrossel */
     overflow: hidden;
     position: relative;
 }
@@ -151,6 +150,8 @@ label[for="menu-toggle"] {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: absolute;
+    z-index: 10;
 }
 
 .prev {
@@ -271,7 +272,7 @@ a:hover::before {
     width: 100%;
 }
 
-.redes a{
+.redes a {
     color: #c04079;
     padding: 4%;
 }
@@ -293,9 +294,10 @@ a:hover::before {
     }
 
     nav ul {
-        display: none; /* Esconder a lista do menu */
+        display: none;
+        /* Esconder a lista do menu */
         position: absolute;
-        top: 80px; 
+        top: 80px;
         left: 0;
         width: 100%;
         background-color: #F8E9EE;
@@ -313,17 +315,17 @@ a:hover::before {
     }
 
     /* Mostrar o botão do menu */
-    #menu-toggle + label { 
-        display: block; 
-        position: absolute; 
+    #menu-toggle+label {
+        display: block;
+        position: absolute;
         top: 20px;
         right: 20px;
-      }
+    }
 
     /* Mostrar o menu quando o checkbox for selecionado */
-    #menu-toggle:checked ~ ul {
+    #menu-toggle:checked~ul {
         display: block;
-      }
+    }
 
 
     /* Ajustes no carrossel */
