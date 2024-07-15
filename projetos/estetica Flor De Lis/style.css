@@ -211,6 +211,10 @@ label[for="menu-toggle"] {
     margin-bottom: 10px;
 }
 
+.contato svg {
+    color: #D3648F;
+}
+
 /* Rodapé */
 footer {
     background-color: #F8E9EE;
@@ -269,7 +273,7 @@ a:hover::before {
 
 .redes a{
     color: #c04079;
-    padding: 2%;
+    padding: 4%;
 }
 
 /* Media Queries - Responsividade */
