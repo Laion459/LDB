@@ -119,14 +119,16 @@ label[for="menu-toggle"] {
 
 .carousel {
     width: 100%;
-    position: relative; /* Mantém o posicionamento relativo */ 
+    position: relative;
+    /* Mantém o posicionamento relativo */
 }
 
 .carousel-inner {
     width: 100%;
-    height: auto;  /* Ajusta a altura ao conteúdo */
+    height: auto;
+    /* Ajusta a altura ao conteúdo */
     overflow: hidden;
-    position: relative; 
+    position: relative;
 }
 
 .carousel-item {
@@ -376,4 +378,37 @@ a:hover::before {
     iframe {
         width: 100%;
     }
+}
+
+.fundo-historia {
+    position: relative;
+}
+
+.fundo-historia::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/historia.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1; 
+}
+
+
+.fundo-historia p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-contato img {
+    width: calc(100% + 200px); /* Ajuste a largura para ocupar toda a tela e compensar o deslocamento */
+    height: 700px; /* Define uma altura fixa */
+    object-fit: cover; /* Ajusta a imagem para cobrir a área definida sem distorcer */
+    position: relative;
+    right: 200px; /* Desloca a imagem para a esquerda */
+    opacity: 0.4;
 }
