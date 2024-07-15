@@ -293,9 +293,13 @@ a:hover::before {
     }
 
     nav ul {
-        display: none;
+        display: none; /* Esconder a lista do menu */
+        position: absolute;
+        top: 80px; 
+        left: 0;
         width: 100%;
-        flex-direction: column;
+        background-color: #F8E9EE;
+        z-index: 10;
     }
 
     nav li {
@@ -308,13 +312,19 @@ a:hover::before {
         padding: 10px 0;
     }
 
-    #menu-toggle:checked+label {
-        text-align: right;
-    }
+    /* Mostrar o botão do menu */
+    #menu-toggle + label { 
+        display: block; 
+        position: absolute; 
+        top: 20px;
+        right: 20px;
+      }
 
-    #menu-toggle:checked~ul {
+    /* Mostrar o menu quando o checkbox for selecionado */
+    #menu-toggle:checked ~ ul {
         display: block;
-    }
+      }
+
 
     /* Ajustes no carrossel */
     .hero {
