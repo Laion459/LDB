@@ -23,7 +23,7 @@ body {
 /* Cabeçalho */
 header {
     background-color: #F8E9EE;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 nav {
@@ -469,7 +469,7 @@ a:hover::before {
     bottom: 20px;
     right: 20px;
     display: none;
-    background: #D3648F;
+    background: #f092b6;
     color: #f70170;
     border: none;
     border-radius: 50%;
