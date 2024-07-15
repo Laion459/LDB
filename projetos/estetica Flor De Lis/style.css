@@ -428,7 +428,6 @@ a:hover::before {
     height: 100%;
     opacity: 0.2;
     z-index: -1;
-
 }
 
 
@@ -448,6 +447,263 @@ h1 {
 }
 
 
+.fundo-cortes {
+    position: relative;
+}
+
+.fundo-cortes::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/corte1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+
+.fundo-cortes p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-cor {
+    position: relative;
+}
+
+.fundo-cor::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/cor.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-cor p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-depilacao {
+    position: relative;
+}
+
+.fundo-depilacao::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/depilacao.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-depilacao p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+
+.fundo-escova {
+    position: relative;
+}
+
+.fundo-escova::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/escova.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+
+.fundo-escova p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+
+.fundo-hidratacao {
+    position: relative;
+}
+
+.fundo-hidratacao::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/hidratacao.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-hidratacao p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-manicure {
+    position: relative;
+}
+
+.fundo-manicure::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/unhas2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-manicure p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-make {
+    position: relative;
+}
+
+.fundo-make::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/make.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-make p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-massagem {
+    position: relative;
+}
+
+.fundo-massagem::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/k21.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-massagem p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-reflexo {
+    position: relative;
+}
+
+.fundo-reflexo::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/reflexo.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-reflexo p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-sob {
+    position: relative;
+}
+
+.fundo-sob::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/sob.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-sob p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
+.fundo-ton {
+    position: relative;
+}
+
+.fundo-ton::before {
+    content: "";
+    background-image: url("../estetica Flor De Lis/img/ton.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.fundo-ton p {
+    color: #D3648F;
+    font-size: 1.5em;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -457,15 +713,19 @@ h1 {
 
 .grid-item {
     text-align: center;
-    /* Centraliza o texto dentro do grid */
+    border: #f70170 2px solid;
+    border-radius: 12px;
+    background-color: #f1a7c3;
+    color:#f70170;
 }
 
 .grid-item img {
     width: 100%;
     /* Faz a imagem ocupar a largura total do container */
-    height: auto;
+    height: 150px;
     /* Ajusta a altura automaticamente */
     box-sizing: border-box;
+    border-radius: 12px;
 }
 
 /* Botão "Voltar ao Topo" */
