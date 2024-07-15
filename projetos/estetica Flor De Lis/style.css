@@ -442,6 +442,11 @@ a:hover::before {
 
 }
 
+h1 {
+    color: #D3648F;
+    font-size: 3em;
+}
+
 
 .grid {
     display: grid;
