@@ -198,6 +198,7 @@ label[for="menu-toggle"] {
     background-color: #F8E9EE;
     padding: 40px 0;
     border: #D3648F solid 2px;
+    border-radius: 5px;
 }
 
 .mapa-content {
@@ -754,11 +755,22 @@ h1 {
     opacity: 1;
 }
 
-
+main {
+    background-color: #ffd7e6;
+}
 /* Estilos gerais do blog */
 .blog-posts {
     text-align: center;
     padding: 80px 0; 
+    color: #D3648F;
+    background-color: #ffd7e6;
+}
+
+.title-blog {
+    color: #D3648F;
+    font-size: 4em;
+    padding: 0px 20px 50px 0;
+    font-family: 'Playfair Display', serif;
 }
 
 .posts-grid {
@@ -793,7 +805,7 @@ h1 {
 }
 
 .post h3 {
-    color: #f14090; /* Cor do título */
+    color: #D3648F; /* Cor do título */
     margin-bottom: 10px;
 }
 
@@ -812,6 +824,7 @@ h1 {
     padding: 80px 0;
     color: #D3648F;
     font-size: 1.5em;
+    background-color: #ffd7e6;
 }
 
 .post-detalhe img {
