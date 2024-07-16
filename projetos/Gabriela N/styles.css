@@ -14,7 +14,7 @@ header {
     align-items: center;
     /* Alinha verticalmente os itens no cabeçalho */
     padding: 20px 0;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     /* Cinza muito claro */
 }
 
@@ -29,11 +29,13 @@ header {
     align-items: center;
     /* Alinha itens verticalmente */
     width: 100%;
+    flex-direction: column;
 }
 
 .logo-area {
     display: flex;
     align-items: center;
+    padding: 0px;
 }
 
 .logo {
@@ -49,10 +51,9 @@ header {
 }
 
 .logo img {
-    width: 90px;
-    height: 90px;
+    width: 390px;
+    height: 390px;
     margin-right: 20px;
-    /* Espaçamento entre a logo e os títulos */
     border-radius: 50%;
 }
 
@@ -94,7 +95,7 @@ nav {
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 40px;
 }
 
 nav li {
@@ -155,7 +156,7 @@ footer {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #333;
+    background-color: #000000;
     margin: 5px auto;
     transition: 0.3s ease-in-out;
     /* Para uma transição suave */
@@ -163,7 +164,7 @@ footer {
 
 .menu-toggle:focus .hamburguer,
 .menu-toggle:hover .hamburguer {
-    background-color: #666;
+    background-color: #666666;
     /* Cor mais escura ao passar o mouse */
 }
 
@@ -180,27 +181,24 @@ footer {
 
     .menu-toggle {
         display: block;
-        /* Mostra o botão em telas menores */
     }
 
     .menu-container {
         display: none;
-        /* Esconde o menu por padrão */
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #f8f8f8;
+        background-color: #ffffff;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .menu-container.mostrar {
         display: block;
-        /* Mostra o menu quando .mostrar é aplicado */
     }
 
     nav ul {
-        background-color: #f8f8f8;
+        background-color: #ffffff;
         /* Cor de fundo para o menu */
     }
 
@@ -216,6 +214,7 @@ footer {
         width: 45%;
         /* Ajuste conforme necessário */
     }
+
 }
 
 /* Botão Voltar ao Topo */
@@ -238,4 +237,9 @@ footer {
 .voltar-topo.mostrar {
     opacity: 1;
     visibility: visible;
+}
+
+.menu-container {
+    padding-right: 50px;
+    margin-top: 0;
 }
