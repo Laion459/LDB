@@ -287,7 +287,7 @@ a:hover::before {
 
 .redes a {
     color: #c04079;
-    padding: 4%;
+    padding: 4px 40px;
 }
 
 /* Media Queries - Responsividade */
@@ -402,9 +402,8 @@ a:hover::before {
     width: 100%;
     height: 100%;
     opacity: 0.2;
-    z-index: -1;
+    z-index: 1;
 }
-
 
 .fundo-historia p {
     color: #D3648F;
@@ -419,14 +418,14 @@ a:hover::before {
 
 .fundo-contato::before {
     content: "";
-    background-image: url("../estetica Flor De Lis/img/historia.webp");
+    background-image: url("../estetica Flor De Lis/img/telefone.webp");
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -350px;
+    left: 0px;
     width: 100%;
-    height: 100%;
+    height: 200%;
     opacity: 0.2;
     z-index: -1;
 }
@@ -707,7 +706,7 @@ h1 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
