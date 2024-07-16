@@ -1,0 +1,192 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #fff; /* Branco */
+    color: #333; /* Cinza escuro */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f8f8f8; /* Cinza muito claro */
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Portfólio (Galeria) - Exemplo Simples */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.galeria img {
+    width: 30%; /* Ajuste conforme necessário */
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+    display: none; /* Só aparece em telas menores */
+    width: 40px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; 
+}
+
+.hamburguer {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px auto;
+    transition: 0.3s ease-in-out; /* Para uma transição suave */
+}
+
+.menu-toggle:focus .hamburguer,
+.menu-toggle:hover .hamburguer {
+    background-color: #666; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        float: none; 
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão em telas menores */
+    }
+
+    .menu-container {
+        display: none; /* Esconde o menu por padrão */
+        position: absolute; 
+        top: 100%;  
+        left: 0; 
+        width: 100%; 
+        background-color: #f8f8f8; 
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+    }
+
+    .menu-container.mostrar {
+        display: block; /* Mostra o menu quando .mostrar é aplicado */
+    }
+
+    nav ul {
+        background-color: #f8f8f8; /* Cor de fundo para o menu */
+    }
+
+    nav li {
+        display: block; 
+        margin: 0; 
+        padding: 10px 0;
+        border-bottom: 1px solid #eee; /* Linha separando os itens do menu */
+    }
+
+    .galeria img {
+        width: 45%; /* Ajuste conforme necessário */
+    }
+}
+
+/* Botão Voltar ao Topo */
+.voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.voltar-topo.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logo {
+    font-family: "Zeyada", cursive;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.logo h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
