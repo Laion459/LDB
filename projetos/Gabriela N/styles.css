@@ -49,39 +49,42 @@ header {
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
     /* Espaçamento entre a logo e os títulos */
     border-radius: 50%;
 }
 
+
 .titulos-logo {
     display: flex;
     flex-direction: column;
-    /* Alinha os títulos verticalmente */
+    align-items: center;
 }
 
 .logo h1 {
     font-size: 2.5em;
     margin: 0;
-    /* Remove a margem padrão do H1 */
+    padding: 0;
+    position: relative;
+    top: 10px;
 }
 
 .logo h5 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin: 0;
-    /* Remove a margem padrão do H5 */
+    padding: 0;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 5em;
     margin: 0;
     float: left;
     font-family: "Zeyada", cursive;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 600;
+    font-style: italic;
 }
 
 nav {
