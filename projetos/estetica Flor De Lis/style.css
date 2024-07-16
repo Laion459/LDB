@@ -11,7 +11,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #D3648F;
 }
 
 .container {
@@ -718,7 +718,7 @@ h1 {
     border: #f76aa9 2px solid;
     border-radius: 15px;
     background-color: #fcc0d7;
-    color: #f14090;
+    color: #D3648F;
 }
 
 .grid-item img {
@@ -821,7 +821,7 @@ main {
 /* Estilos para a página do post */
 .post-detalhe {
     text-align: left;
-    padding: 80px 0;
+    padding: 50px 20px;
     color: #D3648F;
     font-size: 1.5em;
     background-color: #ffd7e6;
