@@ -215,6 +215,16 @@ footer {
         /* Ajuste conforme necessário */
     }
 
+    .voltar-topo {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .voltar-topo svg{
+        max-width: 15px;
+        max-height: 15px;
+
+    }
 }
 
 /* Botão Voltar ao Topo */
@@ -237,6 +247,10 @@ footer {
 .voltar-topo.mostrar {
     opacity: 1;
     visibility: visible;
+}
+
+.voltar-topo:hover {
+    transform: scale(1.1);
 }
 
 .menu-container {
