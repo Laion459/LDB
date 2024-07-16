@@ -427,7 +427,7 @@ a:hover::before {
     width: 100%;
     height: 200%;
     opacity: 0.2;
-    z-index: 1;
+    z-index: -1;
 }
 
 
@@ -730,6 +730,8 @@ h1 {
 .grid-item p {
     text-align: center;
     padding: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
 }
 
 /* Botão "Voltar ao Topo" */
