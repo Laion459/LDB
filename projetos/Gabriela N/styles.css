@@ -2,26 +2,86 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: #fff; /* Branco */
-    color: #333; /* Cinza escuro */
+    background-color: #fff;
+    /* Branco */
+    color: #333;
+    /* Cinza escuro */
+}
+
+header {
+    display: flex;
+    /* Usaremos Flexbox para organizar os elementos */
+    align-items: center;
+    /* Alinha verticalmente os itens no cabeçalho */
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    /* Cinza muito claro */
 }
 
 .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
+    /* Ajuste o padding conforme necessário */
+    display: flex;
+    justify-content: space-between;
+    /* Distribui espaço entre logo e menu */
+    align-items: center;
+    /* Alinha itens verticalmente */
+    width: 100%;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #f8f8f8; /* Cinza muito claro */
-    padding: 20px 0;
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Zeyada", cursive;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    /* Espaçamento entre a logo e os títulos */
+    border-radius: 50%;
+}
+
+.titulos-logo {
+    display: flex;
+    flex-direction: column;
+    /* Alinha os títulos verticalmente */
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    margin: 0;
+    /* Remove a margem padrão do H1 */
+}
+
+.logo h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    /* Remove a margem padrão do H5 */
 }
 
 header h1 {
     font-size: 2.5em;
     margin: 0;
     float: left;
+    font-family: "Zeyada", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav {
@@ -63,7 +123,8 @@ section h2 {
 }
 
 .galeria img {
-    width: 30%; /* Ajuste conforme necessário */
+    width: 30%;
+    /* Ajuste conforme necessário */
     margin-bottom: 20px;
 }
 
@@ -77,13 +138,14 @@ footer {
 
 /* Menu Hambúrguer */
 .menu-toggle {
-    display: none; /* Só aparece em telas menores */
+    display: none;
+    /* Só aparece em telas menores */
     width: 40px;
     height: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .hamburguer {
@@ -92,12 +154,14 @@ footer {
     height: 3px;
     background-color: #333;
     margin: 5px auto;
-    transition: 0.3s ease-in-out; /* Para uma transição suave */
+    transition: 0.3s ease-in-out;
+    /* Para uma transição suave */
 }
 
 .menu-toggle:focus .hamburguer,
 .menu-toggle:hover .hamburguer {
-    background-color: #666; /* Cor mais escura ao passar o mouse */
+    background-color: #666;
+    /* Cor mais escura ao passar o mouse */
 }
 
 /* Estilos para telas menores */
@@ -107,41 +171,47 @@ footer {
     }
 
     nav {
-        float: none; 
+        float: none;
         text-align: center;
     }
 
     .menu-toggle {
-        display: block; /* Mostra o botão em telas menores */
+        display: block;
+        /* Mostra o botão em telas menores */
     }
 
     .menu-container {
-        display: none; /* Esconde o menu por padrão */
-        position: absolute; 
-        top: 100%;  
-        left: 0; 
-        width: 100%; 
-        background-color: #f8f8f8; 
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+        display: none;
+        /* Esconde o menu por padrão */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .menu-container.mostrar {
-        display: block; /* Mostra o menu quando .mostrar é aplicado */
+        display: block;
+        /* Mostra o menu quando .mostrar é aplicado */
     }
 
     nav ul {
-        background-color: #f8f8f8; /* Cor de fundo para o menu */
+        background-color: #f8f8f8;
+        /* Cor de fundo para o menu */
     }
 
     nav li {
-        display: block; 
-        margin: 0; 
+        display: block;
+        margin: 0;
         padding: 10px 0;
-        border-bottom: 1px solid #eee; /* Linha separando os itens do menu */
+        border-bottom: 1px solid #eee;
+        /* Linha separando os itens do menu */
     }
 
     .galeria img {
-        width: 45%; /* Ajuste conforme necessário */
+        width: 45%;
+        /* Ajuste conforme necessário */
     }
 }
 
@@ -157,7 +227,7 @@ footer {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    opacity: 0; 
+    opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
 }
@@ -165,28 +235,4 @@ footer {
 .voltar-topo.mostrar {
     opacity: 1;
     visibility: visible;
-}
-
-.logo {
-    font-family: "Zeyada", cursive;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 24px;
-    color: #000000;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 0;
-}
-
-.logo img {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
-    border-radius: 50%;
-}
-
-.logo h5 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
 }
