@@ -15,7 +15,7 @@ header {
     /* Alinha verticalmente os itens no cabeçalho */
     padding: 20px 0;
 
-    background-color: #000000; 
+    background-color: #ffffff;
     z-index: -5;
     /* Cinza muito claro */
 }
@@ -112,7 +112,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -178,7 +178,7 @@ footer {
 
 .hr-white {
 
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     align-items: center;
     width: 100%;
@@ -269,7 +269,7 @@ footer {
     margin-top: 0;
 }
 
-.pao img{
+.pao img {
     width: 60%;
     left: 50px;
 }
@@ -286,13 +286,42 @@ a::before {
     content: "";
     position: absolute;
     width: 0;
-    height: 2px;
-    background-color: #ffffff;
+    height: 4px;
+    background-color: #000000;
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
+    border-radius: 100%;
 }
 
 a:hover::before {
     width: 100%;
+}
+
+.principal {
+    text-align: center;
+    position: relative;
+    flex-direction: row;
+}
+
+
+.foto-principal {
+    color: #333;
+}
+
+.foto-principal img {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.titulo-principal {
+    color: #000000;
+}
+
+.titulo-principal h2{
+    flex-direction: row;
+    font-family: "Zeyada", cursive;
+
+    font-style: italic;
 }
