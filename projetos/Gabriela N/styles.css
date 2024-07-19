@@ -216,7 +216,7 @@ footer {
     }
 
     nav ul {
-        background-color: #ffffff;
+        background-color: #000000;
         /* Cor de fundo para o menu */
     }
 
@@ -245,7 +245,7 @@ footer {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -310,6 +310,7 @@ a:hover::before {
     background-color: black;
     font-family: "Indie Flower", cursive;
     font-size: 2em;
+    padding: 40px;
 }
 
 .foto-principal {
@@ -318,7 +319,7 @@ a:hover::before {
 
 .foto-principal img {
     width: 100%;
-    max-width: 450px;
+    max-width: 80%;
     text-align: center;
 }
 
