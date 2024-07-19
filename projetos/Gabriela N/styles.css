@@ -280,6 +280,7 @@ a {
     color: #ffffff;
     position: relative;
     overflow: hidden;
+    font-family: "Indie Flower", cursive;
 }
 
 a::before {
@@ -305,7 +306,10 @@ a:hover::before {
     align-items: center; /* Centraliza verticalmente */
     text-align: center;
     position: relative;
-    height: 100vh; /* Garante que o container ocupe a altura total da viewport */
+    /*height: 100vh; /* Garante que o container ocupe a altura total da viewport */
+    background-color: black;
+    font-family: "Indie Flower", cursive;
+    font-size: 2em;
 }
 
 .foto-principal {
@@ -319,12 +323,13 @@ a:hover::before {
 }
 
 .titulo-principal {
-    color: #000000;
+    color: #ffffff;
+    padding: 10%;
 
 }
 
 .titulo-principal h2{
     font-family: "Zeyada", cursive;
     font-style: italic;
-    font-size: 4em;
+    font-size: 2em;
 }
