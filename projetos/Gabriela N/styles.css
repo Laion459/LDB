@@ -9,8 +9,9 @@ body {
 
 header {
     /* Usaremos Flexbox para organizar os elementos no cabeçalho */
-    display: flex;
+
     align-items: center;
+    text-align: center;
     padding: 20px;
     background-color: #000000;
     z-index: -5;
