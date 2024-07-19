@@ -4,36 +4,25 @@ body {
     font-size: 1.5em;
     margin: 0;
     background-color: #000000;
-    /* Branco */
     color: #333;
-    /* Cinza escuro */
-
 }
 
 header {
-
-    /* Usaremos Flexbox para organizar os elementos */
+    /* Usaremos Flexbox para organizar os elementos no cabeçalho */
+    display: flex;
     align-items: center;
-    /* Alinha verticalmente os itens no cabeçalho */
     padding: 20px;
-
     background-color: #000000;
     z-index: -5;
-    /* Cinza muito claro */
 }
-
-
 
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
-    /* Ajuste o padding conforme necessário */
     display: flex;
     justify-content: space-between;
-    /* Distribui espaço entre logo e menu */
     align-items: center;
-    /* Alinha itens verticalmente */
     width: 100%;
     flex-direction: column;
     background-color: #000000;
@@ -68,7 +57,6 @@ header {
     border-radius: 50%;
 }
 
-
 .titulos-logo {
     display: flex;
     flex-direction: column;
@@ -93,14 +81,13 @@ header {
 header h1 {
     font-size: 5em;
     margin: 0;
-    float: left;
     font-family: "Zeyada", cursive;
     font-weight: 600;
     font-style: italic;
 }
 
 nav {
-    float: right;
+    
 }
 
 nav ul {
@@ -131,7 +118,7 @@ section h2 {
     margin-bottom: 20px;
 }
 
-/* Portfólio (Galeria) - Exemplo Simples */
+/* Galeria */
 .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -140,7 +127,6 @@ section h2 {
 
 .galeria img {
     width: 30%;
-    /* Ajuste conforme necessário */
     margin-bottom: 20px;
 }
 
@@ -155,7 +141,6 @@ footer {
 /* Menu Hambúrguer */
 .menu-toggle {
     display: none;
-    /* Só aparece em telas menores */
     width: 40px;
     height: 30px;
     background-color: transparent;
@@ -172,17 +157,14 @@ footer {
     margin: 5px auto;
     transition: 0.3s ease-in-out;
     border-radius: 15px;
-    /* Para uma transição suave */
 }
 
 .menu-toggle:focus .hamburguer,
 .menu-toggle:hover .hamburguer {
     background-color: #666666;
-    /* Cor mais escura ao passar o mouse */
 }
 
 .hr-white {
-
     color: #ffffff;
     text-align: center;
     align-items: center;
@@ -222,7 +204,6 @@ footer {
 
     nav ul {
         background-color: #000000;
-        /* Cor de fundo para o menu */
     }
 
     nav li {
@@ -230,12 +211,10 @@ footer {
         margin: 0;
         padding: 10px 0;
         border-bottom: 1px solid #eee;
-        /* Linha separando os itens do menu */
     }
 
     .galeria img {
         width: 45%;
-        /* Ajuste conforme necessário */
     }
 
     .titulo-principal {
@@ -245,7 +224,6 @@ footer {
     .foto-principal img {
         min-width: 450px;
     }
-
 }
 
 /* Botão Voltar ao Topo */
@@ -284,7 +262,7 @@ footer {
     left: 50px;
 }
 
-
+/* Estilos para links */
 a {
     text-decoration: none;
     color: #ffffff;
@@ -309,17 +287,14 @@ a:hover::before {
     width: 100%;
 }
 
-
+/* Seção Principal */
 .principal {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Centraliza verticalmente */
     text-align: center;
     position: relative;
-    /*height: 100vh; /* Garante que o container ocupe a altura total da viewport */
     background-color: black;
     font-family: "Indie Flower", cursive;
     font-size: 1em;
@@ -339,9 +314,7 @@ a:hover::before {
 .titulo-principal {
     color: #ffffff;
     padding: 1%;
-
     max-width: 100%;
-
 }
 
 .titulo-principal h2 {
@@ -350,6 +323,7 @@ a:hover::before {
     font-size: 2em;
 }
 
+/* Container do Mapa */
 .container-mapa {
     background-color: #000000;
     text-align: center;
@@ -377,75 +351,56 @@ li::marker {
     padding: 10px;
 }
 
+/* Seção Portfólio */
 #portfolio {
     background-color: #000;
-    /* Fundo preto */
     color: #fff;
-    /* Texto branco */
     padding: 80px 0;
-    /* Espaçamento interno */
     text-align: center;
-    /* Alinhamento do texto */
 }
 
 #portfolio h2 {
     font-size: 3em;
-    /* Tamanho da fonte do título */
     margin-bottom: 40px;
-    /* Margem inferior do título */
 }
 
 .container {
     max-width: 1200px;
-    /* Largura máxima do contêiner */
     margin: 0 auto;
-    /* Margens laterais automáticas para centralizar */
     padding: 0 20px;
-    /* Espaçamento interno lateral */
 }
 
 .galeria {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* Centraliza os itens na grade */
 }
 
+/* Grid do Portfólio */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Define 4 colunas de tamanhos iguais */
     grid-gap: 20px;
 }
 
 .grid-item {
     overflow: hidden;
-    /* Impede que as imagens ultrapassem o contêiner */
     border-radius: 10px;
-    /* Cantos arredondados nas imagens */
     transition: transform 0.3s ease;
-    /* Adiciona uma transição suave */
 }
 
 .grid-item img {
     width: 100%;
-    /* Faz com que as imagens ocupem toda a largura do contêiner */
     height: 100%;
-    /* Mantém a proporção da imagem */
     display: block;
-    /* Remove espaço em branco abaixo da imagem */
 }
 
 .grid-item:hover {
     transform: scale(1.08);
-    /* Aumenta o tamanho da imagem ao passar o mouse */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    /* Adiciona uma sombra ao passar o mouse */
 }
 
-
-
-
+/* Seção Produtos */
 #productos {
     background-color: #000;
     color: #fff;
@@ -458,34 +413,27 @@ li::marker {
     margin-bottom: 20px;
 }
 
+/* Grid de Produtos */
 .logos-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Ajuste o tamanho mínimo conforme necessário */
     grid-gap: 40px;
     justify-content: center;
-    /* Centraliza os logos */
 }
 
 .logo-item {
     width: 150px;
-    /* Ajuste o tamanho do círculo conforme necessário */
     height: 150px;
     border-radius: 50%;
-    /* Faz os logos ficarem redondos */
     overflow: hidden;
-    /* Esconde qualquer parte do logo que ultrapasse o círculo */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    /* Fundo branco para os logos */
     margin: 0 auto;
-    /* Centraliza horizontalmente os círculos */
 }
 
 .logo-item img {
     max-width: 80%;
-    /* Ajusta o tamanho da imagem dentro do círculo */
     height: auto;
 }
