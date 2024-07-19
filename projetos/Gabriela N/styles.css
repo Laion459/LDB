@@ -1,11 +1,13 @@
 /* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.5em;
     margin: 0;
     background-color: #fff;
     /* Branco */
     color: #333;
     /* Cinza escuro */
+
 }
 
 header {
@@ -143,8 +145,8 @@ section h2 {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* Menu Hambúrguer */
@@ -233,8 +235,13 @@ footer {
         /* Ajuste conforme necessário */
     }
 
+    .titulo-principal {
+        font-size: 1em;
+    }
 
-
+    .foto-principal img {
+        min-width: 450px;
+    }
 
 }
 
@@ -325,7 +332,9 @@ a:hover::before {
 
 .titulo-principal {
     color: #ffffff;
-    padding: 10%;
+    padding: 1%;
+
+    max-width: 100%;
 
 }
 
@@ -333,4 +342,24 @@ a:hover::before {
     font-family: "Zeyada", cursive;
     font-style: italic;
     font-size: 2em;
+}
+
+.container-mapa {
+    background-color: #000000;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-mapa h1, h2, h3, li {
+    color: #ffffff;
+}
+
+.redes a{
+    padding: 0px 40px;
+    margin: 20px;
+}
+
+.container-mapa li {
+    padding: 10px;
 }
