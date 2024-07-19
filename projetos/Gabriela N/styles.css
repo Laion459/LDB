@@ -36,10 +36,12 @@ header {
     /* Alinha itens verticalmente */
     width: 100%;
     flex-direction: column;
-background-color: #000000;
+    background-color: #000000;
 }
 
-
+.container p {
+    color: #ffffff;
+}
 
 .logo-area {
     display: flex;
@@ -311,8 +313,10 @@ a:hover::before {
 .principal {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
     text-align: center;
     position: relative;
     /*height: 100vh; /* Garante que o container ocupe a altura total da viewport */
@@ -340,7 +344,7 @@ a:hover::before {
 
 }
 
-.titulo-principal h2{
+.titulo-principal h2 {
     font-family: "Zeyada", cursive;
     font-style: italic;
     font-size: 2em;
@@ -353,7 +357,10 @@ a:hover::before {
     padding: 20px;
 }
 
-.container-mapa h1, h2, h3, li {
+.container-mapa h1,
+h2,
+h3,
+li {
     color: #ffffff;
 }
 
@@ -361,7 +368,7 @@ li::marker {
     color: transparent;
 }
 
-.redes a{
+.redes a {
     padding: 0px 40px;
     margin: 20px;
 }
@@ -371,48 +378,114 @@ li::marker {
 }
 
 #portfolio {
-    background-color: #000; /* Fundo preto */
-    color: #fff; /* Texto branco */
-    padding: 80px 0; /* Espaçamento interno */
-    text-align: center; /* Alinhamento do texto */
-  }
-  
-  #portfolio h2 {
-    font-size: 3em; /* Tamanho da fonte do título */
-    margin-bottom: 40px; /* Margem inferior do título */
-  }
-  
-  .container {
-    max-width: 1200px; /* Largura máxima do contêiner */
-    margin: 0 auto; /* Margens laterais automáticas para centralizar */
-    padding: 0 20px; /* Espaçamento interno lateral */
-  }
-  
-  .galeria {
+    background-color: #000;
+    /* Fundo preto */
+    color: #fff;
+    /* Texto branco */
+    padding: 80px 0;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Alinhamento do texto */
+}
+
+#portfolio h2 {
+    font-size: 3em;
+    /* Tamanho da fonte do título */
+    margin-bottom: 40px;
+    /* Margem inferior do título */
+}
+
+.container {
+    max-width: 1200px;
+    /* Largura máxima do contêiner */
+    margin: 0 auto;
+    /* Margens laterais automáticas para centralizar */
+    padding: 0 20px;
+    /* Espaçamento interno lateral */
+}
+
+.galeria {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza os itens na grade */
-  }
-  
-  .grid {
+    justify-content: center;
+    /* Centraliza os itens na grade */
+}
+
+.grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Define 4 colunas de tamanhos iguais */
-    grid-gap: 20px; 
-  }
-  
-  .grid-item {
-    overflow: hidden; /* Impede que as imagens ultrapassem o contêiner */
-    border-radius: 10px; /* Cantos arredondados nas imagens */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
-  }
-  
-  .grid-item img {
-    width: 100%; /* Faz com que as imagens ocupem toda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaço em branco abaixo da imagem */
-  }
-  
-  .grid-item:hover {
-    transform: scale(1.05); /* Aumenta o tamanho da imagem ao passar o mouse */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adiciona uma sombra ao passar o mouse */
-  }
+    grid-template-columns: repeat(4, 1fr);
+    /* Define 4 colunas de tamanhos iguais */
+    grid-gap: 20px;
+}
+
+.grid-item {
+    overflow: hidden;
+    /* Impede que as imagens ultrapassem o contêiner */
+    border-radius: 10px;
+    /* Cantos arredondados nas imagens */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave */
+}
+
+.grid-item img {
+    width: 100%;
+    /* Faz com que as imagens ocupem toda a largura do contêiner */
+    height: 100%;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Remove espaço em branco abaixo da imagem */
+}
+
+.grid-item:hover {
+    transform: scale(1.08);
+    /* Aumenta o tamanho da imagem ao passar o mouse */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    /* Adiciona uma sombra ao passar o mouse */
+}
+
+
+
+
+#productos {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#productos h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Ajuste o tamanho mínimo conforme necessário */
+    grid-gap: 40px;
+    justify-content: center;
+    /* Centraliza os logos */
+}
+
+.logo-item {
+    width: 150px;
+    /* Ajuste o tamanho do círculo conforme necessário */
+    height: 150px;
+    border-radius: 50%;
+    /* Faz os logos ficarem redondos */
+    overflow: hidden;
+    /* Esconde qualquer parte do logo que ultrapasse o círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* Fundo branco para os logos */
+    margin: 0 auto;
+    /* Centraliza horizontalmente os círculos */
+}
+
+.logo-item img {
+    max-width: 80%;
+    /* Ajusta o tamanho da imagem dentro do círculo */
+    height: auto;
+}
