@@ -369,3 +369,50 @@ li::marker {
 .container-mapa li {
     padding: 10px;
 }
+
+#portfolio {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    padding: 80px 0; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+  }
+  
+  #portfolio h2 {
+    font-size: 3em; /* Tamanho da fonte do título */
+    margin-bottom: 40px; /* Margem inferior do título */
+  }
+  
+  .container {
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Margens laterais automáticas para centralizar */
+    padding: 0 20px; /* Espaçamento interno lateral */
+  }
+  
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens na grade */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 colunas de tamanhos iguais */
+    grid-gap: 20px; 
+  }
+  
+  .grid-item {
+    overflow: hidden; /* Impede que as imagens ultrapassem o contêiner */
+    border-radius: 10px; /* Cantos arredondados nas imagens */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+  }
+  
+  .grid-item img {
+    width: 100%; /* Faz com que as imagens ocupem toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço em branco abaixo da imagem */
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.05); /* Aumenta o tamanho da imagem ao passar o mouse */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adiciona uma sombra ao passar o mouse */
+  }
