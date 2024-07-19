@@ -318,7 +318,7 @@ a:hover::before {
     /*height: 100vh; /* Garante que o container ocupe a altura total da viewport */
     background-color: black;
     font-family: "Indie Flower", cursive;
-    font-size: 2em;
+    font-size: 1em;
     padding: 40px;
 }
 
