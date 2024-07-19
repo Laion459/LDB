@@ -36,6 +36,7 @@ header {
     /* Alinha itens verticalmente */
     width: 100%;
     flex-direction: column;
+background-color: #000000;
 }
 
 
@@ -306,6 +307,7 @@ a:hover::before {
     width: 100%;
 }
 
+
 .principal {
     display: flex;
     flex-direction: row;
@@ -353,6 +355,10 @@ a:hover::before {
 
 .container-mapa h1, h2, h3, li {
     color: #ffffff;
+}
+
+li::marker {
+    color: transparent;
 }
 
 .redes a{
