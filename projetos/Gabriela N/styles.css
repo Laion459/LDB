@@ -15,7 +15,7 @@ header {
     /* Usaremos Flexbox para organizar os elementos */
     align-items: center;
     /* Alinha verticalmente os itens no cabeçalho */
-    padding: 20px 0;
+    padding: 20px;
 
     background-color: #000000;
     z-index: -5;
