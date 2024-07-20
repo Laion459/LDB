@@ -8,8 +8,6 @@ body {
 }
 
 header {
-    /* Usaremos Flexbox para organizar os elementos no cabeçalho */
-
     align-items: center;
     text-align: center;
     padding: 20px;
@@ -52,8 +50,9 @@ header {
 }
 
 .logo img {
-    width: 390px;
-    height: 390px;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
     margin-right: 20px;
     border-radius: 50%;
 }
@@ -88,7 +87,6 @@ header h1 {
 }
 
 nav {
-    
 }
 
 nav ul {
@@ -175,6 +173,26 @@ footer {
 }
 
 /* Estilos para telas menores */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .galeria img {
+        width: 45%;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -401,6 +419,18 @@ li::marker {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Seção Produtos */
 #productos {
     background-color: #000;
@@ -437,4 +467,16 @@ li::marker {
 .logo-item img {
     max-width: 80%;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .logos-grid {
+        grid-template-columns: 1fr;
+    }
 }
