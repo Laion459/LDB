@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB ELECTRICISTA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="img/logo.webp" alt="Logo Electricista Seguro">
+                GB ELECTRICISTA
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Soluciones eléctricas <br> para su hogar y negocio</h1>
+            <p>Ofrecemos servicios de electricidad confiables y de alta calidad a precios competitivos.</p>
+            <a href="#contacto" class="btn">Solicitar Presupuesto</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="bg-light">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <img src="img/quadro disjuntores.jpg" alt="Instalaciones Eléctricas">
+                    <h3>Instalaciones Eléctricas</h3>
+                    <p>Realizamos instalaciones eléctricas nuevas y renovaciones en viviendas, locales comerciales e
+                        industriales.</p>
+                </div>
+                <div class="servicio">
+                    <img src="img/cam.jpg" alt="Reparaciones Eléctricas">
+                    <h3>Reparaciones Eléctricas</h3>
+                    <p>Atendemos averías eléctricas de cualquier tipo, desde cortocircuitos hasta fallos de
+                        alimentación.</p>
+                </div>
+                <div class="servicio">
+                    <img src="img/cam2.jpg" alt="Mantenimiento Eléctrico">
+                    <h3>Mantenimiento Eléctrico</h3>
+                    <p>Ofrecemos planes de mantenimiento preventivo para garantizar el buen funcionamiento de sus
+                        instalaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-nosotros">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>En Electricista Seguro, contamos con un equipo de electricistas altamente cualificados y con amplia
+                experiencia
+                en el sector. Nos enorgullecemos de ofrecer un servicio al cliente excepcional y de trabajar de forma
+                segura y
+                eficiente.</p>
+            <p>Nuestra misión es brindar soluciones eléctricas integrales y de calidad, satisfaciendo las necesidades de
+                nuestros clientes con profesionalidad y compromiso.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="bg-light">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>No dude en contactarnos para cualquier consulta o para solicitar un presupuesto sin compromiso.</p>
+            <form action="#" method="post">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Gaston Borges. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" class="back-to-top">
+        <i class="fas fa-arrow-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+            </svg>
+        </i>
+    </button>
+
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>
