@@ -141,13 +141,18 @@ footer {
 
 /* Menu Hambúrguer */
 .menu-toggle {
-    display: none;
+    display: none; /* Garantir que o botão seja exibido */
     width: 40px;
     height: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    position: fixed; /* Fixar a posição do botão */
+    top: 10px; /* Ajuste a posição do topo conforme necessário */
+    right: 10px; /* Posicionar no lado direito */
+    z-index: 1001; /* Garantir que o botão fique acima de outros elementos */
+    border-radius: 15px;
 }
 
 .hamburguer {
@@ -194,9 +199,10 @@ footer {
         margin: 10px;
     }
 
-    .main { 
-        flex-direction: column; /* Imagem em cima, texto embaixo */
-    } 
+    .main {
+        flex-direction: column;
+        /* Imagem em cima, texto embaixo */
+    }
 }
 
 @media (max-width: 768px) {
@@ -221,20 +227,32 @@ footer {
         display: block;
     }
 
+    /* Menu container */
     .menu-container {
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        /* Fixar a posição do menu */
+        top: 50px;
+        right: 0;
+        /* Posicionar no lado direito */
         width: 100%;
-        background-color: #ffffff;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        z-index: 10;
+        /* Ajuste a largura conforme necessário */
         border-radius: 15px;
+        /* Altura total da tela */
+        background-color: #000000;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        /* Para garantir que o menu fique acima de outros elementos */
+        transform: translateX(100%);
+        /* Esconde o menu fora da tela */
+        transition: transform 0.3s ease;
+        /* Transição suave ao abrir e fechar */
+        padding: 20px;
     }
 
     .menu-container.mostrar {
         display: block;
+        transform: translateX(0);
     }
 
     nav ul {
@@ -267,9 +285,10 @@ footer {
         margin: 5px;
     }
 
-    .main { 
-        flex-direction: column; /* Imagem em cima, texto embaixo */
-    } 
+    .main {
+        flex-direction: column;
+        /* Imagem em cima, texto embaixo */
+    }
 }
 
 .main {
