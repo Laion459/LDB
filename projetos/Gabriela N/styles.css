@@ -141,17 +141,22 @@ footer {
 
 /* Menu Hambúrguer */
 .menu-toggle {
-    display: none; /* Garantir que o botão seja exibido */
+    display: none;
+    /* Garantir que o botão seja exibido */
     width: 40px;
     height: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     margin-top: 10px;
-    position: fixed; /* Fixar a posição do botão */
-    top: 10px; /* Ajuste a posição do topo conforme necessário */
-    right: 10px; /* Posicionar no lado direito */
-    z-index: 1001; /* Garantir que o botão fique acima de outros elementos */
+    position: fixed;
+    /* Fixar a posição do botão */
+    top: 10px;
+    /* Ajuste a posição do topo conforme necessário */
+    right: 10px;
+    /* Posicionar no lado direito */
+    z-index: 1001;
+    /* Garantir que o botão fique acima de outros elementos */
     border-radius: 15px;
 }
 

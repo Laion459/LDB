@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuLinks = document.querySelectorAll('.menu-container a'); // Seleciona os links dentro do menu
 
     menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            console.log('Link clicado:', link.href); 
+        link.addEventListener('click', function () {
+            console.log('Link clicado:', link.href);
             menuContainer.classList.remove('mostrar');
         });
     });
