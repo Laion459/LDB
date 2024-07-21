@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Fechar menu ao clicar fora
-    document.addEventListener('click', function(event) { // Movido para dentro do DOMContentLoaded
+    document.addEventListener('click', function(event) { 
       if (
         !menuContainer.contains(event.target) && // Clique fora do menu
         !menuToggle.contains(event.target) // Clique fora do botão
