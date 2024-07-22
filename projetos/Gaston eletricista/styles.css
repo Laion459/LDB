@@ -16,6 +16,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    color: #007bff;
 }
 
 /* Header */
@@ -95,12 +96,14 @@ nav a:hover {
 
 .btn:hover {
     background-color: #0069d9;
+    transform: scale(1.1);
 }
 
 /* Secciones con fondo claro */
 .bg-light {
     background-color: #f8f9fa;
     padding: 80px 0;
+    color: #007bff;
 }
 
 /* Servicios */
@@ -123,6 +126,11 @@ nav a:hover {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.servicio:hover {
+    transform: scale(1.2);
 }
 
 .servicio img {
@@ -331,7 +339,6 @@ footer {
     color: #007bff;
 }
 
-
 a {
     text-decoration: none;
     color: #333;
@@ -357,4 +364,13 @@ a:hover::before {
 .redes a {
     color: #007bff;
     padding: 4px 40px;
+}
+
+hr {
+    color: #007bff;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 100%;
+    border: solid 0.2em;
 }
