@@ -28,18 +28,18 @@ header {
 
 .logo {
     display: inline-block;
-    font-size: 34px;
+    font-size: 54px;
     font-weight: 700;
     color: #ffffff;
     text-decoration: none;
 }
 
 .logo img {
-    width: 70px;
-    height: 70px;
+    width: 180px;
+    height: 180px;
     vertical-align: middle;
     margin-right: 10px;
-    border-radius: 50%;
+    border-radius: 5px;
 }
 
 nav ul {
@@ -186,6 +186,10 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+}
+
+footer p {
+    color: #ffffff;
 }
 
 /* Responsive */
