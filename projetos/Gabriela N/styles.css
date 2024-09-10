@@ -519,3 +519,13 @@ li::marker {
     margin-right: 0;
     /* Removido */
 }
+
+.button-cita {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.button-cita:hover {
+    transform: scale(2.2);
+}
