@@ -524,8 +524,9 @@ li::marker {
     border: 2px solid white;
     border-radius: 50%;
     padding: 20px;
+    margin: 20px;
 }
 
 .button-cita:hover {
-    transform: scale(2.2);
+    zoom: 90%;
 }
