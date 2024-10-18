@@ -397,3 +397,86 @@ a:hover::before {
     font-size: 15px;
     color: #333;
 }
+
+
+
+
+/* Estilo para o grid de tecnologias */
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.technology-card {
+    background-color: #333;
+    padding: 20px;
+    border: 2px solid #fcce00;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;  /* Para o efeito do link */
+}
+
+.technology-card img {
+    width: 50%;
+    height: 150px;  
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.technology-card h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.technology-card p {
+    font-size: 0.9em;
+}
+
+.technology-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.technology-card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Efeito de transição ao passar o mouse */
+.technology-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+/* Efeito de destaque no link ao passar o mouse */
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fcce00;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .technologies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
