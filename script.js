@@ -35,3 +35,39 @@ function toggleMenu() {
     const menu = document.querySelector('.menu');
     menu.classList.toggle('show');
 }
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    progressBars.forEach(bar => {
+        const level = bar.getAttribute('data-level');
+        const percentage = bar.getAttribute('data-percentage');
+        const percentageText = bar.querySelector('.percentage-text');
+
+        if (level) {
+            // Define a largura da barra com base no data-percentage
+            bar.style.width = `${percentage}%`;
+
+            // Atualiza o texto da barra com o nível linguístico (C2, B1, etc.)
+            percentageText.textContent = level;
+        } else {
+            // Para outras habilidades, manter a animação de porcentagem normal
+            let currentPercentage = 0;
+            const interval = setInterval(() => {
+                if (currentPercentage >= percentage) {
+                    clearInterval(interval);
+                } else {
+                    currentPercentage++;
+                    bar.style.width = `${currentPercentage}%`;
+                    percentageText.textContent = `${currentPercentage}%`;
+                }
+            }, 20);
+        }
+    });
+});
+
+

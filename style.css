@@ -375,3 +375,25 @@ a:hover::before {
     text-align: center;
     color: #fcce00;
 }
+
+
+
+
+
+
+
+.progress-bar {
+    position: relative;
+    background-color: #fcce00;
+    height: 25px;
+    transition: width 1s ease-in-out;
+}
+
+.percentage-text {
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #333;
+}
