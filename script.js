@@ -82,3 +82,60 @@ function resetProject(project) {
 }
 
 
+// Função para trocar o tema
+function setTheme(theme) {
+    document.body.className = ''; // Remove qualquer classe anterior
+    if (theme !== 'theme-white') { // A classe 'theme-white' é o padrão
+        document.body.classList.add(theme);
+    }
+    localStorage.setItem('selectedTheme', theme); // Salvar no localStorage
+}
+
+// Aplicar o tema salvo ao carregar a página
+window.onload = function() {
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    }
+};
+
+
+
+
+
+
+
+
+// Funções para o seletor de temas
+const themeButton = document.getElementById('theme-button');
+const themeOptions = document.getElementById('theme-options');
+const closeThemeOptions = document.getElementById('close-theme-options');
+
+
+themeButton.addEventListener('click', () => {
+    themeOptions.classList.toggle('hidden');
+});
+
+
+closeThemeOptions.addEventListener('click', () => {
+    themeOptions.classList.add('hidden');
+});
+
+// Fechar o menu ao clicar fora
+document.addEventListener('click', function(event) {
+    if (!themeButton.contains(event.target) && !themeOptions.contains(event.target)) {
+        themeOptions.classList.add('hidden');
+    }
+});
+
+
+function setTheme(theme) {
+    document.body.className = ''; // Remove classes anteriores do body
+    if (theme !== 'theme-white') { 
+        document.body.classList.add(theme); // Adiciona a classe ao body
+    }
+    localStorage.setItem('selectedTheme', theme);
+    themeOptions.classList.add('hidden');
+    themeButton.className = theme; // Mantém a classe no botão também
+
+}

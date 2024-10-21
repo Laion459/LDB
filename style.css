@@ -219,7 +219,8 @@ footer {
 }
 
 .back-button:hover {
-    transform: scale(1.25);  /* Aumenta um pouco o botão ao passar o mouse */
+    transform: scale(1.25);
+    /* Aumenta um pouco o botão ao passar o mouse */
 }
 
 
@@ -291,14 +292,18 @@ footer {
     }
 
     header .header-content {
-        flex-direction: column; /* Imagem e texto em coluna */
-      }
-    
-      header .profile-picture {
-        margin: 0 auto 20px auto; /* Centraliza a imagem */
-        width: 100%; /* Ocupa a largura disponível */
-        max-width: 300px; /* Largura máxima da imagem */
-      } 
+        flex-direction: column;
+        /* Imagem e texto em coluna */
+    }
+
+    header .profile-picture {
+        margin: 0 auto 20px auto;
+        /* Centraliza a imagem */
+        width: 100%;
+        /* Ocupa a largura disponível */
+        max-width: 300px;
+        /* Largura máxima da imagem */
+    }
 
     header .profile-picture img {
         width: 100%;
@@ -417,13 +422,14 @@ a:hover::before {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
-    position: relative;  /* Para o efeito do link */
+    position: relative;
+    /* Para o efeito do link */
 }
 
 .technology-card img {
     width: 50%;
-    height: 150px;  
-    object-fit: cover; 
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
 }
@@ -479,4 +485,216 @@ a:hover::before {
     .technologies-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+}
+
+
+
+
+
+
+/* Definição padrão (pode ser a versão branca) */
+:root {
+    --bg-color: white;
+    --text-color: #fcce00;
+}
+
+/* Tema Preto */
+.theme-black {
+    --bg-color: black;
+    --text-color: #fcce00;
+}
+
+/* Tema Azul */
+.theme-blue {
+    --bg-color: #007BFF;
+    --text-color: #fcce00;
+}
+
+/* Tema Rosa */
+.theme-pink {
+    --bg-color: #FF69B4;
+    --text-color: #fcce00;
+}
+
+/* Tema Vermelho */
+.theme-red {
+    --bg-color: #FF6347;
+    --text-color: #fcce00;
+}
+
+/* Tema Verde */
+.theme-green {
+    --bg-color: #32CD32;
+    --text-color: #fcce00;
+}
+
+/* Tema Default */
+.theme-default {
+    --bg-color: #333;
+    --text-color: #fcce00;
+}
+
+/* Aplicar as variáveis de cor aos elementos */
+body,
+header,
+footer,
+section,
+nav {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color);
+}
+
+/* Estilos adicionais para o menu */
+.theme-selector {
+    margin: 20px;
+}
+
+.theme-selector button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.theme-selector {
+    position: relative; /* Para posicionar o menu de opções */
+}
+
+#theme-button { /* Estilo para o botão principal */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.theme-options {
+    position: absolute;
+    top: 100%; /* Abaixo do botão principal */
+    left: 0;
+    background: #333; /* Cor de fundo do menu de opções */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os botões quebrem a linha */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
+}
+
+.theme-options button {
+    margin: 5px;
+    padding: 8px 12px; /* Ajusta o tamanho dos botões se necessário */
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;  /* Remove a borda padrão dos botões */
+    color: #fcce00;  /* Cor do texto */
+}
+
+.theme-options.hidden {
+    display: none;
+}
+
+.theme-options button:hover { /* Um pouco de estilo ao passar o mouse */
+    opacity: 0.8;
+}
+
+#close-theme-options {
+    background-color: #555; /* Cor diferente para o botão "Fechar" */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+
+/* Classes de tema para os botões de cores */
+.theme-black { background-color: black; }
+.theme-white { background-color: white; }
+.theme-blue { background-color: #007BFF; }
+.theme-pink { background-color: #FF69B4; }
+.theme-red { background-color: #FF6347; }
+.theme-green { background-color: #32CD32; }
+.theme-default { background-color: #333; }
+
+/* Estilos gerais para os botões */
+.theme-selector button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    font-weight: 500; /* Negrito */
+    text-transform: uppercase; /* Letras maiúsculas */
+    transition: all 0.3s ease; /* Transição suave para as animações */
+    border: none;
+    cursor: pointer;
+    color: #fcce00;  /* Cor do texto padrão */
+    border-radius: 5px;   /* Borda arredondada */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 5px;       /* Espaçamento externo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+
+/* Botão principal - antes de abrir o menu */
+#theme-button {
+    background: linear-gradient(to right, #FFD700, #fcce00); /* Gradiente dourado */
+    color: #333; /* Cor do texto no botão principal */
+
+}
+
+/* Botão principal - efeito hover */
+#theme-button:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra mais intensa */
+
+}
+
+/* Menu de opções de temas */
+.theme-options {
+    /* ... (estilos existentes) ... */
+    background: #444; /* Cor de fundo mais escura */
+    gap: 10px;  /* Espaçamento entre os botões */
+    padding: 15px;
+
+}
+
+
+/* Botões de cores - estilos específicos e hover com brilho */
+.theme-black { background-color: black; }
+.theme-black:hover { background-color: #333; } /* Brilho mais claro */
+
+
+.theme-white { background-color: white; color: #333;}
+.theme-white:hover { background-color: #eee; }
+
+
+.theme-blue { background-color: #007BFF; }
+.theme-blue:hover { background-color: #0056b3; }
+
+.theme-pink { background-color: #FF69B4; }
+.theme-pink:hover { background-color: #C71585; }
+
+
+.theme-red { background-color: #FF6347; }
+.theme-red:hover { background-color: #FF4500; }
+
+
+.theme-green { background-color: #32CD32; }
+.theme-green:hover { background-color: #228B22; }
+
+
+.theme-default { background-color: #333; }
+.theme-default:hover { background-color: #555; }
+
+
+#close-theme-options { 
+    background-color: #777; /* Cor de fundo menos contrastante */
+    margin-top: 10px;
+    color: white; /* Texto branco para melhor contraste */
+
+
+}
+#close-theme-options:hover {
+    background-color: #999; /* Efeito hover mais sutil */
+    transform: scale(1.05);
 }

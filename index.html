@@ -9,11 +9,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
     <header>
+        <div class="theme-selector">
+            <button id="theme-button" class="theme-default">Tema</button>
+            <div id="theme-options" class="theme-options hidden">
+                <button onclick="setTheme('theme-black')" class="theme-black">Preto</button>
+                <button onclick="setTheme('theme-white')" class="theme-white">Branco</button>
+                <button onclick="setTheme('theme-blue')" class="theme-blue">Azul</button>
+                <button onclick="setTheme('theme-pink')" class="theme-pink">Rosa</button>
+                <button onclick="setTheme('theme-red')" class="theme-red">Vermelho</button>
+                <button onclick="setTheme('theme-green')" class="theme-green">Verde</button>
+                <button onclick="setTheme('theme-default')" class="theme-default">Default</button>
+                <button id="close-theme-options">Fechar</button>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <div class="container">
             <nav>
                 <div class="menu-icon" onclick="toggleMenu()">
@@ -244,7 +273,7 @@
     
     <footer>
         <div class="container">
-            <p>© 2023 Leonardo Borges. Todos os direitos reservados.</p>
+            <p>© 2024 Leonardo Borges. Todos os direitos reservados.</p>
         </div>
     </footer>
 
