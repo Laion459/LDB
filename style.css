@@ -571,12 +571,13 @@ nav {
 #theme-button { /* Estilo para o botão principal */
     padding: 10px;
     cursor: pointer;
+    margin-left: 90%;
 }
 
 .theme-options {
     position: absolute;
     top: 100%; /* Abaixo do botão principal */
-    left: 0;
+    margin-left: 70%;
     background: #333; /* Cor de fundo do menu de opções */
     border-radius: 5px;
     padding: 10px;
@@ -628,7 +629,7 @@ nav {
     border: none;
     cursor: pointer;
     color: #fcce00;  /* Cor do texto padrão */
-    border-radius: 5px;   /* Borda arredondada */
+    border-radius: 50%;   /* Borda arredondada */
     padding: 10px 20px; /* Espaçamento interno */
     margin: 5px;       /* Espaçamento externo */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
@@ -639,7 +640,8 @@ nav {
 #theme-button {
     background: linear-gradient(to right, #FFD700, #fcce00); /* Gradiente dourado */
     color: #333; /* Cor do texto no botão principal */
-
+    border-radius: 5px;
+    font-size: 1em;
 }
 
 /* Botão principal - efeito hover */
@@ -651,7 +653,6 @@ nav {
 
 /* Menu de opções de temas */
 .theme-options {
-    /* ... (estilos existentes) ... */
     background: #444; /* Cor de fundo mais escura */
     gap: 10px;  /* Espaçamento entre os botões */
     padding: 15px;
@@ -689,8 +690,9 @@ nav {
 
 #close-theme-options { 
     background-color: #777; /* Cor de fundo menos contrastante */
-    margin-top: 10px;
+    margin-top: 5px;
     color: white; /* Texto branco para melhor contraste */
+
 
 
 }
