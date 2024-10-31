@@ -138,4 +138,22 @@ function setTheme(theme) {
     themeOptions.classList.add('hidden');
     themeButton.className = theme; // Mantém a classe no botão também
 
+    // Atualiza a cor do botão principal do gooey menu
+    const gooeyButton = document.querySelector('#theme-menu .menu-open-button');
+    if (gooeyButton) {
+        gooeyButton.style.backgroundColor = getComputedStyle(document.body).backgroundColor; // Cor de fundo do body
+    }
+
 }
+
+// Fechar o menu ao clicar fora (código correto)
+document.addEventListener('click', function(event) {
+    const gooeyMenu = document.getElementById('theme-menu');
+    const menuOpenButton = document.getElementById('menu-open'); 
+
+    if (gooeyMenu && menuOpenButton) {
+        if (!gooeyMenu.contains(event.target) && !menuOpenButton.contains(event.target)) {
+            menuOpenButton.checked = false;
+        }
+    }
+});

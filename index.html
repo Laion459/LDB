@@ -14,20 +14,45 @@
 
 <body>
     <header>
-        <div class="theme-selector">
-            <button id="theme-button" class="theme-default">TEMAS</button>
-            <div id="theme-options" class="theme-options hidden">
-                <button onclick="setTheme('theme-black')" class="theme-black"></button>
-                <button onclick="setTheme('theme-white')" class="theme-white"></button>
-                <button onclick="setTheme('theme-blue')" class="theme-blue"></button>
-                <button onclick="setTheme('theme-pink')" class="theme-pink"></button>
-                <button onclick="setTheme('theme-red')" class="theme-red"></button>
-                <button onclick="setTheme('theme-green')" class="theme-green"></button>
-                <button onclick="setTheme('theme-default')" class="theme-default"></button>
-                <button id="close-theme-options">X</button>
-            </div>
-        </div>
-        </div>
+        <nav class="menu" id="theme-menu"> <!--- O Gooey Menu aqui, com um ID para facilitar o estilo --->
+            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+            <label class="menu-open-button" for="menu-open">
+              <span class="hamburger hamburger-1"></span>
+              <span class="hamburger hamburger-2"></span>
+              <span class="hamburger hamburger-3"></span>
+            </label>
+          
+            <a href="#" onclick="setTheme('theme-black')" class="menu-item theme-black hidden">B</a>
+            <a href="#" onclick="setTheme('theme-white')" class="menu-item theme-white hidden">W</a>
+            <a href="#" onclick="setTheme('theme-blue')" class="menu-item theme-blue hidden">B</a>
+            <a href="#" onclick="setTheme('theme-pink')" class="menu-item theme-pink hidden">P</a>
+            <a href="#" onclick="setTheme('theme-red')" class="menu-item theme-red hidden">R</a>
+            <a href="#" onclick="setTheme('theme-green')" class="menu-item theme-green hidden">G</a>
+            <a href="#" onclick="setTheme('theme-default')" class="menu-item theme-default hidden">D</a> <!--- Ícone diferente para o tema Default --->
+          
+          </nav>
+          
+          
+          <!-- filters -->
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="shadowed-goo">
+                    
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                    <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                    <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                    <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                    <feComposite in2="shadow" in="goo" result="goo" />
+                    <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                </filter>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                    <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                </filter>
+              </defs>
+          </svg>
 
 
 
