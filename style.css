@@ -564,24 +564,91 @@ nav {
 
 
 
+/* Definição padrão */
+:root {
+    --bg-color: white;
+    --text-color: #fcce00;
+}
+
+/* Tema Preto */
+.theme-black {
+    --bg-color: black;
+    --text-color: #fcce00;
+}
+
+/* Tema Azul */
+.theme-blue {
+    --bg-color: #007BFF;
+    --text-color: #fcce00;
+}
+
+/* Tema Rosa */
+.theme-pink {
+    --bg-color: #FF69B4;
+    --text-color: #fcce00;
+}
+
+/* Tema Vermelho */
+.theme-red {
+    --bg-color: #ff0000;
+    --text-color: #fcce00;
+}
+
+/* Tema Verde */
+.theme-green {
+    --bg-color: #32CD32;
+    --text-color: #fcce00;
+}
+
+/* Tema Default */
+.theme-default {
+    --bg-color: #333;
+    --text-color: #fcce00;
+}
+
+/* Aplica as variáveis de cor aos elementos */
+body,
+header,
+footer,
+section,
+nav {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color);
+}
+
+
+/* Estilos adicionais para o menu (provavelmente não usados, mas mantidos para integridade) */
+.theme-selector {
+    margin: 20px;
+}
+
+.theme-selector button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
 
 /* Variáveis do Gooey Menu */
 :root {
-    --gooey-fg: #e91e63; /* Cor de primeiro plano do gooey menu */
-    --gooey-bg: #8bc34a;  /* Cor de fundo (não usada diretamente, apenas para demonstração) */
-    --open-distance: 110px;  /* Distância de abertura dos itens do menu */
+    --gooey-fg: #e91e63;
+    /* Cor de primeiro plano do gooey menu */
+    --gooey-bg: #8bc34a;
+    /* Cor de fundo (não usada diretamente, apenas para demonstração) */
+    --open-distance: 110px;
+    /* Distância de abertura dos itens do menu */
 }
 
 
 /* Estilos do Gooey Menu */
-#theme-menu { /* Usar o ID para estilizar o gooey menu */
-
+#theme-menu {
     top: 90px;
-    right: 15%; /* Espaçamento da direita */
+    right: 15%;
     left: auto;
     z-index: 100;
-    width: 50px; /* Largura do menu fechado (botão principal) */
-    height: 50px; /* Altura do menu fechado (botão principal) */
+    width: 50px;
+    height: 50px;
 }
 
 #theme-menu .menu,
@@ -590,25 +657,54 @@ nav {
     filter: url('#goo');
 }
 
-
 #theme-menu .menu-item {
-    background: var(--gooey-fg);
     border-radius: 100%;
-    width: 30px; /* Tamanho dos itens do menu */
-    height: 30px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 10px;
-    color: #ffbb33;
     text-align: center;
-    line-height: 60px;
+    line-height: 10px;
     transform: translate3d(0, 0, 0);
     transition: transform ease-out 200ms;
-    display: flex; /* Centralizar o ícone */
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em;  /* Tamanho dos ícones */
-    overflow: hidden; /* Para evitar que o conteúdo vaze */
+    font-size: 1.2em;
+    overflow: hidden;
+    color: #ffbb33;
+    
+}
 
+/* Classes de tema (cores de fundo) */
+.theme-black {
+    background-color: black;
+}
+
+.theme-white {
+    background-color: white;
+    color: black;
+}
+
+/* Texto preto em fundo branco */
+.theme-blue {
+    background-color: #007BFF;
+}
+
+.theme-pink {
+    background-color: #FF69B4;
+}
+
+.theme-red {
+    background-color: #ff0000;
+}
+
+.theme-green {
+    background-color: #32CD32;
+}
+
+.theme-default {
+    background-color: #333;
 }
 
 #theme-menu .menu-open {
@@ -617,19 +713,25 @@ nav {
 
 
 #theme-menu .menu-open-button {
-    background-color: #444; /* Cor de fundo inicial para o botão principal */
-    border-radius: 100%;    /* Arredondar o botão principal */
-    width: 50px;             /* Tamanho do botão principal */
+    background-color: #444;
+    /* Cor de fundo inicial para o botão principal */
+    border-radius: 100%;
+    /* Arredondar o botão principal */
+    width: 50px;
+    /* Tamanho do botão principal */
     height: 50px;
-    position: absolute;       /* Posicionamento do botão */
+    position: absolute;
+    /* Posicionamento do botão */
     top: 0;
-    left: 0;                
-    z-index: 2;             /* Certificar-se de que o botão fica por cima */
+    left: 0;
+    z-index: 2;
+    /* Certificar-se de que o botão fica por cima */
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     transition-duration: 400ms;
     transform: scale(1, 1) translate3d(0, 0, 0);
     cursor: pointer;
-    display: flex; /* Centralizar o ícone do hambúrguer */
+    display: flex;
+    /* Centralizar o ícone do hambúrguer */
     justify-content: center;
     align-items: center;
 }
@@ -638,7 +740,8 @@ nav {
 .hamburger {
     width: 25px;
     height: 3px;
-    background-color: #ffbb33; /* Cor fixa para o hambúrguer */
+    background-color: #ffbb33;
+    /* Cor fixa para o hambúrguer */
     display: block;
     position: absolute;
     top: 50%;
@@ -649,71 +752,114 @@ nav {
 }
 
 /* Animações do Hambúrguer */
-#theme-menu .hamburger-1 { transform: translate3d(0, -8px, 0); }
-#theme-menu .hamburger-2 { transform: translate3d(0, 0, 0); }
-#theme-menu .hamburger-3 { transform: translate3d(0, 8px, 0); }
+#theme-menu .hamburger-1 {
+    transform: translate3d(0, -8px, 0);
+}
 
-#theme-menu .menu-open:checked + .menu-open-button .hamburger-1 {
-  transform: translate3d(0, 0, 0) rotate(45deg);
+#theme-menu .hamburger-2 {
+    transform: translate3d(0, 0, 0);
 }
-#theme-menu .menu-open:checked + .menu-open-button .hamburger-2 {
-  transform: translate3d(0, 0, 0) scale(0.1, 1);
+
+#theme-menu .hamburger-3 {
+    transform: translate3d(0, 8px, 0);
 }
-#theme-menu .menu-open:checked + .menu-open-button .hamburger-3 {
-  transform: translate3d(0, 0, 0) rotate(-45deg);
+
+#theme-menu .menu-open:checked+.menu-open-button .hamburger-1 {
+    transform: translate3d(0, 0, 0) rotate(45deg);
 }
-#theme-menu .menu-open:checked + .menu-open-button {
+
+#theme-menu .menu-open:checked+.menu-open-button .hamburger-2 {
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+#theme-menu .menu-open:checked+.menu-open-button .hamburger-3 {
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+#theme-menu .menu-open:checked+.menu-open-button {
     transition-timing-function: linear;
-  transition-duration: 200ms;
-  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+    transition-duration: 200ms;
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
 }
 
 /* Animação dos Itens do Menu */
-#theme-menu .menu-open:checked ~ .menu-item {
+#theme-menu .menu-open:checked~.menu-item {
     transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
     opacity: 1;
     display: block;
 }
 
 #theme-menu {
-    --n: 7; /* Número de itens do menu */
-    --angle: calc(360deg / var(--n)); /* Ângulo entre os itens */
-    --radius: calc(var(--open-distance) * 1); /* Raio do círculo */
+    --n: 7;
+    /* Número de itens do menu */
+    --angle: calc(360deg / var(--n));
+    /* Ângulo entre os itens */
+    --radius: calc(var(--open-distance) * 1);
+    /* Raio do círculo */
 }
 
 /* Calcular a posição de cada item */
-#theme-menu .menu-open:checked ~ .menu-item:nth-child(n+3) { /* Começar do terceiro filho */
-    transform: rotate(calc((var(--angle) * (var(--n) - (n - 3))) + 17deg )) translate(var(--radius)) rotate(calc(-1 * (var(--angle) * (var(--n) - (n - 3)) - 180deg))); /* Calcular posição */
+#theme-menu .menu-open:checked~.menu-item:nth-child(n+3) {
+    /* Começar do terceiro filho */
+    transform: rotate(calc((var(--angle) * (var(--n) - (n - 3))) + 17deg)) translate(var(--radius)) rotate(calc(-1 * (var(--angle) * (var(--n) - (n - 3)) - 180deg)));
+    /* Calcular posição */
 }
 
 .hidden {
     display: none;
 }
 
-/* Classes de tema (cores de fundo) */
-.theme-black { background-color: black; color: #ffbb33; }
-.theme-white { background-color: white; color: #333; } 
-.theme-blue { background-color: #007BFF; color: white; }
-.theme-pink { background-color: #FF69B4; color: white; }
-.theme-red { background-color: #FF6347; color: white; }
-.theme-green { background-color: #32CD32; color: white; }
-.theme-default { background-color: #333; color: #ffbb33; }
 
 /* Esconder apenas os itens do menu, não o menu inteiro */
-#theme-menu .menu-item.hidden {  /* Adicionar #theme-menu para ser mais específico */
+#theme-menu .menu-item.hidden {
+    /* Adicionar #theme-menu para ser mais específico */
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-#theme-menu .menu-open:checked ~ .menu-item {
+#theme-menu .menu-open:checked~.menu-item {
     opacity: 1;
-    display: block; /* Mostrar os itens quando o menu estiver aberto */
+    display: block;
+    /* Mostrar os itens quando o menu estiver aberto */
 }
 
-#theme-menu .menu-open:checked ~ .menu-item:nth-child(3) { transition-duration: 180ms; transform: translate3d(calc(var(--open-distance) * 0.6), calc(var(--open-distance) * 0.77), 0); }
-#theme-menu .menu-open:checked ~ .menu-item:nth-child(4) { transition-duration: 200ms; transform: translate3d(var(--open-distance), 0, 0); }
-#theme-menu .menu-open:checked ~ .menu-item:nth-child(5) { transition-duration: 220ms; transform: translate3d(calc(var(--open-distance) * 0.6), calc(var(--open-distance) * -0.77), 0); }
-#theme-menu .menu-open:checked ~ .menu-item:nth-child(6) { transition-duration: 240ms; transform: translate3d(calc(var(--open-distance) * -0.15), calc(var(--open-distance) * -0.99), 0); }
-#theme-menu .menu-open:checked ~ .menu-item:nth-child(7) { transition-duration: 260ms; transform: translate3d(calc(var(--open-distance) * -0.73), calc(var(--open-distance) * -0.68), 0); }
-#theme-menu .menu-open:checked ~ .menu-item:nth-child(8) { transition-duration: 280ms; transform: translate3d(calc(var(--open-distance) * -0.95), calc(var(--open-distance) * 0.31), 0); }
+:root {
+    --open-distance: 100px;
+    /* Controle do raio do círculo */
+}
+
+#theme-menu .menu-open:checked~.menu-item:nth-child(3) {
+    transition-duration: 180ms;
+    transform: translate3d(calc(var(--open-distance) * cos(0deg)), calc(var(--open-distance) * sin(0deg)), 0);
+}
+
+#theme-menu .menu-open:checked~.menu-item:nth-child(4) {
+    transition-duration: 200ms;
+    transform: translate3d(calc(var(--open-distance) * cos(51.43deg)), calc(var(--open-distance) * sin(51.43deg)), 0);
+}
+
+#theme-menu .menu-open:checked~.menu-item:nth-child(5) {
+    transition-duration: 220ms;
+    transform: translate3d(calc(var(--open-distance) * cos(102.86deg)), calc(var(--open-distance) * sin(102.86deg)), 0);
+}
+
+#theme-menu .menu-open:checked~.menu-item:nth-child(6) {
+    transition-duration: 240ms;
+    transform: translate3d(calc(var(--open-distance) * cos(154.29deg)), calc(var(--open-distance) * sin(154.29deg)), 0);
+}
+
+#theme-menu .menu-open:checked~.menu-item:nth-child(7) {
+    transition-duration: 260ms;
+    transform: translate3d(calc(var(--open-distance) * cos(205.72deg)), calc(var(--open-distance) * sin(205.72deg)), 0);
+}
+
+#theme-menu .menu-open:checked~.menu-item:nth-child(8) {
+    transition-duration: 280ms;
+    transform: translate3d(calc(var(--open-distance) * cos(257.15deg)), calc(var(--open-distance) * sin(257.15deg)), 0);
+}
+
+#theme-menu .menu-open:checked~.menu-item:nth-child(9) {
+    transition-duration: 300ms;
+    transform: translate3d(calc(var(--open-distance) * cos(308.58deg)), calc(var(--open-distance) * sin(308.58deg)), 0);
+}

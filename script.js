@@ -70,90 +70,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-// Mover o projeto quando o mouse passar sobre ele
-function moveProject(project) {
-    project.style.transform = 'translateY(-10px)';
-}
-
-// Resetar a posição do projeto quando o mouse sair dele
-function resetProject(project) {
-    project.style.transform = 'translateY(0)';
-}
-
-
 // Função para trocar o tema
 function setTheme(theme) {
-    document.body.className = ''; // Remove qualquer classe anterior
-    if (theme !== 'theme-white') { // A classe 'theme-white' é o padrão
+    document.body.className = ''; 
+    if (theme !== 'theme-white') {
         document.body.classList.add(theme);
     }
-    localStorage.setItem('selectedTheme', theme); // Salvar no localStorage
-}
-
-// Aplicar o tema salvo ao carregar a página
-window.onload = function() {
-    const savedTheme = localStorage.getItem('selectedTheme');
-    if (savedTheme) {
-        setTheme(savedTheme);
-    }
-};
-
-
-
-
-
-
-
-
-// Funções para o seletor de temas
-const themeButton = document.getElementById('theme-button');
-const themeOptions = document.getElementById('theme-options');
-const closeThemeOptions = document.getElementById('close-theme-options');
-
-
-themeButton.addEventListener('click', () => {
-    themeOptions.classList.toggle('hidden');
-});
-
-
-closeThemeOptions.addEventListener('click', () => {
-    themeOptions.classList.add('hidden');
-});
-
-// Fechar o menu ao clicar fora
-document.addEventListener('click', function(event) {
-    if (!themeButton.contains(event.target) && !themeOptions.contains(event.target)) {
-        themeOptions.classList.add('hidden');
-    }
-});
-
-
-function setTheme(theme) {
-    document.body.className = ''; // Remove classes anteriores do body
-    if (theme !== 'theme-white') { 
-        document.body.classList.add(theme); // Adiciona a classe ao body
-    }
     localStorage.setItem('selectedTheme', theme);
-    themeOptions.classList.add('hidden');
-    themeButton.className = theme; // Mantém a classe no botão também
 
     // Atualiza a cor do botão principal do gooey menu
     const gooeyButton = document.querySelector('#theme-menu .menu-open-button');
     if (gooeyButton) {
-        gooeyButton.style.backgroundColor = getComputedStyle(document.body).backgroundColor; // Cor de fundo do body
+        gooeyButton.style.backgroundColor = getComputedStyle(document.body).backgroundColor;
     }
-
 }
 
-// Fechar o menu ao clicar fora (código correto)
+// Evento para fechar o menu ao clicar fora dele
 document.addEventListener('click', function(event) {
     const gooeyMenu = document.getElementById('theme-menu');
-    const menuOpenButton = document.getElementById('menu-open'); 
+    const menuOpenCheckbox = document.getElementById('menu-open');
 
-    if (gooeyMenu && menuOpenButton) {
-        if (!gooeyMenu.contains(event.target) && !menuOpenButton.contains(event.target)) {
-            menuOpenButton.checked = false;
-        }
+    // Se o menu está aberto e o clique foi fora do menu, fechamos o menu
+    if (menuOpenCheckbox.checked && !gooeyMenu.contains(event.target)) {
+        menuOpenCheckbox.checked = false;
+    }
+});
+
+// Carregar o tema salvo no localStorage ao iniciar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme) {
+        setTheme(savedTheme);
     }
 });
