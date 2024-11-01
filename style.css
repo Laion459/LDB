@@ -617,7 +617,7 @@ nav {
 }
 
 
-/* Estilos adicionais para o menu (provavelmente não usados, mas mantidos para integridade) */
+/* Estilos adicionais para o menu */
 .theme-selector {
     margin: 20px;
 }
@@ -635,7 +635,7 @@ nav {
     --gooey-fg: #e91e63;
     /* Cor de primeiro plano do gooey menu */
     --gooey-bg: #8bc34a;
-    /* Cor de fundo (não usada diretamente, apenas para demonstração) */
+    /* Cor de fundo */
     --open-distance: 110px;
     /* Distância de abertura dos itens do menu */
 }
