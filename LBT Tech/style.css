@@ -97,3 +97,7 @@ footer {
 .text-cinza-escuro {
     color: #333;
 }
+
+.navbar-brand img {
+    border-radius: 50%; 
+  }
