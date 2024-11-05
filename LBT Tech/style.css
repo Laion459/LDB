@@ -1,46 +1,68 @@
 /* style.css */
 
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte mais moderna - importe ou escolha outra */
+
     margin: 0;
-    color: #333; 
+    color: #333;
     background-color: #fff;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Header */
 header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px 0; /* Espaçamento interno */
+    background-image: url("img/capa\ p.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 400px;
+    /* Exemplo com min-height */
+    color: #282a99;
+    /* Certifique-se de que o texto seja visível na imagem */
+    display: flex;
+    /* Para centralizar verticalmente o conteúdo do header */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centraliza horizontalmente */
+
 }
+
+
 
 .navbar-brand {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 5rem;
+    color: #282a99;
 }
 
 .navbar-nav .nav-link {
-    color: #fff !important; /* Cor branca para os links da navbar */
+    color: #282a99;
     margin-left: 20px;
-    transition: color 0.3s ease; /* Transição suave na cor */
+    transition: color 0.3s ease;
+    /* Transição suave na cor */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #e0e0e0 !important; /* Cinza claro ao passar o mouse */
+    color: #e0e0e0 !important;
+    /* Cinza claro ao passar o mouse */
 }
 
 .hero {
     text-align: center;
-    padding: 100px 0;
+    color: #282a99;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 7rem;
     margin-bottom: 20px;
+    color: #282a99;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 3rem;
     margin-bottom: 30px;
 }
 
@@ -59,18 +81,21 @@ section h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: center;
-    color: #007bff; /* Azul para os títulos das seções */
+    color: #007bff;
+    /* Azul para os títulos das seções */
 }
 
 #servicos {
-    background-color: #f8f9fa; /* Cinza claro para a seção de serviços */
+    background-color: #f8f9fa;
+    /* Cinza claro para a seção de serviços */
 }
 
 
 
 /* Rodapé */
 footer {
-    background-color: #333; /* Cinza escuro para o rodapé */
+    background-color: #333;
+    /* Cinza escuro para o rodapé */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -99,5 +124,5 @@ footer {
 }
 
 .navbar-brand img {
-    border-radius: 50%; 
-  }
+    border-radius: 50%;
+}
