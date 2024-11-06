@@ -13,20 +13,17 @@ body {
 
 /* Header */
 header {
-    background-image: url("img/capa\ p.webp");
+    background-image: url("img/note.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 400px;
-    /* Exemplo com min-height */
     color: #282a99;
-    /* Certifique-se de que o texto seja visível na imagem */
     display: flex;
-    /* Para centralizar verticalmente o conteúdo do header */
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Centraliza horizontalmente */
 
 }
 
