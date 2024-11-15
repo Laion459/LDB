@@ -1,0 +1,125 @@
+/* style.css */
+
+body {
+
+    margin: 0;
+    color: #333;
+    background-color: #fff;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header */
+header {
+    background-image: url("img/note.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 400px;
+    color: #282a99;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 5rem;
+    color: #282a99;
+}
+
+.navbar-nav .nav-link {
+    color: #282a99;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    /* Transição suave na cor */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e0e0e0 !important;
+    /* Cinza claro ao passar o mouse */
+}
+
+.hero {
+    text-align: center;
+    color: #282a99;
+}
+
+.hero h1 {
+    font-size: 7rem;
+    margin-bottom: 20px;
+    color: #282a99;
+}
+
+.hero p {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+/* Seções */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #007bff;
+    /* Azul para os títulos das seções */
+}
+
+#servicos {
+    background-color: #f8f9fa;
+    /* Cinza claro para a seção de serviços */
+}
+
+
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    /* Cinza escuro para o rodapé */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Utilidades */
+.text-cinza-escuro {
+    color: #333;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+}
