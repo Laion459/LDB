@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Consolidada de Ideias de Negócios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+            display: block;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Ajuste das larguras das colunas (adapte conforme necessário) */
+        th:nth-child(1), td:nth-child(1) { width: 3%; }   /* ID */
+        th:nth-child(2), td:nth-child(2) { width: 8%; }   /* Nome Resumido */
+        th:nth-child(3), td:nth-child(3) { width: 6%; }   /* Nicho */
+        th:nth-child(4), td:nth-child(4) { width: 5%; }   /* Ticket Médio */
+        th:nth-child(5), td:nth-child(5) { width: 8%; }   /* Complexidade MVP / Escalabilidade */
+        th:nth-child(6), td:nth-child(6) { width: 5%; }   /* Escalabilidade (Geral) */
+        th:nth-child(7), td:nth-child(7) { width: 6%; }   /* Risco de Churn */
+        th:nth-child(8), td:nth-child(8) { width: 6%; }   /* Concorrência Direta */
+        th:nth-child(9), td:nth-child(9) { width: 6%; }   /* Modelo de Preço */
+        th:nth-child(10), td:nth-child(10) { width: 6%; }  /* Viabilidade a Longo Prazo */
+        th:nth-child(11), td:nth-child(11) { width: 6%; }  /* Possibilidade de Valorização */
+        th:nth-child(12), td:nth-child(12) { width: 6%; }  /* Possibilidade de Vender */
+        th:nth-child(13), td:nth-child(13) { width: 10%; }  /* Problema Que Resolve */
+        th:nth-child(14), td:nth-child(14) { width: 10%; }  /* Solução Proposta (SaaS) */
+        th:nth-child(15), td:nth-child(15) { width: 8%; }   /* Público-Alvo */
+        th:nth-child(16), td:nth-child(16) { width: 6%; }   /* Churn Potencial */
+        th:nth-child(17), td:nth-child(17) { width: 5%; }   /* MVP (Tempo/Meses) */
+        th:nth-child(18), td:nth-child(18) { width: 5%; }   /* Produto Bom (Meses) */
+        th:nth-child(19), td:nth-child(19) { width: 7%; }   /* Custo Inicial Estimado (R$) */
+        th:nth-child(20), td:nth-child(20) { width: 6%; }   /* Grau de Inovação */
+        th:nth-child(21), td:nth-child(21) { width: 8%; }   /* Barreiras de Entrada */
+        th:nth-child(22), td:nth-child(22) { width: 6%; }   /* Modelo de Receita (Tabela 2) */
+        th:nth-child(23), td:nth-child(23) { width: 6%; }   /* Potencial de Equity */
+        th:nth-child(24), td:nth-child(24) { width: 10%; }  /* Observações Estratégicas */
+        th:nth-child(25), td:nth-child(25) { width: 8%; }   /* Oportunidades */
+        th:nth-child(26), td:nth-child(26) { width: 8%; }   /* Ameaças */
+        th:nth-child(27), td:nth-child(27) { width: 8%; }   /* Diferenciais Possíveis */
+
+    </style>
+</head>
+<body>
+    <h1>Análise Consolidada de Ideias de Negócios</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome Resumido</th>
+                <th>Nicho</th>
+                <th>Ticket Médio</th>
+                <th>Complexidade MVP</th>
+                <th>Escalabilidade</th>
+                <th>Risco de Churn</th>
+                <th>Concorrência Direta</th>
+                <th>Modelo de Preço</th>
+                <th>Viabilidade a Longo Prazo</th>
+                <th>Possibilidade de Valorização</th>
+                <th>Possibilidade de Vender</th>
+                <th>Problema Que Resolve</th>
+                <th>Solução Proposta (SaaS)</th>
+                <th>Público-Alvo</th>
+                <th>Churn Potencial</th>
+                <th>MVP (Tempo/Meses)</th>
+                <th>Produto Bom (Meses)</th>
+                <th>Custo Inicial Estimado (R$)</th>
+                <th>Grau de Inovação</th>
+                <th>Barreiras de Entrada</th>
+                <th>Modelo de Receita</th>
+                <th>Potencial de Equity</th>
+                <th>Observações Estratégicas</th>
+                 <th>Oportunidades</th>
+                <th>Ameaças</th>
+                <th>Diferenciais Possíveis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Psicólogos</td>
+                <td>Saúde</td>
+                <td>R$ 89</td>
+                <td>Média</td>
+                <td>8</td>
+                <td>Baixo</td>
+                <td>Média</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Falta de controle financeiro e de agenda</td>
+                <td>Gestão de pacientes, agendamento, financeiro, relatórios de evolução</td>
+                <td>Psicólogos autônomos</td>
+                <td>Baixo</td>
+                <td>2</td>
+                <td>5</td>
+                <td>25.000</td>
+                <td>Média</td>
+                <td>Relacionamento com clientes</td>
+                <td>Assinatura mensal</td>
+                <td>Alta</td>
+                <td>Alta adesão e baixa rotatividade. Foco em retenção e UX.</td>
+                 <td>Alta dor de organização e demanda crescente</td>
+                <td>Concorrência moderada</td>
+                <td>UX simples, foco em regulação, integração com planos</td>
+            </tr>
+             <tr>
+                <td>2</td>
+                <td>WhatsApp sellers</td>
+                <td>Informal</td>
+                <td>R$ 39</td>
+                <td>Média</td>
+                <td>10</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Freemium</td>
+                <td>Média</td>
+                <td>Alta</td>
+                <td>Média</td>
+                 <td>Vendas manuais e sem controle</td>
+                <td>Plataforma para vendas, cobrança, catálogo, gestão de clientes</td>
+                <td>Microempreendedores</td>
+                <td>Alto</td>
+                <td>2</td>
+                <td>4</td>
+                <td>15.000</td>
+                <td>Alta</td>
+                <td>Integrações e automações</td>
+                 <td>Freemium + upgrade</td>
+                <td>Alta</td>
+                <td>Rápido crescimento, foco em engajamento e viralização</td>
+                 <td>Uso massivo do WhatsApp no Brasil</td>
+                <td>Soluções genéricas consolidadas</td>
+                <td>Foco em nichos (ex: oficinas, marmitas)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nutricionistas</td>
+                <td>Saúde</td>
+                <td>R$ 89</td>
+                <td>Média</td>
+                <td>8</td>
+                <td>Baixo</td>
+                <td>Média</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Média</td>
+                <td>Alta</td>
+                <td>Dificuldade em acompanhar pacientes e plano alimentar</td>
+                <td>Agenda, avaliação nutricional, receituário, follow-up por app</td>
+                <td>Nutricionistas</td>
+                <td>Baixo</td>
+                <td>2</td>
+                <td>5</td>
+                <td>22.000</td>
+                <td>Média</td>
+                <td>Personalização e comunicação</td>
+                 <td>Assinatura mensal</td>
+                <td>Média</td>
+                <td>Boa retenção, diferencial em mobile e UX fluída</td>
+                 <td>Mercado com alta retenção</td>
+                <td>Softwares genéricos de saúde</td>
+                <td>Design visual alimentar, sugestão automática de cardápios</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Pet shops</td>
+                <td>Varejo</td>
+                <td>R$ 149</td>
+                <td>Alta</td>
+                <td>9</td>
+                <td>Médio</td>
+                <td>Alta</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                 <td>Falta de CRM, agendamentos manuais, estoques confusos</td>
+                <td>Plataforma de gestão de clientes, pets, estoque e serviços</td>
+                <td>Pet Shops pequenos</td>
+                <td>Médio</td>
+                <td>3</td>
+                <td>6</td>
+                <td>30.000</td>
+                <td>Alta</td>
+                <td>Local + fidelização</td>
+                 <td>Assinatura mensal</td>
+                <td>Alta</td>
+                <td>Poucos players em SaaS, nicho com dinheiro</td>
+                 <td>Pet economy crescendo</td>
+                <td>Alguns ERPs genéricos</td>
+                <td>Conectividade com clientes (ex: notific. vacina)</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Estética</td>
+                <td>Serviços</td>
+                <td>R$ 99</td>
+                <td>Média</td>
+                <td>7</td>
+                <td>Baixo</td>
+                <td>Média</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                 <td>Agendas em papel, no-show, baixa recorrência</td>
+                <td>Gestão de serviços, clientes, pagamento e lembretes</td>
+                <td>Clínicas e esteticistas</td>
+                <td>Baixo</td>
+                <td>2</td>
+                <td>5</td>
+                <td>18.000</td>
+                <td>Média</td>
+                <td>Integração com WhatsApp</td>
+                 <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Pode verticalizar com loja virtual e produtos</td>
+                 <td>Nicho muito fiel e social</td>
+                <td>Concorrência local</td>
+                <td>App para clientes agendarem com gamificação</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Dentistas</td>
+                <td>Saúde</td>
+                <td>R$ 199</td>
+                <td>Alta</td>
+                <td>9</td>
+                <td>Baixo</td>
+                <td>Alta</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Softwares antigos, complicados e caros</td>
+                <td>CRM + financeiro + prontuário simples e mobile</td>
+                <td>Dentistas individuais e clínicas pequenas</td>
+                <td>Baixo</td>
+                <td>3</td>
+                <td>6</td>
+                <td>40.000</td>
+                <td>Alta</td>
+                <td>Alto custo de aquisição</td>
+                 <td>Assinatura anual</td>
+                <td>Alta</td>
+                <td>Margem alta e baixo churn se bem implantado</td>
+                <td>Alto ticket e complexidade</td>
+                <td>Concorrentes robustos</td>
+                <td>UX minimalista e foco em clínicas pequenas</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Diaristas</td>
+                <td>Informal</td>
+                <td>R$ 29</td>
+                <td>Baixa</td>
+                <td>5</td>
+                <td>Alta</td>
+                <td>Baixa</td>
+                <td>Assinatura</td>
+                <td>Média</td>
+                <td>Baixa</td>
+                <td>Média</td>
+                 <td>Falta de visibilidade e agenda desorganizada</td>
+                <td>Plataforma de marca pessoal, pagamento, agendamento</td>
+                <td>Diaristas e clientes finais</td>
+                <td>Alto</td>
+                <td>2</td>
+                <td>4</td>
+                <td>12.000</td>
+                <td>Alta</td>
+                <td>Volume vs margem</td>
+                 <td>Freemium</td>
+                <td>Média</td>
+                <td>Precisa de tráfego alto ou parceria com apps locais</td>
+                 <td>Nicho com dor, pouca digitalização</td>
+                <td>Baixo ticket</td>
+                <td>Parcerias com plataformas locais</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Financeiro famílias</td>
+                <td>Pessoal</td>
+                <td>R$ 19</td>
+                <td>Média</td>
+                <td>7</td>
+                <td>Médio</td>
+                <td>Alta</td>
+                <td>Assinatura</td>
+                <td>Média</td>
+                <td>Baixa</td>
+                <td>Baixa</td>
+                 <td>Falta de controle doméstico de orçamento</td>
+                <td>App compartilhado de finanças para casais/famílias</td>
+                <td>Casais, jovens, pais</td>
+                <td>Médio</td>
+                <td>2</td>
+                <td>5</td>
+                <td>14.000</td>
+                <td>Média</td>
+                <td>UX simples, lúdica</td>
+                 <td>Assinatura mensal</td>
+                <td>Baixa</td>
+                <td>Melhor como produto gratuito ou embutido em outro SaaS</td>
+                 <td>Educacional e viralizável</td>
+                <td>Baixo ticket</td>
+                <td>Gamificação para filhos, dashboard familiar</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Salão beleza</td>
+                <td>Serviços</td>
+                <td>R$ 89</td>
+                <td>Média</td>
+                <td>8</td>
+                <td>Baixo</td>
+                <td>Alta</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Média</td>
+                <td>Alta</td>
+                <td>Agendamento e estoque confusos, baixa recorrência</td>
+                <td>Gestão de serviços, estoque, clientes e fidelidade</td>
+                <td>Salões pequenos</td>
+                <td>Baixo</td>
+                <td>2</td>
+                <td>5</td>
+                <td>20.000</td>
+                <td>Média</td>
+                <td>UX simples, recorrência</td>
+                 <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Nicho competitivo mas com muita demanda</td>
+                <td>Alta retenção e comunidade</td>
+                <td>Concorrência tradicional</td>
+                <td>Integração com Instagram e link de agendamento</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Professores</td>
+                <td>Educação</td>
+                <td>R$ 59</td>
+                <td>Média</td>
+                <td>7</td>
+                <td>Baixo</td>
+                <td>Média</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Baixa</td>
+                <td>Baixa</td>
+                 <td>Planejamento de aulas, turmas e materiais desorganizado</td>
+                <td>Plataforma de ensino, calendário, recursos</td>
+                <td>Professores autônomos</td>
+                <td>Baixo</td>
+                <td>2</td>
+                <td>4</td>
+                <td>15.000</td>
+                <td>Baixa</td>
+                <td>UX e conteúdo são chave</td>
+                 <td>Assinatura</td>
+                <td>Média</td>
+                <td>Ideal se integrado com marketplace de aulas</td>
+                 <td>Mercado autônomo em crescimento</td>
+                <td>Educação informal tem baixa adesão a SaaS</td>
+                <td>Aula online integrada, faturas automáticas</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Fisioterapia</td>
+                <td>Saúde</td>
+                <td>R$ 79</td>
+                <td>Média</td>
+                <td>8</td>
+                <td>Baixo</td>
+                <td>Média</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Média</td>
+                <td>Alta</td>
+                 <td>Agenda e ficha de pacientes em papel</td>
+                <td>App com ficha, calendário, plano de sessões</td>
+                <td>Clínicas e autônomos</td>
+                <td>Baixo</td>
+                <td>2</td>
+                <td>5</td>
+                <td>22.000</td>
+                <td>Média</td>
+                <td>Legislação é diferencial</td>
+                 <td>Assinatura</td>
+                <td>Média</td>
+                <td>Produto bom pode fidelizar para sempre</td>
+                 <td>Crescimento com longevidade da população</td>
+                <td>Similaridade com apps de saúde</td>
+                <td>UX pensada em mobilidade e registro por voz</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Pequenos alugueis</td>
+                <td>Imóveis</td>
+                <td>R$ 49</td>
+                <td>Média</td>
+                <td>8</td>
+                <td>Médio</td>
+                <td>Baixa</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Média</td>
+                <td>Alta</td>
+                 <td>Controle manual de aluguéis, recibos, atrasos</td>
+                <td>Plataforma de locação e gestão de imóveis próprios</td>
+                <td>Locadores pessoa física</td>
+                <td>Médio</td>
+                <td>2</td>
+                <td>5</td>
+                <td>17.000</td>
+                <td>Alta</td>
+                <td>Poucos players focados nesse microsegmento</td>
+                 <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Muito promissor com escala moderada</td>
+                <td>Submercado desassistido</td>
+                <td>Alta inadimplência</td>
+                <td>Gestão de cobrança automatizada e inspeção por fotos</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Eventos</td>
+                <td>Serviços</td>
+                <td>R$ 79</td>
+                <td>Alta</td>
+                <td>9</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Freemium</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                 <td>Gestão de datas, contratos, pagamentos caótica</td>
+                <td>Plataforma de organização e CRM</td>
+                <td>Fornecedores de eventos</td>
+                <td>Alto</td>
+                <td>3</td>
+                <td>6</td>
+                <td>25.000</td>
+                <td>Alta</td>
+                <td>Agendamento e calendário são o core</td>
+                 <td>Assinatura + taxa</td>
+                <td>Alta</td>
+                <td>Pode virar marketplace próprio</td>
+                 <td>Mercado desorganizado</td>
+                <td>Pouca profissionalização</td>
+                <td>Integração com agenda e fornecedores</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Cursos livres</td>
+                <td>Educação</td>
+                <td>R$ 59</td>
+                <td>Média</td>
+                <td>6</td>
+                <td>Baixo</td>
+                <td>Baixa</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Baixa</td>
+                <td>Baixa</td>
+                 <td>Plataformas caras e difíceis</td>
+                <td>Sistema próprio de ensino com pagamentos e videoaulas</td>
+                <td>Instrutores autônomos</td>
+                <td>Baixo</td>
+                <td>2</td>
+                <td>5</td>
+                <td>18.000</td>
+                <td>Média</td>
+                <td>Precisa diferencial em engajamento</td>
+                 <td>Assinatura</td>
+                <td>Média</td>
+                <td>Pode ser freemium com upgrade</td>
+                 <td>Muito conteúdo de expert</td>
+                <td>Alta concorrência</td>
+                <td>Designer de trilha educacional</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Marmitas/artesanato</td>
+                <td>Informal</td>
+                <td>R$ 29</td>
+                <td>Baixa</td>
+                <td>8</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Freemium</td>
+                <td>Média</td>
+                <td>Baixa</td>
+                <td>Média</td>
+                 <td>Falta de catálogo e pagamento fácil</td>
+                <td>Catálogo online, pedido e entrega integrada</td>
+                <td>Produtores locais</td>
+                <td>Alto</td>
+                <td>2</td>
+                <td>4</td>
+                <td>12.000</td>
+                <td>Alta</td>
+                <td>UX e logística são chaves</td>
+                 <td>Freemium + %</td>
+                <td>Baixa</td>
+                <td>Escala só via B2B ou parcerias regionais</td>
+                 <td>Mercado fidelizável</td>
+                <td>Logística é o gargalo</td>
+                <td>Agendamento com previsão e renovação</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Oficinas</td>
+                <td>Serviços</td>
+                <td>R$ 129</td>
+                <td>Alta</td>
+                <td>9</td>
+                <td>Médio</td>
+                <td>Média</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Orçamentos manuais e agenda confusa</td>
+                <td>Gestão de ordens de serviço, estoque e clientes</td>
+                <td>Oficinas pequenas</td>
+                <td>Médio</td>
+                <td>3</td>
+                <td>6</td>
+                <td>25.000</td>
+                <td>Alta</td>
+                <td>Muita dor no setor</td>
+                 <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Poucos SaaS bons no setor</td>
+                 <td>Pouca digitalização</td>
+                <td>Dificuldade com adesão</td>
+                <td>App cliente com histórico e orçamento</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Revendedores</td>
+                <td>Varejo</td>
+                <td>R$ 49</td>
+                <td>Baixa</td>
+                <td>8</td>
+                <td>Médio</td>
+                <td>Alta</td>
+                <td>Assinatura</td>
+                <td>Média</td>
+                <td>Média</td>
+                <td>Baixa</td>
+                 <td>Não têm controle de vendas e clientes</td>
+                <td>App de pedidos, catálogo e pagamento</td>
+                <td>Revendedoras de Avon, Natura, etc</td>
+                <td>Médio</td>
+                <td>2</td>
+                <td>5</td>
+                <td>15.000</td>
+                <td>Média</td>
+                <td>Precisa integração com catálogo real</td>
+                 <td>Assinatura</td>
+                <td>Média</td>
+                <td>Se automatizar catálogo, vira referência</td>
+                <td>Ainda muito no papel</td>
+                <td>Concorrência indireta</td>
+                <td>App com catálogo digital interativo</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Cuidadores</td>
+                <td>Pessoal</td>
+                <td>R$ 59</td>
+                <td>Média</td>
+                <td>7</td>
+                <td>Baixo</td>
+                <td>Baixa</td>
+                <td>Assinatura</td>
+                <td>Alta</td>
+                <td>Baixa</td>
+                <td>Baixa</td>
+                 <td>Falta de acompanhamento e gestão de horários</td>
+                <td>Gestão de pacientes, horário e contatos de emergência</td>
+                <td>Cuidadores e famílias</td>
+                <td>Baixo</td>
+                <td>2</td>
+                <td>4</td>
+                <td>18.000</td>
+                <td>Alta</td>
+                <td>Legislação e UX sensível</td>
+                 <td>Assinatura</td>
+                <td>Média</td>
+                <td>Ideal para expandir via instituições e hospitais</td>
+                 <td>Envelhecimento populacional</td>
+                <td>Pouco acesso a tecnologia</td>
+                <td>Impressão de relatórios automática</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Igrejas/associações</td>
+                <td>Social</td>
+                <td>R$ 69</td>
+                <td>Média</td>
+                <td>7</td>
+                <td>Médio</td>
+                <td>Baixa</td>
+                <td>Assinatura</td>
+                <td>Média</td>
+                <td>Média</td>
+                <td>Média</td>
+                <td>Gestão de membros, eventos e doações desorganizada</td>
+                <td>App de gestão interna e financeira</td>
+                <td>Igrejas pequenas e ONGs</td>
+                <td>Médio</td>
+                <td>2</td>
+                <td>5</td>
+                <td>15.000</td>
+                <td>Baixa</td>
+                <td>UX simples e confiável</td>
+                 <td>Assinatura</td>
+                <td>Média</td>
+                <td>Alta chance de fidelização a longo prazo</td>
+                 <td>Crescimento constante</td>
+                <td>Pouco poder aquisitivo</td>
+                <td>Integração com Pix e eventos</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Freelancers</td>
+                <td>Criativo</td>
+                <td>R$ 69</td>
+                <td>Baixa</td>
+                <td>8</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Freemium</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                <td>Alta</td>
+                 <td>Dificuldade em acompanhar projetos e clientes</td>
+                <td>App de CRM + financeiro pessoal + proposta</td>
+                <td>Freelancers designers, redatores etc</td>
+                <td>Alto</td>
+                <td>2</td>
+                <td>4</td>
+                <td>15.000</td>
+                <td>Alta</td>
+                <td>Integração com Notion e IA</td>
+                <td>Freemium</td>
+                <td>Alta</td>
+                <td>Se viralizar, pode escalar muito</td>
+                <td>Mercado informal, crescente</td>
+                <td>Baixa retenção</td>
+                <td>Propostas visuais interativas e automação</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
