@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light" style="color-scheme: light;"> <!-- Tema claro padrão -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleven Soft - ESH</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white font-sans"> <!-- Fundo branco -->
+
+    <!-- Header -->
+    <header class="fixed left-0 top-0 z-99999 w-full py-7 bg-white shadow transition duration-100 border-b border-stroke">
+        <div class="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+            <div class="flex w-full items-center justify-between xl:w-1/4">
+                <a href="/" class="flex items-center gap-x-1">
+                    <img src="img/logo.png" alt="Eleven Soft Logo" class="w-full" style="max-width: 100px; height: auto;">
+                    <span class="font-semibold text-xl text-gray-800"></span>
+                </a>
+            </div>
+            <div class="invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full false">
+              <nav>
+                  <ul class="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+                      <li><a class="hover:text-orange-500" href="#recursos">Recursos</a></li>
+                      <li><a class="hover:text-orange-500" href="#preco">Preços</a></li>
+                      <li><a class="hover:text-orange-500" href="#depoimentos">Depoimentos</a></li>
+                      <li><a class="hover:text-orange-500" href="#contato">Contato</a></li>
+                  </ul>
+              </nav>
+              <div class="mt-7 flex items-center gap-6 xl:mt-0">
+                <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out">Experimente Grátis</a>
+              </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-100 py-20 mt-20">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 text-center">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-6 animate_top">ESH: A Visibilidade Total Que Sua Empresa Precisa</h1>
+            <p class="text-lg text-gray-700 mb-8 animate_top">Monitore, grave e audite acessos remotos com a solução definitiva para segurança e conformidade.</p>
+            <a href="#contato" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full animate_top transition-all duration-300 ease-in-out">Solicite uma Demonstração</a>
+        </div>
+        <img src="img/fondo.jpg" alt="Visualização do software ESH" class="mx-auto mt-8 rounded-lg shadow-xl animate_top">
+    </section>
+
+    <!-- Problemas Resolvidos -->
+    <section class="py-20 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <h2 class="text-3xl font-semibold text-black mb-8 text-center animate_top">Problemas Que o ESH Resolve</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7.5">
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <i class="fas fa-eye-slash fa-3x text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-2">Falta de Controle e Visibilidade</h3>
+                    <p class="text-gray-600">Você sabe quem acessa o quê e quando? Rastreie atividades e previna problemas com ESH.</p>
+                </div>
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <i class="fas fa-project-diagram fa-3x text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-2">Gestão Fragmentada</h3>
+                    <p class="text-gray-600">Simplifique o gerenciamento de múltiplos protocolos e ferramentas em uma única plataforma.</p>
+                </div>
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <i class="fas fa-shield-alt fa-3x text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-2">Riscos de Segurança</h3>
+                    <p class="text-gray-600">Identifique e neutralize vulnerabilidades antes que causem danos à sua empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais do ESH -->
+    <section class="bg-gray-100 py-20 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50" id="recursos">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <h2 class="text-3xl font-semibold text-black mb-8 text-center animate_top">Os Diferenciais do ESH</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7.5">
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <i class="fas fa-video fa-3x text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-2">Monitoramento em Tempo Real com Reprodução de Sessões</h3>
+                    <p class="text-gray-600">Acompanhe tudo que acontece em seus servidores e revise sessões gravadas.</p>
+                </div>
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <i class="fas fa-history fa-3x text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-2">Registro Completo de Logs</h3>
+                    <p class="text-gray-600">Histórico seguro e auditável de todos os comandos e atividades.</p>
+                </div>
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <i class="fas fa-tags fa-3x text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-2">Controle Granular com Tags</h3>
+                    <p class="text-gray-600">Permissões específicas baseadas em tags para maior segurança e controle.</p>
+                </div>
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <i class="fas fa-desktop fa-3x text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-2">Interface Intuitiva e Personalizável</h3>
+                    <p class="text-gray-600">Navegação fácil e rápida para encontrar servidores, grupos e logs.</p>
+                </div>
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <i class="fas fa-clock fa-3x text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-2">Economia de Tempo e Recursos</h3>
+                    <p class="text-gray-600">Centralize tudo em uma única ferramenta e aumente a eficiência da sua equipe.</p>
+                </div>
+                <div class="animate_top">
+                  <video src="videos/Snoop.mp4" controls class="w-full rounded-lg shadow-md"></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios do ESH -->
+    <section class="py-20 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <h2 class="text-3xl font-semibold text-black mb-8 text-center animate_top">Como o ESH Pode Beneficiar Sua Empresa</h2>
+            <ul class="list-disc list-inside text-lg text-gray-700 animate_top">
+                <li>Segurança da sua infraestrutura reforçada como nunca.</li>
+                <li>Economia de horas semanais na gestão de acessos.</li>
+                <li>Um ambiente de trabalho mais produtivo e organizado.</li>
+                <li>Escalabilidade para atender desde pequenas equipes até grandes corporações.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Depoimentos (Simulação) -->
+    <section class="bg-gray-100 py-20 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50" id="depoimentos">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <h2 class="text-3xl font-semibold text-black mb-8 text-center animate_top">Depoimentos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7.5">
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <p class="text-gray-700 italic">"ESH transformou a forma como monitoramos nossos servidores. A reprodução de sessões é incrível!"</p>
+                    <p class="mt-4 font-semibold text-gray-800">- João Silva, Gerente de TI</p>
+                </div>
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <p class="text-gray-700 italic">"A interface intuitiva do ESH facilitou muito o trabalho da nossa equipe. Ganhamos horas!"</p>
+                    <p class="mt-4 font-semibold text-gray-800">- Maria Oliveira, Analista de Segurança</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Post (Simulação) -->
+    <section class="py-20 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <h2 class="text-3xl font-semibold text-black mb-8 text-center animate_top">Artigo Recente do Blog</h2>
+            <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                <h3 class="text-2xl font-semibold text-black mb-4">Por que o ESH é a Solução Definitiva para Gerenciamento de Acessos Remotos?</h3>
+                <p class="text-gray-600 mb-4">Publicado em: 16/11/2024 por Larissa Amaral | Categoria: Blog</p>
+                <p class="text-gray-700">
+                No cenário atual, garantir a segurança e a eficiência no gerenciamento de acessos remotos é crucial para qualquer empresa. O ESH surge como uma solução abrangente, resolvendo problemas como falta de controle, gestão fragmentada e riscos de segurança.
+                ...</p>
+                <a href="https://elevensoft.dev/blog/6" class="text-blue-500 hover:text-blue-700 mt-4 inline-block transition-all duration-300 ease-in-out">Leia Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preços (Simulação) -->
+     <section class="bg-gray-100 py-20 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50" id="preco">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <h2 class="text-3xl font-semibold text-black mb-8 text-center animate_top">Planos e Preços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7.5">
+                <!-- Plano Básico -->
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <h3 class="text-2xl font-semibold text-black mb-4">Básico</h3>
+                    <p class="text-gray-600 mb-4">Ideal para pequenas empresas que estão começando.</p>
+                    <div class="text-5xl font-bold text-blue-500 mb-4">Grátis</div>
+                    <ul class="list-disc list-inside text-gray-700 mb-6">
+                        <li>Monitoramento Básico</li>
+                        <li>Relatórios Semanais</li>
+                        <li>Suporte Comunitário</li>
+                    </ul>
+                    <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out">Começar Agora</a>
+                </div>
+
+                <!-- Plano Premium -->
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <h3 class="text-2xl font-semibold text-black mb-4">Premium</h3>
+                    <p class="text-gray-600 mb-4">Para empresas que precisam de mais recursos e suporte.</p>
+                    <div class="text-5xl font-bold text-green-500 mb-4">R$ 499/mês</div>
+                    <ul class="list-disc list-inside text-gray-700 mb-6">
+                        <li>Monitoramento Avançado</li>
+                        <li>Relatórios Detalhados</li>
+                        <li>Suporte Prioritário</li>
+                        <li>Integrações API</li>
+                    </ul>
+                    <a href="#" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out">Assinar Agora</a>
+                </div>
+
+                <!-- Plano Corporativo -->
+                <div class="rounded-md border border-stroke bg-white p-9 shadow-solid-13 animate_top">
+                    <h3 class="text-2xl font-semibold text-black mb-4">Corporativo</h3>
+                    <p class="text-gray-600 mb-4">Solução completa para grandes empresas com necessidades específicas.</p>
+                    <div class="text-5xl font-bold text-purple-500 mb-4">Entre em Contato</div>
+                    <ul class="list-disc list-inside text-gray-700 mb-6">
+                        <li>Monitoramento Personalizado</li>
+                        <li>Consultoria Especializada</li>
+                        <li>Suporte Dedicado</li>
+                        <li>SLA Garantido</li>
+                    </ul>
+                    <a href="#contato" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="py-20 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50 bg-blue-50" id="contato">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <h2 class="text-3xl font-semibold text-black mb-8 text-center animate_top">Entre em Contato</h2>
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <p class="text-lg text-gray-700 mb-4 animate_top">
+                        Preencha o formulário abaixo para solicitar uma demonstração, tirar dúvidas ou obter um orçamento personalizado.
+                    </p>
+                    <form action="#" method="POST" class="space-y-4 animate_top">
+                        <div>
+                            <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div>
+                            <label for="mensagem" class="block text-gray-700 text-sm font-bold mb-2">Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-all duration-300 ease-in-out">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="lg:w-1/2 animate_top">
+                    <img src="img/fondo.jpg" alt="Imagem de contato" class="rounded-md object-cover object-center" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
+                <div class="animate_top w-1/2 lg:w-1/4" style="opacity: 1; transform: none;"><a href="https://elevensoft.dev/" class="flex items-center gap-x-1"><img alt="logo" loading="lazy" width="180" height="30" decoding="async" data-nimg="1" src="img/logo.png"></a>
+                <p class="mb-10 mt-5">Soluções digitais personalizadas para transformar sua visão em realidade.</p>
+                <p class="mb-1.5 text-sectiontitle uppercase tracking-[5px]">contato</p><a aria-label="contact via whatsapp button" class="flex w-max py-2.5 text-itemtitle2 text-black hover:underline" href="https://wa.me/message/X2DMDA457ASDN1" target="_blank">Whatsapp</a>
+                <a aria-label="send email button" class="flex w-max py-2.5 text-itemtitle2 text-black hover:underline" href="mailto:ola@elevensoft.dev?subject=Tenho interesse em construir um projeto&body=Bom dia! Sou [SEU_NOME_AQUI] e gostaria de discutir a respeito de [SEU_ASSUNTO]" target="_blank">ola@elevensoft.dev</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-stroke bg-white">
+      <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+        <div class="flex flex-col flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 lg:flex-row lg:justify-between lg:gap-0">
+          <div class="animate_top" style="opacity: 1; transform: none;">
+            <ul class="flex items-center gap-8">
+              <li><a href="#" class="hover:text-orange-500">Política de privacidade</a></li>
+              <li><a href="https://wa.me/message/X2DMDA457ASDN1" target="_blank" class="hover:text-orange-500">Suporte</a></li>
+            </ul>
+          </div>
+          <div class="animate_top" style="opacity: 1; transform: none;">
+            <p>© 2025 Eleven. Todos os direitos reservados</p>
+          </div>
+          <div class="animate_top" style="opacity: 1; transform: none;">
+            <ul class="flex items-center gap-5">
+              <li>
+                <a href="https://www.instagram.com/elevensoft.dev" target="_blank" aria-label="Instragram social icon">
+                  <svg class="b-red-500 text-[#D1D8E0] transition-all duration-300 hover:text-orange-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/eleven-soft-105a4229b/" target="_blank" aria-label="social icon">
+                  <svg class="fill-[#D1D8E0] transition-all duration-300 hover:fill-orange-500" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_48_1505)">
+                      <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill=""></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_48_1505">
+                        <rect width="24" height="24" fill="white"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="fixed bottom-8 right-8 z-[99]">
+      <div aria-label="scroll to top" class="hover:shadow-signUp flex h-10 w-10 cursor-pointer items-center justify-center rounded-sm bg-orange-500 text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80">
+        <span class="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"></span>
+        <span class="sr-only">scroll to top</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

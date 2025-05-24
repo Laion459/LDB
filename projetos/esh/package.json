@@ -1,0 +1,24 @@
+{
+  "name": "esh",
+  "version": "1.0.0",
+  "description": "Monitoramento de Terminais e Auditoria",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i style.css -o output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monitoramento",
+    "auditoria",
+    "segurança",
+    "acesso remoto"
+  ],
+  "author": "Eleven Soft",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/cli": "^0.1.2",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}
