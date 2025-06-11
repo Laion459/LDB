@@ -4,280 +4,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo D. Borges - Developer Full stack</title>
+     <!-- Título mais direto -->
+    <title>Leonardo Borges | Desenvolvedor Full-Stack | Portfólio</title>
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Font Awesome - Versão mais recente se possível -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- AOS para animação de scroll -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <!-- DEV ICONS - Ótimo para logos de tecnologia -->
+      <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+	<!-- Remover animate.css e font-awesome 4.3 se não usar especificamente -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+   <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+   
+   <!-- ESTILOS BÁSICOS - MOVER PARA style.css E APERFEIÇOAR -->
+    <style>
+       /* CSS RESET Simples e Configs Gerais*/
+       * { box-sizing: border-box; margin: 0; padding: 0;}
+        html { scroll-behavior: smooth; } /* Scroll suave para navegação interna */
+        body { font-family: sans-serif; line-height: 1.6; color: #333; padding-top: 70px;} /* padding para nav fixa */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 60px 0; border-bottom: 1px solid #eee;}
+        section h2 { text-align: center; margin-bottom: 40px; font-size: 2.2em; color: #2c3e50;}
+        img {max-width: 100%; height: auto;}
+        a { color: #3498db; text-decoration: none;}
+        a:hover { text-decoration: underline;}
+         ul { list-style: none;}
+        .btn {
+            display: inline-block; padding: 10px 25px; background-color: #3498db; color: white;
+            border-radius: 5px; text-decoration: none; margin: 5px; transition: background-color 0.3s ease;
+            text-align: center;
+         }
+       .btn:hover { background-color: #2980b9; text-decoration: none;}
+       .btn-outline {
+           background-color: transparent; border: 1px solid #3498db; color: #3498db;
+       }
+        .btn-outline:hover { background-color: #3498db; color: white;}
+
+        /* Header / Nav */
+        header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; top:0; left: 0; width: 100%; z-index: 1000; padding: 10px 0;}
+        nav { display: flex; justify-content: space-between; align-items: center;}
+         nav .logo { font-weight: bold; font-size: 1.4em;}
+         nav .menu-icon { cursor: pointer; display: none; /* Mostrar em mobile */ }
+         nav ul.menu { display: flex; }
+         nav ul.menu li a { padding: 10px 15px; display: block; transition: color 0.3s ease;}
+          nav ul.menu li a:hover {color: #2980b9; text-decoration: none;}
+        .nav-social a { margin-left: 10px; font-size: 1.5em;}
+
+
+        /* Hero Section */
+        #home {
+           display: flex; align-items: center; min-height: 85vh; text-align: center;
+           background: #f4f4f4; padding-top: 80px; /* Ajuste para nav */
+         }
+        .hero-content {
+            display: flex; flex-direction: column; align-items: center; gap: 20px;
+         }
+         .profile-picture img {
+            width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+         }
+         .hero-text h1 {font-size: 3em; margin-bottom: 5px; color:#2c3e50;}
+         .hero-text h2 { font-size: 1.5em; font-weight: normal; color: #555; margin-bottom: 15px;}
+         .hero-text p { max-width: 700px; margin-bottom: 25px; font-size: 1.1em;}
+         .hero-actions .btn {margin: 0 10px;}
+         .hero-social a { font-size: 1.8em; margin: 0 12px; color: #333;}
+         .hero-social a:hover { color: #3498db;}
+
+
+        /* Skills */
+         .skills-list {
+           display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left;
+         }
+        .skill-category h3 {margin-bottom: 15px; color: #2c3e50; border-left: 4px solid #3498db; padding-left: 10px;}
+        .skill-category ul li { margin-bottom: 8px; display: flex; align-items: center; gap: 8px;}
+         .skill-category i { font-size: 1.4em; color: #3498db; } /* Icones */
+         .languages-list li { margin-bottom: 5px;}
+
+         /* Projetos */
+        .projects-grid {
+           display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+        }
+       .project-card {
+           background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; 
+           box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+       }
+       .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1);}
+       .project-card h3 { margin-bottom: 10px; color:#2c3e50;}
+       .project-card p { font-size: 0.95em; color: #555; flex-grow: 1; margin-bottom: 15px;}
+       .project-tech { margin-bottom: 15px; font-size: 0.85em; color: #3498db; font-weight: bold;}
+       .project-links a {margin-right: 10px;}
+       .projects-more { text-align: center; margin-top: 30px;}
+
+        /* Formação */
+        .education-item, .course-item {margin-bottom: 20px;}
+         .education-item h3, .course-item h4 { color:#2c3e50;}
+         .education-item span, .course-list li {color: #555;}
+          .course-list { list-style: disc; margin-left: 20px;}
+
+
+        /* Contato */
+       #contato { background-color: #f9f9f9;}
+        .contact-info { display: flex; flex-direction: column; align-items: center; gap: 15px;}
+        .contact-info p { display: flex; align-items: center; gap: 10px; font-size: 1.1em;}
+        .contact-info i { color: #3498db; font-size: 1.3em;}
+
+
+        /* Footer */
+        footer {background: #2c3e50; color: #ccc; text-align: center; padding: 25px 0; }
+        footer a { color: white;}
+
+        /* Back to top */
+        .back-to-top {
+          position: fixed; bottom: 20px; right: 20px; background: #3498db; color: white;
+          width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center;
+           justify-content: center; cursor: pointer; border: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+             transform: translateY(20px);
+         }
+          .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0);}
+           .back-to-top:hover {background: #2980b9;}
+
+        /* Media Query Simples para Menu */
+        @media (max-width: 768px) {
+            body { padding-top: 60px;}
+            nav .menu-icon { display: block; font-size: 1.8em; }
+             nav ul.menu { 
+                 display: none; /* Mudado de flex para none */
+                 flex-direction: column; position: absolute; top: 60px; /* Ajuste */
+                 left: 0; width: 100%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                 text-align: center;
+              }
+              nav ul.menu.active { display: flex;} /* JS vai adicionar/remover esta classe */
+             nav ul.menu li a {padding: 15px;}
+             .hero-content { padding: 20px; }
+             .hero-text h1 {font-size: 2em;}
+             .hero-text h2 { font-size: 1.2em;}
+             #home {min-height: auto; padding-top: 40px; padding-bottom: 40px;}
+             .nav-social {display: none;} /* Esconde social da nav no mobile, mostra na hero */
+              .skills-list, .projects-grid { grid-template-columns: 1fr;}
+        }
+         @media (max-width: 480px) {
+             .hero-actions .btn { display: block; width: 80%; margin: 10px auto;}
+         }
+
+    </style>
+
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-31B99SFX8Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-31B99SFX8Z');
+</script>
 <body>
-    <header>
-        <!-- 
-        <nav class="menu" id="theme-menu"> 
-            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-            <label class="menu-open-button" for="menu-open">
-              <span class="hamburger hamburger-1"></span>
-              <span class="hamburger hamburger-2"></span>
-              <span class="hamburger hamburger-3"></span>
-            </label>
-          
-            <a href="#" onclick="setTheme('theme-black')" class="menu-item theme-black hidden">B</a>
-            <a href="#" onclick="setTheme('theme-white')" class="menu-item theme-white hidden">W</a>
-            <a href="#" onclick="setTheme('theme-blue')" class="menu-item theme-blue hidden">B</a>
-            <a href="#" onclick="setTheme('theme-pink')" class="menu-item theme-pink hidden">P</a>
-            <a href="#" onclick="setTheme('theme-red')" class="menu-item theme-red hidden">R</a>
-            <a href="#" onclick="setTheme('theme-green')" class="menu-item theme-green hidden">G</a>
-            <a href="#" onclick="setTheme('theme-default')" class="menu-item theme-default hidden">D</a>
-          
-        </nav>
-        -->
-
-        <div class="container">
+    <!-- ===================== HEADER / NAV ===================== -->
+     <header>
+       <div class="container">
             <nav>
+                 <a href="#home" class="logo">L . B</a>
                 <div class="menu-icon" onclick="toggleMenu()">
                     <i class="fas fa-bars"></i>
                 </div>
-                <ul class="menu">
-                    <li><a href="contato/index.html">Contato</a></li>
-                    <li><a href="diplomas/index.html">Diplomas</a></li>
-                    <li><a href="projetos/index.html">Projetos</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="curriculo vitae/index.html">Currículo</a></li>
-
+                <!-- NAVEGAÇÃO INTERNA -->
+                <ul class="menu" id="mainMenu">
+                    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                     <li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+                    <li><a href="#skills" onclick="closeMenu()">Competências</a></li>
+                    <li><a href="#projetos" onclick="closeMenu()">Projetos</a></li>
+                     <li><a href="#formacao" onclick="closeMenu()">Formação</a></li>
+                    <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+                   <!-- Link para o CV completo ou página dedicada-->
+                   <!-- <li><a href="curriculo vitae/index.html" target="_blank">Currículo</a></li> -->
                 </ul>
+                 <div class="nav-social">
+                   <a href="https://www.linkedin.com/in/borgesleonardod" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                   <a href="https://github.com/Laion459" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                 </div>
 
             </nav>
-            <div class="header-content">
-                <div class="profile-picture animate__animated animate__backInUp" data-aos="fade-right">
-                    <img src="imagens/img/Leonardo perfil.jpeg" alt="Leonardo Borges">
-                </div>
-                <div class="header-text">
-                    <h1 data-aos="fade-down-right" class="animate__animated animate__heartBeat">Leonardo D. Borges</h1>
-
-                    <h2 class="animate__animated animate__bounceInLeft">Software Developer</h2>
-                    <p class="animate__animated animate__fadeInUp">"Todo mundo é um gênio. Mas, se você julgar um peixe
-                        por sua capacidade de subir em uma árvore, ela vai passar toda a sua vida acreditando que ele é
-                        estúpido" - Albert Einstein
-                        <br><br>
-                        Bem-vindo ao meu portfólio. Eu sou Leonardo Borges e aqui você encontrará as ideias e inovações
-                        que trago para o mundo através da programação.
-                    </p>
-
-                </div>
-            </div>
         </div>
     </header>
 
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2>Habilidades</h2>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h3>Especialidades</h3>
-                    <div class="skill-bar">
-                        <h4>Front-End</h4>
-                        <div class="progress">
-                            <div class="progress-bar" data-percentage="50">
-                                <span class="percentage-text">0%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <h4>Back-End</h4>
-                        <div class="progress">
-                            <div class="progress-bar" data-percentage="50">
-                                <span class="percentage-text">0%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <h4>Mobile</h4>
-                        <div class="progress">
-                            <div class="progress-bar" data-percentage="25">
-                                <span class="percentage-text">0%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3>Linguas</h3>
-                    <div class="skill-bar">
-                        <h4>Português</h4>
-                        <div class="progress">
-                            <div class="progress-bar" data-percentage="100" data-level="C2">
-                                <span class="percentage-text">C2</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <h4>Espanhol</h4>
-                        <div class="progress">
-                            <div class="progress-bar" data-percentage="100" data-level="C2">
-                                <span class="percentage-text">C2</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <h4>Inglês</h4>
-                        <div class="progress">
-                            <div class="progress-bar" data-percentage="40" data-level="B1">
-                                <span class="percentage-text">B1</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- 
-            <div class="skill-group">
-                <h3>Tecnologias         **************** (EM IMPLEMENTAÇÃO ESTA PARTE!!!!!!) ****************</h3>
-                <div class="technologies-grid">
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/java.svg" alt="Java Logo">
-                        <h4>Java</h4>
-                        <p>Veja os projetos desenvolvidos com Java.</p>
-                        <a href="tecnologias/java.html" class="btn">Ver Projetos</a>
-                    </div>
-                    
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/php.svg" alt="PHP Logo">
-                        <h4>PHP</h4>
-                        <p>Veja os projetos desenvolvidos com PHP.</p>
-                        <a href="tecnologias/php.html" class="btn">Ver Projetos</a>
-                    </div>
-
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/python5.svg" alt="Python Logo">                        <h4>Python</h4>
-                        <p>Veja os projetos desenvolvidos com Python.</p>
-                        <a href="tecnologias/python.html" class="btn">Ver Projetos</a>
-                    </div>
+ <main>
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="home" data-aos="fade-in">
+         <div class="container hero-content">
+             <div class="profile-picture" data-aos="fade-up" data-aos-delay="100">
+                <!-- Imagem otimizada e com alt text claro -->
+                 <img src="imagens/img/leonardo perfil 2.JPG" alt="Foto de perfil de Leonardo Borges">
+             </div>
+             <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
+                 <h1>Leonardo Borges</h1>
+                 <!-- Título mais específico -->
+                 <h2>Desenvolvedor Full-Stack | Estudante de Ciência da Computação</h2>
+                 <!-- Resumo Profissional Direto do CV -->
+                 <p>
+                    Foco em Engenharia de Software, com experiência em projetos PHP (Laravel), JavaScript (React, Node.js) e Python. 
+                    Interesse em desenvolvimento robusto, clean code, segurança e bancos de dados. 
+                    Busco oportunidades para aplicar e aprofundar meus conhecimentos.
+                 </p>
+                  <div class="hero-social" data-aos="fade-up" data-aos-delay="400">
+                     <a href="https://www.linkedin.com/in/borgesleonardod" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                     <a href="https://github.com/Laion459" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                      <a href="mailto:laion459@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+                   </div>
+                   <br>
+                 <!-- CALL TO ACTIONS -->
+                 <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                     <a href="#projetos" class="btn">Ver Projetos</a>
+                      <!-- LINK PARA O PDF DO SEU CV -->
+                     <a href="path/para/seu/Curriculo_Leonardo_Borges.pdf" class="btn btn-outline" target="_blank" download>Baixar CV</a>
+                      <a href="#contato" class="btn btn-outline">Contato</a>
+                 </div>
+             </div>
             
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/javascript.svg" alt="JavaScript Logo">
-                        <h4>JavaScript</h4>
-                        <p>Veja os projetos desenvolvidos com JavaScript.</p>
-                        <a href="tecnologias/javascript.html" class="btn">Ver Projetos</a>
-                    </div>
-                    
-
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/html.svg" alt="HTML Logo">
-                        <h4>HTML</h4>
-                        <p>Veja os projetos desenvolvidos com HTML.</p>
-                        <a href="tecnologias/html.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/css.svg" alt="CSS Logo">
-                        <h4>CSS</h4>
-                        <p>Veja os projetos desenvolvidos com CSS.</p>
-                        <a href="tecnologias/css.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-            
-            
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/c1.svg" alt="C Logo">
-                        <h4>C</h4>
-                        <p>Veja os projetos desenvolvidos com C.</p>
-                        <a href="tecnologias/c.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/c.svg" alt="C++ Logo">
-                        <h4>C++</h4>
-                        <p>Veja os projetos desenvolvidos com C++.</p>
-                        <a href="tecnologias/cplusplus.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/react.svg" alt="React Logo">
-                        <h4>React</h4>
-                        <p>Veja os projetos desenvolvidos com React.</p>
-                        <a href="tecnologias/react.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/laravel.svg" alt="Laravel Logo">
-                        <h4>Laravel</h4>
-                        <p>Veja os projetos desenvolvidos com Laravel.</p>
-                        <a href="tecnologias/laravel.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                   
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/assembly.png" alt="Assembly Logo">
-                        <h4>Assembly</h4>
-                        <p>Veja os projetos desenvolvidos com Assembly.</p>
-                        <a href="tecnologias/assembly.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/android.svg" alt="Android Logo">
-                        <h4>Android</h4>
-                        <p>Veja os projetos desenvolvidos com Android.</p>
-                        <a href="tecnologias/android.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/mysql.svg" alt="MySQL Logo">
-                        <h4>MySQL</h4>
-                        <p>Veja os projetos desenvolvidos com MySQL.</p>
-                        <a href="tecnologias/mysql.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                   
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/mongodb.svg" alt="MongoDB Logo">
-                        <h4>MongoDB</h4>
-                        <p>Veja os projetos desenvolvidos com MongoDB.</p>
-                        <a href="tecnologias/mongodb.html" class="btn">Ver Projetos</a>
-                    </div>
-        
-            
-                    
-                    <div class="technology-card" onmouseover="moveProject(this)" onmouseout="resetProject(this)">
-                        <img src="imagens/logos/docker.svg" alt="Docker Logo">
-                        <h4>Docker</h4>
-                        <p>Veja os projetos desenvolvidos com Docker.</p>
-                        <a href="tecnologias/docker.html" class="btn">Ver Projetos</a>
-                    </div>
-            
-                </div>
-            </div>
-        -->
-
-        </div>
+         </div>
     </section>
+
+      <!-- ===================== SOBRE MIM ===================== -->
+     <section id="sobre">
+        <div class="container" data-aos="fade-up">
+             <h2>Sobre Mim</h2>
+             <p style="max-width: 800px; margin: 0 auto; text-align: center;">
+                Sou estudante de Ciência da Computação na UNIVALI, apaixonado por transformar ideias em soluções 
+             </p>
+                <a href="mailto:laion459@gmail.com" class="btn btn-primary">Enviar um E-mail</a>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <div class="container">
-            <p>© 2024 Leonardo Borges. Todos os direitos reservados.</p>
+            <div class="footer-content">
+                <p>© 2024 Leonardo Borges. Todos os direitos reservados.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/borgesleonardod" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/laion459" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Botão de Voltar ao Topo -->
     <button onclick="scrollToTop()" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <script src="script.js" defer></script>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Duração da animação
+            once: true, // Animação acontece apenas uma vez
+        });
+    </script>
+    <script src="script.js" defer></script>
 </body>
-<script>
-    AOS.init();
-</script>
 
 </html>
