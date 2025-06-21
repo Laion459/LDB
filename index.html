@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leonardo Borges | Desenvolvedor Full-Stack | Portfólio</title>
-    <meta name="description" content="Portfólio de Leonardo Borges, Desenvolvedor Full-Stack com experiência em PHP, Laravel, React, Node.js e Python.">
-    <meta name="keywords" content="Leonardo Borges, Desenvolvedor Full-Stack, PHP, Laravel, React, Node.js, Python, Portfólio">
+    <meta name="description"
+        content="Portfólio de Leonardo Borges, Desenvolvedor Full-Stack com experiência em PHP, Laravel, React, Node.js e Python.">
+    <meta name="keywords"
+        content="Leonardo Borges, Desenvolvedor Full-Stack, PHP, Laravel, React, Node.js, Python, Portfólio">
     <meta name="author" content="Leonardo Borges">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" type='text/css'
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <style>
         /* CSS RESET Simples e Configs Gerais*/
@@ -27,30 +30,30 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
-            line-height: 1.7; /* Aumentei um pouco */
-            color: #444; /* Cor mais suave */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #444;
             padding-top: 70px;
-            background-color: #f8f9fa; /* Fundo levemente acinzentado */
+            background-color: #f8f9fa;
         }
 
         .container {
-            max-width: 1200px; /* Aumentei o tamanho */
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 30px; /* Aumentei o padding */
+            padding: 0 30px;
         }
 
         section {
-            padding: 80px 0; /* Aumentei o padding */
+            padding: 80px 0;
             border-bottom: 1px solid #eee;
         }
 
         section h2 {
             text-align: center;
-            margin-bottom: 50px; /* Aumentei o espaçamento */
-            font-size: 2.8em; /* Aumentei o tamanho */
-            color: #343a40; /* Cor mais escura */
-            font-weight: 600; /* Mais forte */
+            margin-bottom: 50px;
+            font-size: 2.8em;
+            color: #fcce00;
+            font-weight: 600;
         }
 
         img {
@@ -59,14 +62,14 @@
         }
 
         a {
-            color: #007bff; /* Azul mais moderno */
+            color: #fcce00;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #0056b3; /* Azul mais escuro no hover */
-            text-decoration: none; /* Removi o sublinhado */
+            color: #e0b700;
+            text-decoration: none;
         }
 
         ul {
@@ -75,33 +78,35 @@
 
         .btn {
             display: inline-block;
-            padding: 12px 30px; /* Aumentei o padding */
-            background-color: #007bff; /* Azul mais moderno */
-            color: white;
-            border-radius: 8px; /* Mais arredondado */
+            padding: 12px 30px;
+            background-color: #fcce00;
+            color: #343a40;
+            border-radius: 8px;
             text-decoration: none;
             margin: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionei transform */
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
             text-align: center;
-            font-size: 1.1em; /* Aumentei o tamanho */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra suave */
+            font-size: 1.1em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            font-weight: 600;
         }
 
         .btn:hover {
-            background-color: #0056b3; /* Azul mais escuro no hover */
-            transform: translateY(-2px); /* Levemente elevado no hover */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+            background-color: #e0b700;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #343a40;
         }
 
         .btn-outline {
             background-color: transparent;
-            border: 2px solid #007bff; /* Aumentei a espessura */
-            color: #007bff;
+            border: 2px solid #fcce00;
+            color: #fcce00;
         }
 
         .btn-outline:hover {
-            background-color: #007bff;
-            color: white;
+            background-color: #fcce00;
+            color: #343a40;
         }
 
         /* Header / Nav */
@@ -111,9 +116,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            
             z-index: 1000;
-            padding: 15px 0; /* Aumentei o padding */
+            padding: 15px 0;
         }
 
         nav {
@@ -124,8 +128,8 @@
 
         nav .logo {
             font-weight: bold;
-            font-size: 1.6em; /* Aumentei o tamanho */
-            color: #343a40; /* Cor mais escura */
+            font-size: 1.6em;
+            color: #fcce00;
         }
 
         nav .menu-icon {
@@ -138,91 +142,94 @@
         }
 
         nav ul.menu li a {
-            padding: 12px 20px; /* Aumentei o padding */
+            padding: 12px 20px;
             display: block;
             transition: color 0.3s ease;
-            color: #555; /* Cor mais suave */
+            color: #555;
         }
 
         nav ul.menu li a:hover {
-            color: #0056b3; /* Azul mais escuro no hover */
+            color: #e0b700;
             text-decoration: none;
         }
 
         .nav-social a {
-            margin-left: 15px; /* Aumentei o espaçamento */
-            font-size: 1.6em; /* Aumentei o tamanho */
-            color: #555; /* Cor mais suave */
+            margin-left: 15px;
+            font-size: 1.6em;
+            color: #555;
         }
 
         .nav-social a:hover {
-            color: #007bff; /* Azul mais moderno */
+            color: #fcce00;
         }
 
         /* Hero Section */
         #home {
             display: flex;
             align-items: center;
-            min-height: 90vh; /* Aumentei a altura */
+            min-height: 90vh;
             text-align: center;
-            background: #f8f9fa; /* Fundo levemente acinzentado */
-            padding-top: 80px;
+            background: #f8f9fa;
         }
 
         .hero-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px; /* Aumentei o espaçamento */
+            gap: 30px;
         }
 
         .profile-picture img {
-            width: 200px; /* Aumentei o tamanho */
-            height: 200px; /* Aumentei o tamanho */
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid white; /* Aumentei a espessura */
+            border: 5px solid white;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .hero-text h1 {
-            font-size: 4em; /* Aumentei o tamanho */
+            font-size: 4em;
             margin-bottom: 10px;
-            color: #343a40; /* Cor mais escura */
-            font-weight: 700; /* Mais forte */
+            color: #fcce00;
+            font-weight: 700;
         }
 
         .hero-text h2 {
-            font-size: 1.8em; /* Aumentei o tamanho */
+            font-size: 1.8em;
             font-weight: normal;
-            color: #6c757d; /* Cor mais suave */
+            color: #fcce00;
             margin-bottom: 20px;
         }
 
         .hero-text p {
-            max-width: 800px; /* Aumentei o tamanho */
+            max-width: 800px;
             margin-bottom: 30px;
-            font-size: 1.2em; /* Aumentei o tamanho */
+            font-size: 1.2em;
             color: #555;
         }
 
         .hero-actions .btn {
-            margin: 0 15px; /* Aumentei o espaçamento */
+            margin: 0 15px;
         }
 
-        .hero-social a {
-            font-size: 2em; /* Aumentei o tamanho */
-            margin: 0 15px; /* Aumentei o espaçamento */
-            color: #555; /* Cor mais suave */
+        /* Estilo para os ícones sociais (Hero e Footer) */
+        .hero-social a,
+        .footer-content .social-icons a {
+            font-size: 2em;
+            margin: 0 15px;
+            color: #555;
+            transition: color 0.3s ease;
         }
 
-        .hero-social a:hover {
-            color: #007bff; /* Azul mais moderno */
+        .hero-social a:hover,
+        .footer-content .social-icons a:hover {
+            color: #fcce00;
         }
 
         /* Sobre Mim */
         #sobre {
-            background-color: #fff; /* Fundo branco */
+            background-color: #fff;
         }
 
         #sobre p {
@@ -234,12 +241,34 @@
             margin-bottom: 30px;
         }
 
+        /* Minha Jornada */
+        #minha-jornada {
+            background-color: #f8f9fa;
+        }
+
+        #minha-jornada .container {
+            max-width: 900px;
+        }
+
+        #minha-jornada h2 {
+            color: #fcce00;
+            margin-bottom: 40px;
+        }
+
+        #minha-jornada p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
         /* Footer */
         footer {
-            background: #343a40; /* Cor mais escura */
+            background: #343a40;
             color: #ccc;
             text-align: center;
-            padding: 30px 0; /* Aumentei o padding */
+            padding: 30px 0;
         }
 
         footer a {
@@ -268,10 +297,10 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #007bff; /* Azul mais moderno */
-            color: white;
-            width: 45px; /* Aumentei o tamanho */
-            height: 45px; /* Aumentei o tamanho */
+            background: #fcce00;
+            color: #343a40;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -281,19 +310,20 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background-color 0.3s ease, color 0.3s ease;
             transform: translateY(20px);
-            font-size: 1.2em; /* Aumentei o tamanho */
+            font-size: 1.2em;
+        }
+
+        .back-to-top:hover {
+            background: #e0b700;
+            color: #343a40;
         }
 
         .back-to-top.show {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            background: #0056b3; /* Azul mais escuro no hover */
         }
 
         /* Media Query Simples para Menu */
@@ -332,11 +362,11 @@
             }
 
             .hero-text h1 {
-                font-size: 2.5em; /* Ajustei o tamanho */
+                font-size: 2.5em;
             }
 
             .hero-text h2 {
-                font-size: 1.4em; /* Ajustei o tamanho */
+                font-size: 1.4em;
             }
 
             #home {
@@ -370,6 +400,16 @@
                 width: 80%;
                 margin: 10px auto;
             }
+        }
+
+        /* Correção do alinhamento do botão "Enviar um E-mail" */
+        #sobre .container {
+            text-align: center;
+        }
+
+        #sobre .container a.btn {
+            margin: 20px auto;
+            display: inline-block;
         }
     </style>
 
@@ -440,6 +480,9 @@
                             rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/Laion459" target="_blank" rel="noopener noreferrer"
                             title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=5551999092387&text&type=phone_number&app_absent=0"
+                            target="_blank" rel="noopener noreferrer" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
                         <a href="mailto:laion459@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
                     </div>
                     <br>
@@ -461,7 +504,30 @@
                     Sou Argentino, empresário há mais de 12 anos, com empresas em diferentes segmentos. Também sou
                     estudante de Ciência da Computação na UNIVALI, apaixonado por transformar ideias em soluções.
                 </p>
-                <a href="mailto:laion459@gmail.com" class="btn btn-primary">Enviar um E-mail</a>
+                <a href="mailto:laion459@gmail.com" class="btn">Enviar um E-mail</a>
+            </div>
+        </section>
+
+        <!-- ===================== MINHA JORNADA ===================== -->
+        <section id="minha-jornada" data-aos="fade-up">
+            <div class="container">
+                <h2>Minha Jornada</h2>
+                <p>
+                    Aqui você pode adicionar sua história pessoal. Comece contando como você começou no mundo da
+                    tecnologia, quais foram os desafios que você enfrentou e como os superou. As pessoas se conectam
+                    com histórias, não apenas com currículos.
+                </p>
+                <p>
+                    Deixe claro o que te motiva. Por que você é apaixonado por desenvolvimento full-stack e
+                    empreendedorismo? Qual é o seu propósito em tudo isso? Mencione seus valores profissionais. O que é
+                    importante para você em um projeto ou em uma equipe? Integridade, colaboração, inovação?
+                </p>
+                <p>
+                    Destaque suas maiores conquistas, tanto profissionais quanto pessoais. Isso pode incluir projetos
+                    bem-sucedidos, prêmios, reconhecimentos ou até mesmo habilidades que você desenvolveu ao longo do
+                    tempo. Mostre que você está sempre aprendendo e se atualizando. Mencione cursos, livros, artigos ou
+                    tecnologias que você está estudando atualmente.
+                </p>
             </div>
         </section>
 
@@ -476,6 +542,9 @@
                         aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/laion459" target="_blank" aria-label="GitHub"><i
                             class="fab fa-github"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=5551999092387&text&type=phone_number&app_absent=0"
+                        target="_blank" rel="noopener noreferrer" title="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
