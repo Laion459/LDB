@@ -4,170 +4,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Título mais direto -->
     <title>Leonardo Borges | Desenvolvedor Full-Stack | Portfólio</title>
-    
+    <meta name="description" content="Portfólio de Leonardo Borges, Desenvolvedor Full-Stack com experiência em PHP, Laravel, React, Node.js e Python.">
+    <meta name="keywords" content="Leonardo Borges, Desenvolvedor Full-Stack, PHP, Laravel, React, Node.js, Python, Portfólio">
+    <meta name="author" content="Leonardo Borges">
+
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome - Versão mais recente se possível -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- AOS para animação de scroll -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     <!-- DEV ICONS - Ótimo para logos de tecnologia -->
-      <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-	<!-- Remover animate.css e font-awesome 4.3 se não usar especificamente -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
-   <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
-   
-   <!-- ESTILOS BÁSICOS - MOVER PARA style.css E APERFEIÇOAR -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <style>
-       /* CSS RESET Simples e Configs Gerais*/
-       * { box-sizing: border-box; margin: 0; padding: 0;}
-        html { scroll-behavior: smooth; } /* Scroll suave para navegação interna */
-        body { font-family: sans-serif; line-height: 1.6; color: #333; padding-top: 70px;} /* padding para nav fixa */
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        section { padding: 60px 0; border-bottom: 1px solid #eee;}
-        section h2 { text-align: center; margin-bottom: 40px; font-size: 2.2em; color: #2c3e50;}
-        img {max-width: 100%; height: auto;}
-        a { color: #3498db; text-decoration: none;}
-        a:hover { text-decoration: underline;}
-         ul { list-style: none;}
-        .btn {
-            display: inline-block; padding: 10px 25px; background-color: #3498db; color: white;
-            border-radius: 5px; text-decoration: none; margin: 5px; transition: background-color 0.3s ease;
+        /* CSS RESET Simples e Configs Gerais*/
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+            line-height: 1.7; /* Aumentei um pouco */
+            color: #444; /* Cor mais suave */
+            padding-top: 70px;
+            background-color: #f8f9fa; /* Fundo levemente acinzentado */
+        }
+
+        .container {
+            max-width: 1200px; /* Aumentei o tamanho */
+            margin: 0 auto;
+            padding: 0 30px; /* Aumentei o padding */
+        }
+
+        section {
+            padding: 80px 0; /* Aumentei o padding */
+            border-bottom: 1px solid #eee;
+        }
+
+        section h2 {
             text-align: center;
-         }
-       .btn:hover { background-color: #2980b9; text-decoration: none;}
-       .btn-outline {
-           background-color: transparent; border: 1px solid #3498db; color: #3498db;
-       }
-        .btn-outline:hover { background-color: #3498db; color: white;}
+            margin-bottom: 50px; /* Aumentei o espaçamento */
+            font-size: 2.8em; /* Aumentei o tamanho */
+            color: #343a40; /* Cor mais escura */
+            font-weight: 600; /* Mais forte */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #007bff; /* Azul mais moderno */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3; /* Azul mais escuro no hover */
+            text-decoration: none; /* Removi o sublinhado */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px; /* Aumentei o padding */
+            background-color: #007bff; /* Azul mais moderno */
+            color: white;
+            border-radius: 8px; /* Mais arredondado */
+            text-decoration: none;
+            margin: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionei transform */
+            text-align: center;
+            font-size: 1.1em; /* Aumentei o tamanho */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra suave */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Azul mais escuro no hover */
+            transform: translateY(-2px); /* Levemente elevado no hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #007bff; /* Aumentei a espessura */
+            color: #007bff;
+        }
+
+        .btn-outline:hover {
+            background-color: #007bff;
+            color: white;
+        }
 
         /* Header / Nav */
-        header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; top:0; left: 0; width: 100%; z-index: 1000; padding: 10px 0;}
-        nav { display: flex; justify-content: space-between; align-items: center;}
-         nav .logo { font-weight: bold; font-size: 1.4em;}
-         nav .menu-icon { cursor: pointer; display: none; /* Mostrar em mobile */ }
-         nav ul.menu { display: flex; }
-         nav ul.menu li a { padding: 10px 15px; display: block; transition: color 0.3s ease;}
-          nav ul.menu li a:hover {color: #2980b9; text-decoration: none;}
-        .nav-social a { margin-left: 10px; font-size: 1.5em;}
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            
+            z-index: 1000;
+            padding: 15px 0; /* Aumentei o padding */
+        }
 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.6em; /* Aumentei o tamanho */
+            color: #343a40; /* Cor mais escura */
+        }
+
+        nav .menu-icon {
+            cursor: pointer;
+            display: none;
+        }
+
+        nav ul.menu {
+            display: flex;
+        }
+
+        nav ul.menu li a {
+            padding: 12px 20px; /* Aumentei o padding */
+            display: block;
+            transition: color 0.3s ease;
+            color: #555; /* Cor mais suave */
+        }
+
+        nav ul.menu li a:hover {
+            color: #0056b3; /* Azul mais escuro no hover */
+            text-decoration: none;
+        }
+
+        .nav-social a {
+            margin-left: 15px; /* Aumentei o espaçamento */
+            font-size: 1.6em; /* Aumentei o tamanho */
+            color: #555; /* Cor mais suave */
+        }
+
+        .nav-social a:hover {
+            color: #007bff; /* Azul mais moderno */
+        }
 
         /* Hero Section */
         #home {
-           display: flex; align-items: center; min-height: 85vh; text-align: center;
-           background: #f4f4f4; padding-top: 80px; /* Ajuste para nav */
-         }
-        .hero-content {
-            display: flex; flex-direction: column; align-items: center; gap: 20px;
-         }
-         .profile-picture img {
-            width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-         }
-         .hero-text h1 {font-size: 3em; margin-bottom: 5px; color:#2c3e50;}
-         .hero-text h2 { font-size: 1.5em; font-weight: normal; color: #555; margin-bottom: 15px;}
-         .hero-text p { max-width: 700px; margin-bottom: 25px; font-size: 1.1em;}
-         .hero-actions .btn {margin: 0 10px;}
-         .hero-social a { font-size: 1.8em; margin: 0 12px; color: #333;}
-         .hero-social a:hover { color: #3498db;}
-
-
-        /* Skills */
-         .skills-list {
-           display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left;
-         }
-        .skill-category h3 {margin-bottom: 15px; color: #2c3e50; border-left: 4px solid #3498db; padding-left: 10px;}
-        .skill-category ul li { margin-bottom: 8px; display: flex; align-items: center; gap: 8px;}
-         .skill-category i { font-size: 1.4em; color: #3498db; } /* Icones */
-         .languages-list li { margin-bottom: 5px;}
-
-         /* Projetos */
-        .projects-grid {
-           display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+            display: flex;
+            align-items: center;
+            min-height: 90vh; /* Aumentei a altura */
+            text-align: center;
+            background: #f8f9fa; /* Fundo levemente acinzentado */
+            padding-top: 80px;
         }
-       .project-card {
-           background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; 
-           box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-       }
-       .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1);}
-       .project-card h3 { margin-bottom: 10px; color:#2c3e50;}
-       .project-card p { font-size: 0.95em; color: #555; flex-grow: 1; margin-bottom: 15px;}
-       .project-tech { margin-bottom: 15px; font-size: 0.85em; color: #3498db; font-weight: bold;}
-       .project-links a {margin-right: 10px;}
-       .projects-more { text-align: center; margin-top: 30px;}
 
-        /* Formação */
-        .education-item, .course-item {margin-bottom: 20px;}
-         .education-item h3, .course-item h4 { color:#2c3e50;}
-         .education-item span, .course-list li {color: #555;}
-          .course-list { list-style: disc; margin-left: 20px;}
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px; /* Aumentei o espaçamento */
+        }
 
+        .profile-picture img {
+            width: 200px; /* Aumentei o tamanho */
+            height: 200px; /* Aumentei o tamanho */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white; /* Aumentei a espessura */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-        /* Contato */
-       #contato { background-color: #f9f9f9;}
-        .contact-info { display: flex; flex-direction: column; align-items: center; gap: 15px;}
-        .contact-info p { display: flex; align-items: center; gap: 10px; font-size: 1.1em;}
-        .contact-info i { color: #3498db; font-size: 1.3em;}
+        .hero-text h1 {
+            font-size: 4em; /* Aumentei o tamanho */
+            margin-bottom: 10px;
+            color: #343a40; /* Cor mais escura */
+            font-weight: 700; /* Mais forte */
+        }
 
+        .hero-text h2 {
+            font-size: 1.8em; /* Aumentei o tamanho */
+            font-weight: normal;
+            color: #6c757d; /* Cor mais suave */
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            max-width: 800px; /* Aumentei o tamanho */
+            margin-bottom: 30px;
+            font-size: 1.2em; /* Aumentei o tamanho */
+            color: #555;
+        }
+
+        .hero-actions .btn {
+            margin: 0 15px; /* Aumentei o espaçamento */
+        }
+
+        .hero-social a {
+            font-size: 2em; /* Aumentei o tamanho */
+            margin: 0 15px; /* Aumentei o espaçamento */
+            color: #555; /* Cor mais suave */
+        }
+
+        .hero-social a:hover {
+            color: #007bff; /* Azul mais moderno */
+        }
+
+        /* Sobre Mim */
+        #sobre {
+            background-color: #fff; /* Fundo branco */
+        }
+
+        #sobre p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
 
         /* Footer */
-        footer {background: #2c3e50; color: #ccc; text-align: center; padding: 25px 0; }
-        footer a { color: white;}
+        footer {
+            background: #343a40; /* Cor mais escura */
+            color: #ccc;
+            text-align: center;
+            padding: 30px 0; /* Aumentei o padding */
+        }
+
+        footer a {
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-icons a {
+            margin-left: 15px;
+            font-size: 1.5em;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: white;
+        }
 
         /* Back to top */
         .back-to-top {
-          position: fixed; bottom: 20px; right: 20px; background: #3498db; color: white;
-          width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center;
-           justify-content: center; cursor: pointer; border: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-             transform: translateY(20px);
-         }
-          .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0);}
-           .back-to-top:hover {background: #2980b9;}
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #007bff; /* Azul mais moderno */
+            color: white;
+            width: 45px; /* Aumentei o tamanho */
+            height: 45px; /* Aumentei o tamanho */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            transform: translateY(20px);
+            font-size: 1.2em; /* Aumentei o tamanho */
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: #0056b3; /* Azul mais escuro no hover */
+        }
 
         /* Media Query Simples para Menu */
         @media (max-width: 768px) {
-            body { padding-top: 60px;}
-            nav .menu-icon { display: block; font-size: 1.8em; }
-             nav ul.menu { 
-                 display: none; /* Mudado de flex para none */
-                 flex-direction: column; position: absolute; top: 60px; /* Ajuste */
-                 left: 0; width: 100%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                 text-align: center;
-              }
-              nav ul.menu.active { display: flex;} /* JS vai adicionar/remover esta classe */
-             nav ul.menu li a {padding: 15px;}
-             .hero-content { padding: 20px; }
-             .hero-text h1 {font-size: 2em;}
-             .hero-text h2 { font-size: 1.2em;}
-             #home {min-height: auto; padding-top: 40px; padding-bottom: 40px;}
-             .nav-social {display: none;} /* Esconde social da nav no mobile, mostra na hero */
-              .skills-list, .projects-grid { grid-template-columns: 1fr;}
-        }
-         @media (max-width: 480px) {
-             .hero-actions .btn { display: block; width: 80%; margin: 10px auto;}
-         }
+            body {
+                padding-top: 60px;
+            }
 
+            nav .menu-icon {
+                display: block;
+                font-size: 1.8em;
+            }
+
+            nav ul.menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            nav ul.menu.active {
+                display: flex;
+            }
+
+            nav ul.menu li a {
+                padding: 15px;
+            }
+
+            .hero-content {
+                padding: 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5em; /* Ajustei o tamanho */
+            }
+
+            .hero-text h2 {
+                font-size: 1.4em; /* Ajustei o tamanho */
+            }
+
+            #home {
+                min-height: auto;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .nav-social {
+                display: none;
+            }
+
+            .skills-list,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .social-icons {
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-actions .btn {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
     </style>
 
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-31B99SFX8Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-31B99SFX8Z');
-</script>
 <body>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31B99SFX8Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-31B99SFX8Z');
+    </script>
+
     <!-- ===================== HEADER / NAV ===================== -->
-     <header>
-       <div class="container">
+    <header>
+        <div class="container">
             <nav>
-                 <a href="#home" class="logo">L . B</a>
+                <a href="#home" class="logo">L . B</a>
                 <div class="menu-icon" onclick="toggleMenu()">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -179,61 +405,62 @@
                     <li><a href="ciencia da computacao/index.html" onclick="closeMenu()">Formação</a></li>
                     <li><a href="contato/index.html" onclick="closeMenu()">Contato</a></li>
                     <li><a href="blog/index.html" onclick="closeMenu()">Blog</a></li>
-                   <!-- Link para o CV completo ou página dedicada-->
-                   <!-- <li><a href="curriculo vitae/index.html" target="_blank">Currículo</a></li> -->
                 </ul>
-                 <div class="nav-social">
-                   <a href="https://www.linkedin.com/in/borgesleonardod" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                   <a href="https://github.com/Laion459" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-                 </div>
-
+                <div class="nav-social">
+                    <a href="https://www.linkedin.com/in/borgesleonardod/" target="_blank" rel="noopener noreferrer"
+                        title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Laion459" target="_blank" rel="noopener noreferrer"
+                        title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
             </nav>
         </div>
     </header>
 
- <main>
-    <!-- ===================== HERO SECTION ===================== -->
-    <section id="home" data-aos="fade-in">
-         <div class="container hero-content">
-             <div class="profile-picture" data-aos="fade-up" data-aos-delay="100">
-                <!-- Imagem otimizada e com alt text claro -->
-                 <img src="imagens/img/leonardo perfil 2.JPG" alt="Foto de perfil de Leonardo Borges">
-             </div>
-             <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
-                 <h1>Leonardo Borges</h1>
-                 <!-- Título mais específico -->
-                 <h2>Desenvolvedor Full-Stack | Estudante de Ciência da Computação</h2>
-                 <!-- Resumo Profissional Direto do CV -->
-                 <p>
-                    Foco em Engenharia de Software, com experiência em projetos PHP (Laravel), JavaScript (React, Node.js) e Python. 
-                    Interesse em desenvolvimento robusto, clean code, segurança e bancos de dados. 
-                    Busco oportunidades para aplicar e aprofundar meus conhecimentos.
-                 </p>
-                  <div class="hero-social" data-aos="fade-up" data-aos-delay="400">
-                     <a href="https://www.linkedin.com/in/borgesleonardod" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                     <a href="https://github.com/Laion459" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-                      <a href="mailto:laion459@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
-                   </div>
-                   <br>
-                 <!-- CALL TO ACTIONS -->
-                 <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
-                     <a href="projetos/index.html" class="btn">Ver Projetos</a>
-                      <!-- LINK PARA O PDF DO SEU CV -->
-                     <a href="path/para/seu/Curriculo_Leonardo_Borges.pdf" class="btn btn-outline" target="_blank" download>Baixar CV</a>
-                      <a href="contato/index.html" class="btn btn-outline">Contato</a>
-                 </div>
-             </div>
-            
-         </div>
-    </section>
+    <main>
+        <!-- ===================== HERO SECTION ===================== -->
+        <section id="home" data-aos="fade-in">
+            <div class="container hero-content">
+                <div class="profile-picture" data-aos="fade-up" data-aos-delay="100">
+                    <img src="imagens/img/leonardo perfil 2.JPG" alt="Foto de perfil de Leonardo Borges">
+                </div>
+                <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
+                    <h1>Leonardo Borges</h1>
+                    <h2>Empresário | Desenvolvedor Full-Stack | Estudante de Ciência da Computação</h2>
+                    <p>
+                        Com empresas em diferentes segmentos, como marketing digital, apartamentos de temporada,
+                        lavanderia, salão de beleza, entre outros.
+                    </p>
+                    <p>
+                        Foco em Engenharia de Software, com experiência em projetos PHP (Laravel), JavaScript (React,
+                        Node.js) e Python. Interesse em desenvolvimento robusto, clean code, segurança e bancos de
+                        dados. Sempre estudando e aplicando para aprofundar meus conhecimentos.
+                    </p>
+                    <div class="hero-social" data-aos="fade-up" data-aos-delay="400">
+                        <a href="https://www.linkedin.com/in/borgesleonardod/" target="_blank"
+                            rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Laion459" target="_blank" rel="noopener noreferrer"
+                            title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:laion459@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <br>
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                        <a href="projetos/index.html" class="btn">Ver Projetos</a>
+                        <a href="path/para/seu/Curriculo_Leonardo_Borges.pdf" class="btn btn-outline" target="_blank"
+                            download>Baixar CV</a>
+                        <a href="contato/index.html" class="btn btn-outline">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- ===================== SOBRE MIM ===================== -->
-     <section id="sobre">
-        <div class="container" data-aos="fade-up">
-             <h2>Sobre Mim</h2>
-             <p style="max-width: 800px; margin: 0 auto; text-align: center;">
-                Sou estudante de Ciência da Computação na UNIVALI, apaixonado por transformar ideias em soluções 
-             </p>
+        <!-- ===================== SOBRE MIM ===================== -->
+        <section id="sobre">
+            <div class="container" data-aos="fade-up">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Sou Argentino, empresário há mais de 12 anos, com empresas em diferentes segmentos. Também sou
+                    estudante de Ciência da Computação na UNIVALI, apaixonado por transformar ideias em soluções.
+                </p>
                 <a href="mailto:laion459@gmail.com" class="btn btn-primary">Enviar um E-mail</a>
             </div>
         </section>
@@ -245,8 +472,10 @@
             <div class="footer-content">
                 <p>© 2024 Leonardo Borges. Todos os direitos reservados.</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/borgesleonardod" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/laion459" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/borgesleonardod/" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/laion459" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
@@ -256,12 +485,12 @@
     <button onclick="scrollToTop()" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
-    
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000, // Duração da animação
-            once: true, // Animação acontece apenas uma vez
+            duration: 1000,
+            once: true,
         });
     </script>
     <script src="script.js" defer></script>
