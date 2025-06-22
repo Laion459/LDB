@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    
+
 });
 
 // Função para rolar suavemente ao topo
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Função para trocar o tema
 function setTheme(theme) {
-    document.body.className = ''; 
+    document.body.className = '';
     if (theme !== 'theme-white') {
         document.body.classList.add(theme);
     }
@@ -86,7 +86,7 @@ function setTheme(theme) {
 }
 
 // Evento para fechar o menu ao clicar fora dele
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const gooeyMenu = document.getElementById('theme-menu');
     const menuOpenCheckbox = document.getElementById('menu-open');
 
