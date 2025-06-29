@@ -16,407 +16,7 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <style>
-        /* CSS RESET Simples e Configs Gerais*/
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            color: #444;
-            padding-top: 70px;
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-
-        section {
-            padding: 80px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        section h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 2.8em;
-            color: #fcce00;
-            font-weight: 600;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        a {
-            color: #fcce00;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #e0b700;
-            text-decoration: none;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #fcce00;
-            color: #343a40;
-            border-radius: 8px;
-            text-decoration: none;
-            margin: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
-            text-align: center;
-            font-size: 1.1em;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-            font-weight: 600;
-        }
-
-        .btn:hover {
-            background-color: #e0b700;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            color: #343a40;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid #fcce00;
-            color: #fcce00;
-        }
-
-        .btn-outline:hover {
-            background-color: #fcce00;
-            color: #343a40;
-        }
-
-        /* Header / Nav */
-        header {
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 1%;
-            z-index: 1000;
-            padding: 15px 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .logo {
-            font-weight: bold;
-            font-size: 1.6em;
-            color: #fcce00;
-        }
-
-        nav .menu-icon {
-            cursor: pointer;
-            display: none;
-        }
-
-        nav ul.menu {
-            display: flex;
-        }
-
-        nav ul.menu li a {
-            padding: 12px 20px;
-            display: block;
-            transition: color 0.3s ease;
-            color: #555;
-        }
-
-        nav ul.menu li a:hover {
-            color: #e0b700;
-            text-decoration: none;
-        }
-
-        .nav-social a {
-            margin-left: 15px;
-            font-size: 1.6em;
-            color: #555;
-        }
-
-        .nav-social a:hover {
-            color: #fcce00;
-        }
-
-        /* Hero Section */
-        #home {
-            display: flex;
-            align-items: center;
-            min-height: 56vh;
-            text-align: center;
-            background: #f8f9fa;
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .profile-picture img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: initial;
-            border: 3px solid #fcce00;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero-text h1 {
-            font-size: 4em;
-            margin-bottom: 10px;
-            color: #fcce00;
-            font-weight: 700;
-        }
-
-        .hero-text h2 {
-            font-size: 1.8em;
-            font-weight: normal;
-            color: #fcce00;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            max-width: 900px;
-            margin-bottom: 30px;
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        .hero-actions .btn {
-            margin: 0 15px;
-        }
-
-        /* Estilo para os ícones sociais (Hero e Footer) */
-        .hero-social a,
-        .footer-content .social-icons a {
-            font-size: 2em;
-            margin: 0 15px;
-            color: #555;
-            transition: color 0.3s ease;
-        }
-
-        .hero-social a:hover,
-        .footer-content .social-icons a:hover {
-            color: #fcce00;
-        }
-
-        /* Sobre Mim */
-        #sobre {
-            background-color: #fff;
-        }
-
-        #sobre p {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        /* Minha Jornada */
-        #minha-jornada {
-            background-color: #f8f9fa;
-        }
-
-        #minha-jornada .container {
-            max-width: 900px;
-        }
-
-        #minha-jornada h2 {
-            color: #fcce00;
-            margin-bottom: 40px;
-        }
-
-        #minha-jornada p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        /* Footer */
-        footer {
-            background: #343a40;
-            color: #ccc;
-            text-align: center;
-            padding: 30px 0;
-        }
-
-        footer a {
-            color: white;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .social-icons a {
-            margin-left: 15px;
-            font-size: 1.5em;
-            color: #ccc;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: white;
-        }
-
-        /* Back to top */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #fcce00;
-            color: #343a40;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background-color 0.3s ease, color 0.3s ease;
-            transform: translateY(20px);
-            font-size: 1.2em;
-        }
-
-        .back-to-top:hover {
-            background: #e0b700;
-            color: #343a40;
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        /* Media Query Simples para Menu */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 60px;
-            }
-
-            nav .menu-icon {
-                display: block;
-                font-size: 1.8em;
-            }
-
-            nav ul.menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background: white;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                text-align: center;
-            }
-
-            nav ul.menu.active {
-                display: flex;
-            }
-
-            nav ul.menu li a {
-                padding: 15px;
-            }
-
-            .hero-content {
-                padding: 20px;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5em;
-            }
-
-            .hero-text h2 {
-                font-size: 1.4em;
-            }
-
-            #home {
-                min-height: auto;
-                padding-top: 40px;
-                padding-bottom: 40px;
-            }
-
-            .nav-social {
-                display: none;
-            }
-
-            .skills-list,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .social-icons {
-                margin-top: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-actions .btn {
-                display: block;
-                width: 80%;
-                margin: 10px auto;
-            }
-        }
-
-        /* Correção do alinhamento do botão "Enviar um E-mail" */
-        #sobre .container {
-            text-align: center;
-        }
-
-        #sobre .container a.btn {
-            margin: 20px auto;
-            display: inline-block;
-        }
-
-        .links-center {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        
     </style>
 
 </head>
@@ -522,102 +122,98 @@
 
         <!-- ===================== MINHA JORNADA ===================== -->
         <section id="minha-jornada" data-aos="fade-up">
+    <div class="container">
+        <h2>Minha Jornada</h2>
+        <section id="minha-jornada-resumo" data-aos="fade-up">
             <div class="container">
-                <h2>Minha Jornada</h2>
-                <section id="minha-jornada-resumo" data-aos="fade-up">
-                    <div class="container">
-                        <p>
-                            Cresci no interior da Argentina, entre plantações, feiras e trabalho duro no campo. Desde
-                            cedo aprendi a valorizar o esforço, a disciplina e a entrega. Com o tempo, minha ambição me
-                            levou à cidade, onde comecei a empreender ainda jovem e iniciei minha trajetória em
-                            diferentes mercados — da beleza ao turismo.
-                        </p>
-                        <p>
-                            No Brasil, aprofundei minha experiência como empreendedor e me reinventei ao entrar para o
-                            mundo da tecnologia. De forma autodidata, mergulhei em desenvolvimento full-stack, com foco
-                            em segurança, escalabilidade e impacto real.
-                        </p>
-                        <p>
-                            Hoje lidero produtos na Eleven Soft, atuando com visão estratégica e execução
-                            técnica. Trago comigo uma base sólida em Linux, Laravel, C, e sigo evoluindo
-                            com estudos em forense digital, threat intelligence e arquitetura de APIs.
-                        </p>
-                        <p>
-                            Código, visão e ação. É assim que transformo ideias em soluções robustas.
-                        </p>
-                    </div>
-                    <details>
-                        <summary>Mais...</summary>
-
-                        <div class="container">
-                            <h3>Raízes</h3>
-                            <p>
-                                Nasci em San Vicente, Misiones (Argentina), e vivi boa parte da infância com meus avós
-                                em um sítio. A rotina era dura: cuidar de animais, plantar, colher e preparar tudo para
-                                vender nas feiras. Desde cedo aprendi o valor do trabalho e da disciplina.
-                            </p>
-
-                            <h3>Primeiras Decisões</h3>
-                            <p>
-                                Por volta dos 12 anos, um episódio simples — ver meu irmão com uma carteira e 30 pesos —
-                                me despertou uma sede por entender como o mundo funcionava. Voltei para a cidade com um
-                                propósito: aprender a empreender. Comecei vendendo luzes de Natal de porta em porta.
-                                Depois, ajudei a montar um negócio de jardinagem, trabalhei como garçom e operador de
-                                luzes em festas, fiz cursos técnicos em elétrica e atuei em agropecuária.
-                            </p>
-
-                            <h3>Expansão e Brasil</h3>
-                            <p>
-                                Aos 20 anos, deixei Misiones e fui morar no Brasil, em Novo Hamburgo/RS. Entrei no setor
-                                da beleza e, mesmo com dificuldades no idioma, conquistei clientes ao investir pesado na
-                                leitura e dicção. Fiz curso na Embelleze e abri meu próprio salão. Em paralelo, toquei
-                                uma distribuidora regional de cosméticos com minha tia e tentei lançar uma fábrica
-                                própria — projeto que esbarrou nas exigências da ANVISA.
-                            </p>
-
-                            <h3>Empreendedorismo Serial</h3>
-                            <p>
-                                Após deixar o setor de cosméticos, percebi um problema no mercado de locações por
-                                temporada em Florianópolis. Nasceu a TMOT, empresa de gestão de imóveis. Logo expandi
-                                com lavanderia própria e serviços de manutenção, além de atuar em áreas como transfer,
-                                câmbio e turismo.
-                            </p>
-
-                            <h3>Transição para Tecnologia</h3>
-                            <p>
-                                A tecnologia surgiu como necessidade e paixão. Comecei estudando por conta própria,
-                                conciliando projetos com trabalho. Desenvolvi habilidades full-stack, com domínio de
-                                infraestrutura, backend (Laravel, PHP), frontend moderno e validações em C para
-                                hardware. Participei de programas de aceleração, contribuí com soluções Linux e lidero o
-                                desenvolvimento do <strong>Eleven Shell Hub</strong>, onde atuo como Product Header e
-                                programador.
-                            </p>
-
-                            <h3>Hoje</h3>
-                            <p>
-                                Estudo Bacharelado em Ciência da Computação, com foco em arquitetura de APIs e
-                                inteligência de ameaças. No backend, atuo com PHP, Laravel, PostgreSQL e Docker,
-                                entregando soluções robustas, seguras e documentadas. Já implementei sistemas de
-                                licenciamento com validação por hardware/software, integrações de pagamentos e APIs REST
-                                escaláveis. Em cada projeto aplico boas práticas, testes automatizados e visão de
-                                produto. Código limpo, rastreável e com propósito.
-                                Não estou aqui para ser mais um.
-                                Estou aqui para transformar.
-                            </p>
-
-                        </div>
-
-
-                </section>
-
-                <p class="links-center">
-                    <a href="https://laion459.github.io/LDB/projetos/index.html" target="_blank">Portfólio completo</a>
-                    &nbsp;|&nbsp;
-                    <a href="https://github.com/Laion459" target="_blank">Veja meus projetos no GitHub</a> &nbsp;|&nbsp;
-                    <a href="https://www.linkedin.com/in/borgesleonardod/" target="_blank">Meu LinkedIn</a>
+                <p>
+                    Cresci no interior da Argentina, onde aprendi o valor do trabalho e da disciplina. Minha ambição me
+                    levou a empreender em diversos mercados, da beleza ao turismo.
+                </p>
+                <p>
+                    No Brasil, aprofundei minha experiência como empreendedor e me reinventei no mundo da tecnologia,
+                    tornando-me desenvolvedor full-stack com foco em segurança, escalabilidade e impacto real.
+                </p>
+                <p>
+                    Atualmente, lidero produtos na Eleven Soft, combinando visão estratégica e execução técnica. Minha
+                    base sólida em Linux, Laravel e C é complementada por estudos em forense digital, threat
+                    intelligence e arquitetura de APIs.
+                </p>
+                <p>
+                    Código, visão e ação. É assim que transformo ideias em soluções robustas.
                 </p>
             </div>
+            <details>
+                <summary>Mais...</summary>
+
+                <div class="container">
+                    <h3>Raízes</h3>
+                    <p>
+                        Nasci em San Vicente, Misiones (Argentina), e vivi boa parte da infância com meus avós em um
+                        sítio. A rotina era intensa: cuidar de animais, plantar, colher e preparar produtos para as
+                        feiras. Essa experiência me ensinou o valor do trabalho e da disciplina.
+                    </p>
+
+                    <h3>Primeiras Decisões</h3>
+                    <p>
+                        Por volta dos 12 anos, um evento simples despertou minha curiosidade sobre o mundo dos negócios.
+                        Voltei para a cidade com um propósito: aprender a empreender. Comecei vendendo luzes de Natal de
+                        porta em porta. Depois, ajudei a montar um negócio de jardinagem, trabalhei como garçom e
+                        operador de luzes em festas, fiz cursos técnicos em elétrica e atuei em agropecuária.
+                    </p>
+
+                    <h3>Expansão e Brasil</h3>
+                    <p>
+                        Aos 20 anos, deixei Misiones e fui morar no Brasil, em Novo Hamburgo/RS. No setor da beleza,
+                        superei as dificuldades com o idioma ao investir em leitura e dicção, conquistando clientes e
+                        abrindo meu próprio salão. Em paralelo, toquei uma distribuidora regional de cosméticos com
+                        minha tia e tentei lançar uma fábrica própria — projeto que esbarrou nas exigências da ANVISA.
+                    </p>
+
+                    <h3>Empreendedorismo Serial</h3>
+                    <p>
+                        Após deixar o setor de cosméticos, identifiquei uma oportunidade no mercado de locações por
+                        temporada em Florianópolis, criando a TMOT, empresa de gestão de imóveis. Logo expandi com
+                        lavanderia própria e serviços de manutenção, além de atuar em áreas como transfer, câmbio e
+                        turismo.
+                    </p>
+
+                    <h3>Transição para Tecnologia</h3>
+                    <p>
+                        A tecnologia surgiu como necessidade e paixão, levando-me a estudar por conta própria e
+                        conciliar projetos com o trabalho. Desenvolvi habilidades full-stack, com domínio de
+                        infraestrutura, backend (Laravel, PHP), frontend moderno e validações em C para hardware.
+                        Participei de programas de aceleração, contribuí com soluções Linux e lidero o desenvolvimento
+                        do <strong>Eleven Shell Hub</strong>, onde atuo como Product Header e programador.
+                    </p>
+
+                    <h3>Hoje</h3>
+                    <p>
+                        Cursando Ciência da Computação, foco em arquitetura de APIs e inteligência de ameaças. No
+                        backend, utilizo PHP, Laravel, PostgreSQL e Docker para entregar soluções robustas, seguras e
+                        bem documentadas. Já implementei sistemas de licenciamento com validação por hardware/software,
+                        integrações de pagamentos e APIs REST escaláveis. Em cada projeto aplico boas práticas, testes
+                        automatizados e visão de produto. Código limpo, rastreável e com propósito.
+                        Não estou aqui para ser mais um.
+                        Estou aqui para transformar.
+                    </p>
+
+                </div>
+
+
         </section>
+
+        <p class="links-center">
+            <a href="https://laion459.github.io/LDB/projetos/index.html" target="_blank" rel="noopener noreferrer">Portfólio
+                completo</a>
+             | 
+            <a href="https://github.com/Laion459" target="_blank" rel="noopener noreferrer">Veja meus projetos no
+                GitHub</a>  | 
+            <a href="https://www.linkedin.com/in/borgesleonardod/" target="_blank" rel="noopener noreferrer">Meu
+                LinkedIn</a>
+        </p>
+    </div>
+</section>
 
 
     </main>
