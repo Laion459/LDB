@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico Escolar</title>
     <link rel="stylesheet" href="bacharel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="../diplomas/index.html" class="back-button"><i class="fas fa-arrow-left"></i>
+            <a href="../diplomas/index.html" class="back-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="126" height="26" fill="currentColor"
                     class="bi bi-caret-left-square" viewBox="0 0 16 16">
                     <path
@@ -32,7 +35,6 @@
         <h2>Dados do Aluno</h2>
         <ul>
             <li><strong>Aluno:</strong> Leonardo Dario Borges</li>
-            <li><strong>Código:</strong> **********</li>
             <li><strong>Curso:</strong> Ciência da Computação</li>
             <li><strong>Modalidade:</strong> Bacharelado</li>
             <li><strong>Período:</strong> 10º - Noturno</li>
@@ -41,9 +43,9 @@
 
     <main>
         <div class="skill-bar">
-            <h4>Progreso 65%</h4>
+            <h4>Progresso 75%</h4>
             <div class="progress">
-                <div class="progress-bar" style="width: 65%;"></div>
+                <div class="progress-bar" style="width: 75%;"></div>
             </div>
         </div>
         <h2>Histórico de Notas</h2>
@@ -60,6 +62,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- 1º Período -->
                 <tr>
                     <td rowspan="7">1º Período</td>
                     <td>21855</td>
@@ -67,7 +70,7 @@
                     <td>30</td>
                     <td>9,50</td>
                     <td>Aprovado</td>
-                    <td>219/1</td>
+                    <td>19/1</td>
                 </tr>
                 <tr>
                     <td>22706</td>
@@ -75,7 +78,7 @@
                     <td>60</td>
                     <td>8,50</td>
                     <td>Aprovado</td>
-                    <td>419/1</td>
+                    <td>19/1</td>
                 </tr>
                 <tr>
                     <td>23251</td>
@@ -83,7 +86,7 @@
                     <td>30</td>
                     <td>6,50</td>
                     <td>Aprovado</td>
-                    <td>219/1</td>
+                    <td>19/1</td>
                 </tr>
                 <tr>
                     <td>22721</td>
@@ -91,7 +94,7 @@
                     <td>60</td>
                     <td>7,50</td>
                     <td>Aprovado</td>
-                    <td>419/2</td>
+                    <td>19/2</td>
                 </tr>
                 <tr>
                     <td>22760</td>
@@ -99,7 +102,7 @@
                     <td>60</td>
                     <td>6,50</td>
                     <td>Aprovado</td>
-                    <td>419/2</td>
+                    <td>19/2</td>
                 </tr>
                 <tr>
                     <td>22722</td>
@@ -107,7 +110,7 @@
                     <td>60</td>
                     <td>7,50</td>
                     <td>Aprovado</td>
-                    <td>420/1</td>
+                    <td>19/2</td>
                 </tr>
                 <tr>
                     <td>23189</td>
@@ -115,9 +118,10 @@
                     <td>60</td>
                     <td>7,50</td>
                     <td>Aprovado</td>
-                    <td>419/2</td>
+                    <td>19/2</td>
                 </tr>
 
+                <!-- 2º Período -->
                 <tr>
                     <td rowspan="4">2º Período</td>
                     <td>22817</td>
@@ -144,9 +148,10 @@
                     <td>23/2</td>
                 </tr>
                 <tr>
-                    <td colspan="7" class="eletivas">GRUPO: ELETIVAS 60 C.H.cumprida = 60</td>
+                    <td colspan="7" class="eletivas eletivas-row">GRUPO: ELETIVAS 60 C.H.cumprida = 60</td>
                 </tr>
 
+                <!-- 3º Período -->
                 <tr>
                     <td rowspan="5">3º Período</td>
                     <td>23258</td>
@@ -176,19 +181,20 @@
                     <td>22730</td>
                     <td>Cálculo II</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>23272</td>
                     <td>Estruturas de Dados</td>
                     <td>90</td>
-                    <td> </td>
-                    <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td>7,00</td>
+                    <td>Aprovado</td>
+                    <td>25/1</td>
                 </tr>
 
+                <!-- 4º Período -->
                 <tr>
                     <td rowspan="5">4º Período</td>
                     <td>22834</td>
@@ -226,11 +232,12 @@
                     <td>22737</td>
                     <td>Cálculo Numérico</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
 
+                <!-- 5º Período -->
                 <tr>
                     <td rowspan="5">5º Período</td>
                     <td>23259</td>
@@ -268,11 +275,12 @@
                     <td>22742</td>
                     <td>Estatística</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
 
+                <!-- 6º Período -->
                 <tr>
                     <td rowspan="6">6º Período</td>
                     <td>1803</td>
@@ -310,19 +318,20 @@
                     <td>4201</td>
                     <td>Informática na Educação</td>
                     <td>60</td>
-                    <td> </td>
-                    <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
+                    <td>Em Curso</td>
+                    <td>25/1</td>
                 </tr>
                 <tr>
                     <td>23276</td>
                     <td>Linguagens Formais e Autômatos</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
 
+                <!-- 7º Período -->
                 <tr>
                     <td rowspan="5">7º Período</td>
                     <td>3643</td>
@@ -336,35 +345,36 @@
                     <td>12464</td>
                     <td>Computação Gráfica</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>22741</td>
                     <td>Inteligência Artificial</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>22835</td>
                     <td>Redes de Computadores II</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>23284</td>
                     <td>Compiladores</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
 
+                <!-- 8º Período -->
                 <tr>
                     <td rowspan="5">8º Período</td>
                     <td>22732</td>
@@ -378,34 +388,36 @@
                     <td>12335</td>
                     <td>Sistemas Distribuídos</td>
                     <td>60</td>
-                    <td> </td>
-                    <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
+                    <td>Em Curso</td>
+                    <td>25/1</td>
                 </tr>
                 <tr>
                     <td>22821</td>
                     <td>Inteligência Artificial II</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>23279</td>
                     <td>Trabalho de Conclusão de Curso I</td>
                     <td>30</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>23285</td>
                     <td>Teoria da Computação</td>
                     <td>30</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
+
+                <!-- 9º Período -->
                 <tr>
                     <td rowspan="4">9º Período</td>
                     <td>22716</td>
@@ -419,22 +431,23 @@
                     <td>23286</td>
                     <td>Melhoria de Processos de Software</td>
                     <td>60</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>23287</td>
                     <td>Trabalho de Conclusão de Curso II</td>
                     <td>120</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td colspan="7" class="eletivas">GRUPO: ELETIVAS 60 C.H.cumprida = 0</td>
+                    <td colspan="7" class="eletivas eletivas-row">GRUPO: ELETIVAS 60 C.H.cumprida = 0</td>
                 </tr>
 
+                <!-- 10º Período -->
                 <tr>
                     <td rowspan="4">10º Período</td>
                     <td>22714</td>
@@ -456,12 +469,12 @@
                     <td>23289</td>
                     <td>Trabalho de Conclusão de Curso III</td>
                     <td>120</td>
-                    <td> </td>
+                    <td></td>
                     <td>Apto a Cursar</td>
-                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td colspan="7" class="eletivas">GRUPO: ELETIVAS 60 C.H.cumprida = 0</td>
+                    <td colspan="7" class="eletivas eletivas-row">GRUPO: ELETIVAS 60 C.H.cumprida = 0</td>
                 </tr>
 
             </tbody>
@@ -476,12 +489,13 @@
                 <li><strong>Total de disciplinas:</strong> <span id="total-disciplinas"></span></li>
                 <li><strong>Disciplinas cursadas:</strong> <span id="disciplinas-cursadas"></span></li>
                 <li><strong>Disciplinas restantes:</strong> <span id="disciplinas-restantes"></span></li>
+                <li><strong>Nota Média:</strong> <span id="nota-media"></span></li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>Data de emissão: 14/07/2024</p>
+        <p>Data de emissão: 29/06/2025</p>
     </footer>
     <script src="bacharel.js" defer></script>
 </body>

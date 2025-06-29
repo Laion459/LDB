@@ -31,10 +31,11 @@ header {
     padding-bottom: 20px;
     min-height: 300px;
     text-align: center;
-}
-
-header a {
-    color: #fff;
+    position: fixed; /* Mantém o cabeçalho fixo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+    z-index: 1000;
 }
 
 header .container {
@@ -49,14 +50,36 @@ header .container {
     align-items: center;
 }
 
-header .profile-picture {
+/* Foto de Perfil */
+.profile-picture-container {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-
-
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-header .profile-picture img {
+.profile-picture-container:hover {
+    transform: scale(1.2);
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profile-picture img {
     border-radius: 40px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 header .header-text h1 {
