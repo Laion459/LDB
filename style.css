@@ -983,11 +983,11 @@ nav {
             left: 0;
             width: 1%;
             z-index: 1000;
-            padding: 15px 0;
+            padding: 10px 0;
         }
 
         nav {
-            display: flex;
+            
             justify-content: space-between;
             align-items: center;
         }
